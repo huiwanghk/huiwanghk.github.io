@@ -1,7 +1,878 @@
-<!DOCTYPE html>
-<html>
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PGZH8HT');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>&#x1F466; Elvin's personal website</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126939217-2');
+  </script>
+
+  <!-- Open Graph-->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hui Wang | Researcher" />
+  <meta property="og:description" content="Researcher" />
+  <meta property="og:url" content="https://varadbhogayata.github.io/" />
+  <meta property="og:site_name" content="Hui Wang | Researcher" />
+  <meta property="article:publisher" content="https://varadbhogayata.github.io/" />
+  <meta property="og:image" content="https://varadbhogayata.github.io/examples/preview.JPG" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@varad_bhogayata" />
+  <meta name="twitter:title" content="Coder | Technofreak | Explorer | Minimalist | Humane" />
+  <meta name="twitter:description" content="Software Developer" />
+  <meta name="twitter:url" content="https://twitter.com/varad_bhogayata" />
+  <meta name="author" content="Hui Wang" />
+  <meta name="description" content="Software Developer with a passion for backend development and artificial intelligence." />
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
+  <!-- Google Site Verification for indexing -->
+  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  
+  <!-- Navigation Menu-->
+  <!-- Nav class 1 -->
+  <nav class="hide-on-small-only">
+    <ul class="side-nav fixed section table-of-contents">
+
+      <li class="logo">
+        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+          class="brand-logo grey-blue-text">
+          <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
+        </a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+
+      <li class="bold">
+        <!--
+        ICONS:
+        -->
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Publications section" href="#publications"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Publications</span></a>
+      </li>
+
+      <li class="bold">
+        <!-- mdi-av-web small
+             mdi-av-my-library-books small-->
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Awards section" href="#awards"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-grade small"></i><span>Awards</span></a>
+      </li>
+
+      <li class="bold">
+        <!--
+        ICONS:
+        mdi-action-assessment
+        mdi-social-poll
+        mdi-av-equalizer
+        -->
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Skills</span></a>
+      </li>
+
+      <li class="bold">
+        <!-- 
+        1. mdi-communication-contacts
+        2. mdi-content-mail
+        3. mdi-communication-email
+        -->
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Nav class 2 -->
+  <nav class="hide-on-large only trigger z-depth-1">
+    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
+      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div class="name-title">
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Hui
+        Wang</a><span class="black-text"> Transportation and Geography Researcher</span>
+    </div>
+  </nav>
+
+  <!-- Nav class 3 -->
+  <nav class="hide-on-large only">
+    <ul id="slide-out" class="side-nav">
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Publications section" href="#publications"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Publications</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Skills</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Main Content-->
+  <main>
+    <!-- First Section: Heading lines and image -->
+    <section id="intro" class="section scrollspy full-height">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="col-md-9">
+          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
+            <div class="caption">
+              <br>
+              <h2>Hi There!&#x1F44B; I'm <span class="teal">Hui (Elvin) Wang.</span></h2>
+              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
+              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
+              <h5>I’m a transportation engineering professional with more than 7 years of research experience 
+                and I would love to bring my expertise and enthusiasm to the world. &#x1F618;</h5>
+            </div>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/hui-wang-b0488b199/" target="_blank">
+                <button class="icon-btn linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </button>
+              </a>
+              <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=zh-CN" target="_blank">
+                <button class="icon-btn google scholar">
+                  <i class="fa fa-google scholar"></i>
+                </button>
+              </a>
+              <a href="https://twitter.com/Elvin_Wang123" target="_blank">
+                <button class="icon-btn twitter">
+                  <i class="fa fa-twitter"></i>
+                </button>
+              </a>
+
+            </div>
+            <div class='buttons'>
+              <a href="#about" class="readme">Read More</a>
+              <a href="#contact" class="contactme">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Section: About -->
+    <section id="about" class="section scrollspy">
+      <h3 class="page-title white-text teal">About</h3>
+      <div class="container flow-text">
+        <!-- <blockquote>
+          <h2>
+            A Software Developer with a passion for Backend Development and Artificial Intelligence.
+
+          </h2>
+        </blockquote> -->        
+        <p>
+          In the past 7 years, my research direction has changed from railway transportation planning and management 
+          to urban bus operation and optimization, and then to a new theme: transportation combined with geography. 
+          These are the changes in research perspective from traditional engineering to humanities and social sciences, 
+          which have also become a new challenge for me &#x1F635;&#x200D;&#x1F4AB;.
+        </p>
+        <p>
+          Currently, I am a second-year PhD student at the University of Hong Kong. 
+          I have always had strong research interests in emerging issues in transportation and geography 
+          and enjoy solving these problems by adopting the STATE-OF-THE-ART methods, 
+          which will make sweeping changes to next-generation mobility &#x1F62E;&#x200D;&#x1F4A8;.
+        </p>
+
+        <p>
+          Here are my <b>research interests</b>&#x1F917;:
+        </p>
+
+        <p>
+          <ul>
+            <li><b>Research topics&#x1F642;</b>: Accessibility | Mobility as a Service | Demand-responsive transit </li>
+            <li><b>Research methods&#x1F600;</b>: Discrete Choice Analysis | GIS | Spatial-temporal data Analysis | Agent-based simulation</li>
+          </ul>
+        </p>
+
+      </div>
+    </section>
+    <!-- Third Section: Education -->
+    <section id="education" class="section scrollspy">
+      <h3 class="page-title white-text teal">Education</h3>
+      <div class="container">
+        <div class="row">
+          <!-- Education -->
+          <div class="col s12 m6 l6">
+            <div class="card">
+              <div class="card-content">
+                <p>
+                  <span class="card-title"><a href="https://www.hku.hk/" target="_blank" class="teal-text hoverline">University of Hong Kong &#x2764;</a></span>
+                </p>
+                <p class="brown-text">Hong Kong SAR, China</p>
+                <p>
+                  <b>Program: </b>Doctor of Philosophy in Geography and Transportation   
+                  <br>
+                  <b>Year: </b>2022.Sep - 2026.Aug (Expected)
+                </p>
+
+                <ul>
+                  <p>
+                    <b>Phd Dissertation:</b>
+                  <ul>
+                    <li>TBA</li>                   
+                  </ul>
+                  </p>
+                  <p>
+                    <b>Supervisor:</b>
+                  <ul>
+                    <li><a href="https://www.bpyloo.net/" target="_blank" class="teal-text hoverline">Prof. Becky P.Y. Loo</a></li>                   
+                  </ul>
+                  </p>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l6">
+            <div class="card">
+              <div class="card-content">
+                <p>
+                  <span class="card-title"><a href="https://www.tum.de/" target="_blank" class="teal-text hoverline">Technical University of Munich &#x2764;&#xFE0F;&#x200D;&#x1F525;</a></span>
+                </p>
+                <p class="brown-text">Munich, Germany</p>
+                <p>
+                  <b>Program: </b>Exchange student at Department of Civil and Environmental Engineering
+                  <br>
+                  <b>Year: </b>2021.Oct - 2022.Aug
+                  <br>
+                  
+                </p>
+
+                <ul>
+                  <p>
+                    <b>Relevant Courseworks:</b>
+                  <ul>
+                    <li>Discrete Choice Methods for Transportation Systems Analysis</li>
+                    <li>Interactions of Land-use and Transport</li>
+                    <li>German as a Foreign Language A1.1</li>
+                    <!-- <li>Prof. Jing Teng</li>                    -->
+                  </ul>
+                  
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col s12 m6 l6">
+            <div class="card">
+              <div class="card-content">
+                <p>
+                  <span class="card-title"><a href="https://www.tongji.edu.cn/" target="_blank" class="teal-text hoverline">Tongji University &#x1F49D;</a></span>
+                </p>
+                <p class="brown-text">Shanghai, China</p>
+                <p>
+                  <b>Degree: </b>Master of Engineering in Transportation Engineering
+                  <br>
+                  <b>Year: </b>2019.Sep - 2022.Jun
+                  <br>
+                  <b>GPA: </b>4.5/5
+                </p>
+
+                <ul>
+                  <p>
+                    <b>Master Dissertation:</b>
+                  <ul>
+                    <li>Research on Adaptability Evaluation Method of Route Deviation Demand Responsive Transit</li>
+                  </ul>
+                  </p>
+                  <p>
+                    <b>Supervisor:</b>
+                  <ul>
+                    <li><a href="https://tjjt.tongji.edu.cn/szdw1/jsml2/ysglgcx1/tj.htm" target="_blank" class="teal-text hoverline">Prof. Jing Teng</a></li>                   
+                  </ul>
+                  </p>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l6">
+            <div class="card">
+              <div class="card-content">
+                <p>
+                  <span class="card-title"><a href="https://www.bjtu.edu.cn/" target="_blank" class="teal-text hoverline">Beijing Jiaotong University &#x1F496;</a></span>
+                </p>
+                <p class="brown-text">Beijing, China</p>
+                <p>
+                  <b>Degree: </b>Bachelor of Engineering in Traffic and Transportation
+                  <br>
+                  <b>Year: </b>2015.Sep - 2019.Jun
+                  <br>
+                  <b>GPA: </b>91.3/100.0
+                </p>
+
+                <ul>
+                  <p>
+                    <b>Bachelor Dissertation:</b>
+                  <ul>
+                    <li>Research on Layout Adaptive Evaluation of Train Operation Department under the Developed and Perfect Railway Network</li>                   
+                  </ul>
+                  </p>
+                  <p>
+                    <b>Supervisor:</b>
+                  <ul>
+                    <li>Assoc. Prof. Ying Wang & Prof. Haiying Li</li>                   
+                  </ul>
+                  </p>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Fourth Section: Publications -->
+    <section id="publications" class="section scrollspy">
+      <h3 class="page-title white-text teal">Publications</h3>
+      <div class="container">
+
+        <!-- Latest Publications -->
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2">
+                <a ><img alt="journalpaper logo"
+                    src="/assets/img/journalpaper.webp" class="responsive-img center-block" /></a>
+              </div>
+              <!-- <div class="col s12 m10"> -->
+            </div>
+            <div class="role brown-text text-darken-2"><p><b>Journal Article</b>
+            </div>
+            <ul>
+              <p><b><font size="5" color= #006666>Public Transport</font></b></p>
+              <li>
+                <b>Hui WANG</b>, Jinyang LI, Pengling WANG, Jing TENG, Becky PY Loo. (2023). Adaptability analysis methods of demand responsive transit: A review and future directions. Transport Reviews, 1-22. DOI: 10.1080/01441647.2023.2165574. <b><a href="https://doi.org/10.1080/01441647.2023.2165574" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+              <li>
+                Jinyang LI, Jing TENG, <b>Hui Wang</b>. (2023). Integrating bipartite network modelling and overlapping community detection: A new method to evaluate transit line coordination. Physica A: Statistical Mechanics and its Applications, 129169. DOI: 10.1016/j.physa.2023.129169 <b><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378437123007240?via%3Dihub" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+
+              <p>
+
+              </p>
+
+              <p><b><font size="5" color= #006666>Railway Transportation</font></b></p>
+              <li>
+                Jing TENG, <b>Hui WANG</b>, Cen ZHANG, Shaojie LIU. (2021). Evaluation of Operating Schemes on Municipal Rail Transit with Express/Local Mode. Transportation Research Record, 2675(12), 583-597. DOI: 10.1177/03611981211030261. <b><a href="https://doi.org/10.1177/03611981211030261" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+              <li>
+                Zhuotong Bai, <b>Hui Wang</b>, Lin Yang, Jiajie Li, Huapu Lu. (2023). A Rescheduling Approach for Freight Railway considering Equity and Efficiency by an Integrated Genetic Algorithm. Journal of Advanced Transportation. DOI: 10.1155/2023/8989644  <b><a href="https://doi.org/10.1155/2023/8989644" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+              <li>
+                Lin Yang, Dewei Li, <b>Hui Wang</b>, Yuan Gao. (2023). Integrating Stop Planning, Timetabling and Rolling Stock Planning on High-Speed Railway Lines: A Multi-Objective Optimization Approach. Expert Systems with Applications, 121515. DOI: 10.1016/j.eswa.2023.121515 <b><a href="https://doi.org/10.1016/j.eswa.2023.121515" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+              <li>
+                <b>Hui WANG</b>, Xinjun DU, Haiying LI, et al. (2019). A Study on Layout Adaptive Evaluation of Train Operation System. Railway Transport and Economy,2019,41(12):97-104. (In Chinese) <b><a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=TDYS201912020&uniplatform=NZKPT&v=ugJnLvfCNBTbwgBApKeO-qeIe7SfppavGJZvgU3H5DVOvSTePK1C3GkU9Ldj3EFT" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+              <li>
+                Xiang ZHENG, <b>Hui WANG</b>, Xingfang XU, Jing TENG. (2020). Comprehensive Evaluation of the Municipality Rail Transit Operation Plan Under the Express and Local Train Mode. Journal of East China Jiaotong University, 2020,37(06):58-67. (In Chinese) <b><a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=HDJT202006008&uniplatform=NZKPT&v=aQAK5uXBRJjDYjzTT_OiIfzC8YNirJ_-uFYdVGMaqj5OOr5eGd2Ao9FcNhniDSZS" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <span>latest update: 2023. Sep. 20th</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2">
+                <a ><img alt="journalpaper logo"
+                    src="/assets/img/journalpaper1.webp" class="responsive-img center-block" /></a>
+              </div>
+              <!-- <div class="col s12 m10"> -->
+            </div>
+            <div class="role brown-text text-darken-2"><p><b>Conference Proceedings & Presentation</b>
+            </div>
+            <ul>
+              <li>
+                Jing TENG, Tong WU, Cen ZHANG, Jinyang Li, and <b>Hui WANG</b>. (2023). Exploring heterogeneity in preferences for Mobility as a Service: An Airport Ground Access Case.
+                Presented at The Transportation Research Board (TRB) 102nd Annual Meeting.
+              </li>
+              <li>
+                <b>Hui WANG</b>, Jing TENG, and Becky P.Y. LOO. (2022). A Multi-Agent-Based Simulation: Explore the Adaptability of Route Deviation Demand Responsive Transit.
+                Proceedings of the 26th International Conference of Hong Kong Society for Transportation Studies, HKSTS 2022. DOI:10.25442/hku.21786815.v2.  <b><a href="https://datahub.hku.hk/articles/conference_contribution/A_Multi-Agent-Based_Simulation_Explore_the_Adaptability_of_Route_Deviation_Demand_Responsive_Transit/21786815/2" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+              <li>
+                <b>Hui WANG</b>, Lin YANG, Zhuotong Bai. (2020). A Multi-Objective Railway Freight Timetable Reschedule Approach with Extensive and Stochastic Delay.
+                Presented on the 2020 INFORMS Annual Meeting. <b><a href="https://www.informs.org/Recognizing-Excellence/Community-Prizes/Railway-Applications/Rail-Applications-Section-Problem-Solving-Competition" target="_blank" class="teal-text hoverline"> [LINK]</a></b>
+              </li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <span>latest update: 2023. Sep. 20th</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fifth Section: Projects -->
+    <section id="projects" class="section scrollspy">
+      <h3 class="page-title white-text teal">Projects</h3>
+      <div class="container">
+        <div class="row">
+          
+          <!-- Head Counting System -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Demand Responsive Transit" src="/assets/img/newdrt.gif" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Demand Responsive Transit<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Adaptability evaluation method of Route Deviation Demand Responsive Transit.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Summarizes the research methods of domestic and foreign DRT adaptability.</li>
+                  <li>A techno-economic assessment method is used to support the analysis of the RdDRT adaptability.</li>
+                  <li>A simulation modeling of RdDRT is created to support for the technical and economic evaluation model.</li>
+                  <li>Selecting Shanghai Jiading No. 66 bus as the research case.</li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Image Generator -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of  web app" src="/assets/img/smartvehicle.gif" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Smart vehicle<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Smart vehicle transportation system.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Funded by Strategic Consulting Center of Chinese Academy of Engineering.(10/2020-10/2021)</li>
+                  <li>Analyze the system operation and maintenance demand analysis.</li>
+                  <li>Build an optimization model of maintenance management.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Productivity optimization" src="/assets/img/chinarailwaynetwork.jpg" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Productivity optimization<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Productivity layout optimization of China's railway stations
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title grey-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Funded by China State Railway Group Co., Ltd. (12/2018-12/2019)</li>
+                  <li>Stage One: Establish an Evaluation Index System for The Whole Train Operation System in China</li>
+                  <li>Stage Two: Evaluation and Adjustment of the Layout of the Train Operation Department</li>
+                </ul>
+
+                <!-- <div class="card-action">
+                  <a aria-label="Visit " href="https://galvanic-music.herokuapp.com/" target="_blank" data-position="top"
+                    data-tooltip="View Online"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-external-link"></i></a>
+                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
+                    target="_blank" data-position="top" data-tooltip="View Source"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-github"></i></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="municipal rail" src="/assets/img/Guangzhouline.webp" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Municipal rail planning<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Research on the municipal rail with the express/local mode
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title grey-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Funded by Guangzhou Metro Design & Research Institute Co., Ltd.(06/2019-09/2021)</li>
+                  <li>Construct a passenger flow assignment model based on the improved multinominal logit model to solve the express/local line problems of multi-routes and high-overlapping..</li>
+                  <li>Solve the assignment model based on the method of successive averages algorithm.</li>
+                  <li>Establish an evaluation index system considering both passengers and operators.</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Flask Project -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of web app" src="/assets/img/Qingdao.jpg"
+                style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Qingdao MaaS<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Planning of Qingdao MaaS Platform.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title teal-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Funded by Qingdao Municipal Government.(06/2021-present)</li>
+                  <li>Investigation of travel behavior survey to Qingdao new airport (SP/RP survey +logit model).</li>
+                  <li>Research for (1) the characteristics of integrated transportation service in Qingdao metropolitan area; (2) operation mode of MaaS; (3) risk analysis and policy guarantee.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- VQA -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of  web app" src="/assets/img/yga.jpg" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">Integrate Metro and Intercity Rail<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  Integrated Operation and Management between Metro and Intercity Rail in Guangdong-Hong Kong-Macao Greater Bay Area.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title teal-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Funded by China Railway Design Group Co., Ltd.(07/2019-10/2019) </li>
+                  <li>Sub-topics 1: survey of EU railway interconnection; Sub-topics 2: standard setting of timetable collaborative optimization; Sub-topics 3: analysis of enterprise management and coordination mechanism.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Summarizer -->
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="Screenshot of  web app" src="/assets/img/oneticket.png" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">One-ticket connecting service<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  One-ticket connecting service system of passengers in Guangdong-Hong Kong-Macao Greater Bay Area.
+                </p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title brown-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li>Funded by Scientific Research Institute of the Ministry of transport.(06/2020-10/2020)</li>
+                  <li>Research and analysis of collaborative operation scheduling system.</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ************* -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Sixth Section: Awards -->
+    <section id="awards" class="section scrollspy">
+      <h3 class="page-title white-text teal">Awards</h3>
+      <div class="container">
+
+        <!-- Honors -->
+        <div class="card">
+          <div class="card-content">
+            <div class="col s12 m2">
+              <p>
+                <span class="card-title"><a target="_blank" class="teal-text hoverline">Honors</a></span>
+              </p>
+            </div>
+            
+            <!-- <div class="role brown-text text-darken-2">Software Engineer</div> -->
+            <ul>
+              <li>Outstanding Master's Thesis award from Tongji University. (2023)</li>
+              <li>Outstanding Graduate Award of Shanghai.                   (2022)</li>
+              <li>China National Scholarship.                               (2021)</li>
+              <li>Excellent Student Title at Tongji University.             (2020)</li>
+              <li>The Social Activities Scholarship at Tongji University.   (2020)</li>
+              <li>The Second Scholarship at Beijing Jiaotong University.    (2018)</li>
+              <li>The Third Scholarship at Beijing Jiaotong University.     (2017)</li>
+              <li>The Third Scholarship at Beijing Jiaotong University.     (2016)</li>
+              <!-- <li>
+                <b>Tools:</b> Python, Flask, MongoDB
+              </li> -->
+            </ul>
+          </div>
+          <div class="card-action">
+            <span>Latest update: 2023. Nov. 10th</span>
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="card">
+          <div class="card-content">
+            <div class="col s12 m2">
+              <p>
+                <span class="card-title"><a target="_blank" class="teal-text hoverline">Competitions</a></span>
+              </p>
+            </div>
+            <ul>
+              <li><b>The First Prize: </b>INFORMS: The 2020 RAS Problem Solving Competition. (2020) <b> [International] </b></li>
+              <li><b>The Second Prize: </b>The 17th China Graduate Mathematical Contest in Modeling. (2020) <b> [National] </b></li>
+              <li><b>The Second Prize: </b>The 16th China Graduate Mathematical Contest in Modeling. (2019) <b> [National] </b></li>
+              <li><b>Honorable Mention: </b>Interdisciplinary Contest in Modeling. (2018) <b> [International] </b></li>
+              <li><b>The Second Prize: </b>Asia and Pacific Mathematical Contest in Modeling. (2018) <b> [International] </b></li>
+              <li><b>Excellent Award: </b>Shenzhen Road Traffic Accident Data Analysis Competition. (2018) <b> [Provincial] </b></li>
+              <!-- <li>
+                <b>Tools:</b> Python, Flask, MongoDB
+              </li> -->
+            </ul>
+          </div>
+          <div class="card-action">
+            <span>Latest update: 2023. Sep. 20th</span>
+          </div>
+        </div>
+    </section>
+
+<!-- Seventh Section: Skills -->
+<section id="skills" class="section scrollspy">
+  <h3 class="page-title white-text teal">Skills</h3>
+  <div class="container">
+    <!-- Languages-->
+    <div class="card">
+      <div class="card-content">
+        <h4 class="brown-text light">Languages</h4>
+        <div class="row text-center">
+          <div class="col s4 m3">
+            <img alt="" src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python
+          </div>
+          <div class="col s4 m3">
+            <img alt="" src="/assets/img/Rlanguage.png" class="responsive-img" />R
+          </div>
+          <div class="col s4 m3">
+            <img alt="" src="/assets/img/Matlab.jpg" class="responsive-img" />Matlab
+          </div>
+          <div class="col s4 m3">
+            <img alt="" src="/assets/img/html5-300x300.jpg" class="responsive-img" />Html
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4 class="brown-text light">Softwares</h4>
+        <div class="row text-center">
+          <div class="col s4 m2">
+            <img alt="" src="/assets/img/AnyLogic.png" class="responsive-img" />AnyLogic
+          </div>
+          <div class="col s4 m2">
+            <img alt="" src="/assets/img/Arcgis.jfif" class="responsive-img" />Arcgis
+          </div>
+          <div class="col s4 m2">
+            <img alt="" src="/assets/img/geoda.jpg" class="responsive-img" />Geoda
+          </div>
+          <div class="col s4 m2">
+            <img alt="" src="/assets/img/VScode.png" class="responsive-img" />VS
+          </div>
+          <div class="col s4 m2">
+            <img alt="" src="/assets/img/SPSS.jpg" class="responsive-img" />SPSS
+          </div>
+          <div class="col s4 m2">
+            <img alt="" src="/assets/img/CAD.jpg" class="responsive-img" />CAD
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Eighth Section: Contact -->
+    <section id="contact" class="section scrollspy full-height">
+      <h3 class="page-title white-text teal">Contact</h3>
+        
+      <div class="container">
+        <p>
+          <a aria-label="Call Hui" data-position="top" data-tooltip="Call Hui"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
+              aria-label="Call Hui">  +852 94242654 </a></a>
+        </p>
+        <p>
+          <a aria-label="Email Hui" href="mailto:huiwanghk@connect.hku.hk" target="_blank" data-position="top"
+            data-tooltip="Email Hui" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-envelope"></i><a aria-label="Email Hui" href="mailto:huiwanghk@connect.hku.hk"
+              class="hoverline">  huiwanghk@connect.hku.hk</a></a>
+        </p>
+        <p>
+          <a aria-label="View Hui on LinkedIn" href="https://www.linkedin.com/in/hui-wang-b0488b199/" target="_blank"
+            data-position="top" data-tooltip="View Hui on LinkedIn"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-linkedin"></i><a aria-label="Hui on LinkedIn" href="https://www.linkedin.com/in/hui-wang-b0488b199/"
+              class="hoverline" target="_blank">  linkedin.com/in/hui-wang-b0488b199/</a></a>
+        </p>
+      </div> 
+
+    </section>
+  </main>
+
+  <!-- typed.js -->
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script type="text/javascript">
+    var typed = new Typed('.typing',{
+      strings: ["PhD Student", "Transportation Researcher", "Geography New Learner"],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40
+    });
+  </script>
+
+
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Materialize - Compiled and minified JavaScript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script>
+    // Materialize - Initializers
+    $(document).ready(function () {
+      $(".scrollspy").scrollSpy()
+      // Initialize collapse button
+      $(".button-collapse").sideNav({
+        menuWidth: 190, // Default is 240
+        edge: "left", // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      })
+    })
+  </script>
 </body>
+
 </html>
