@@ -1,0 +1,25 @@
+    <section id="contact" class="section scrollspy full-height">
+      <h3 class="page-title white-text teal">Contact</h3>
+        
+      <div class="container">
+        <p>
+          <a aria-label="Call Hui" data-position="top" data-tooltip="Call Hui"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
+              aria-label="Call Hui">  +852 94242654 </a></a>
+        </p>
+        <p>
+          <a aria-label="Email Hui" href="mailto:huiwanghk@connect.hku.hk" target="_blank" data-position="top"
+            data-tooltip="Email Hui" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-envelope"></i><a aria-label="Email Hui" href="mailto:huiwanghk@connect.hku.hk"
+              class="hoverline">  huiwanghk@connect.hku.hk</a></a>
+        </p>
+        <p>
+          <a aria-label="View Hui on LinkedIn" href="https://www.linkedin.com/in/hui-wang-b0488b199/" target="_blank"
+            data-position="top" data-tooltip="View Hui on LinkedIn"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-linkedin"></i><a aria-label="Hui on LinkedIn" href="https://www.linkedin.com/in/hui-wang-b0488b199/"
+              class="hoverline" target="_blank">  linkedin.com/in/hui-wang-b0488b199/</a></a>
+        </p>
+      </div> 
+
+    </section>
