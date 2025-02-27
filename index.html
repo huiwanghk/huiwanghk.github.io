@@ -5,11 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- 引入 Material Design Icons -->
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
-  
-  <!-- 引入 Materialize CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -25,6 +20,7 @@
   <link rel="icon" type="image/png" href="/hku.jpg" />
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
 
   <!-- Materialize - Compiled and minified CSS-->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
@@ -61,18 +57,9 @@
   <meta name="twitter:url" content="https://twitter.com/Elvin_Wang123" />
   <meta name="author" content="Hui Wang" />
   <meta name="description" content="Transportation Researcher with a passion for better mobility." />
-
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
-
   <link rel="icon" href="/assets/img/favicon/hku.jpg" />
+
+
   <link rel="manifest" href="/assets/img/favicon/manifest.json" />
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-TileImage" content="/assets/img/favicon/hku.jpg" />
@@ -91,13 +78,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Menu</title>
+  <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      /* 去掉默认的外边距 */
+      font-family: Arial, sans-serif;
+    }
+
+    .logo {
+      display: flex;
+      /* 使用 Flexbox 布局 */
+      justify-content: flex-start;
+      /* 左对齐 */
+      padding: 0px 10px;
+      /* 添加内边距 */
+    }
+
+    .logo img {
+      width: 120px;
+      /* 设置固定宽度，增加头像大小 */
+      height: auto;
+      /* 保持头像的纵横比 */
+      border-radius: 50%;
+      /* 使头像成为圆形 */
+    }
+
+    .side-nav {
+      padding-top: 0;
+      /* 去掉顶部内边距 */
+      padding-left: 0px;
+      /* 添加左内边距 */
+    }
+
+    .side-nav li {
+      text-align: left;
+      /* 确保导航项左对齐 */
+    }
+  </style>
+</head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    
   <nav class="hide-on-small-only">
     <ul class="side-nav fixed section table-of-contents">
       <li class="logo">
@@ -108,20 +133,20 @@
       </li>
       <li class="bold">
         <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
+            class="mdi mdi-account small"></i><span>About</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Publications section" href="#publications"
           class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Publications</span></a>
+            class="mdi mdi-trending-up small"></i><span>Publications</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi mdi-folder small"></i><span>Projects</span></a>
+            class="mdi mdi-book-open-page-variant small"></i><span>Projects</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Service section" href="#service" class="waves-effect waves-dark teal-text"><i
-            class="mdi mdi-bell small"></i><span>Service</span></a>
+            class="mdi mdi-star small"></i><span>Service</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Awards section" href="#awards" class="waves-effect waves-dark teal-text"><i
@@ -129,7 +154,7 @@
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Travel section" href="#travel" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-public small"></i><span>Travel</span></a>
+            class="mdi mdi-earth small"></i><span>Travel</span></a>
       </li>
     </ul>
   </nav>
@@ -189,7 +214,7 @@
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Awards section" href="#awards" class="waves-effect waves-dark teal-text">
-          <i class="mdi mdi-trophy small"></i><span>Awards</span>
+          <i class="mdi-action-assessment small"></i><span>Awards</span>
         </a>
       </li>
       <li class="bold">
@@ -1097,7 +1122,7 @@
       }
 
       .section {
-        padding: 0px;
+        padding: 20px;
       }
 
       .map-container {
@@ -1141,7 +1166,7 @@
         }
 
         .section {
-          padding: 0px;
+          padding: 20px;
         }
 
         .full-height {
@@ -1417,10 +1442,21 @@
               style="vertical-align: middle;">
           </a>
         </div>
+
+
+
     </body>
+
     </html>
+
+
+
+
   </body>
+
   </html>
+
+
 </main>
 
 
