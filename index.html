@@ -71,8 +71,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap-icons.min.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_rkdI2gWmU6OFK3ScMDAnNrJZ9QnMjds&callback=initMap"
-    async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_rkdI2gWmU6OFK3ScMDAnNrJZ9QnMjds&callback=initMap&loading=async" defer></script>
+  <script>
+    // Google Maps 的 initMap 函数
+    function initMap() {
+        const googleMap = new google.maps.Map(document.getElementById("google-map"), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+        });
+        // 添加标记等...
+    }
+</script>
   <link href="https://cdn.jsdelivr.net/npm/twemoji@13.0.1/2/twemoji.min.css" rel="stylesheet">
 </head>
 
@@ -215,7 +224,7 @@
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Awards section" href="#awards" class="waves-effect waves-dark teal-text">
-          <i class=""mdi mdi-trophy small"></i><span>Awards</span>
+          <i class="mdi mdi-trophy small"></i><span>Awards</span>
         </a>
       </li>
       <li class="bold">
@@ -423,7 +432,6 @@
             </p>
             <p style="text-align: left; font-size: 16px;">
               * denotes corresponding author. ☘️ means Top 10% in the respective subject category. <br>
-              <br>
             </p>
           </div>
           <ul>
@@ -1291,7 +1299,7 @@
         <div class="map-container">
           <div id="map" style="width: 100%; height: 100%;"></div> <!-- Leaflet.js 地图 -->
         </div>
-
+    
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
           // 确保在窗口加载后初始化地图
@@ -1433,10 +1441,10 @@
         </script>
 
         <!-- Divider Line -->
-        <div style="border-top: 1px solid #ccc; margin: 3vh 0;"></div> <!-- 新增的横线 -->
+        <div style="border-top: 1px solid #ccc; margin: 5vh 0;"></div> <!-- 新增的横线 -->
         <div style="display: flex; flex-direction: column; align-items: center;">
           <div class="clustr-map"> </div>
-          <div style="border-top: 1px solid #ccc; margin: 3vh 0;"></div> <!-- 这里增加的横线 -->
+          <div style="border-top: 1px solid #ccc; margin: 5vh 0;"></div> <!-- 这里增加的横线 -->
         </div>
 
         <!-- ClustrMaps Globe at the Bottom -->
@@ -1473,7 +1481,7 @@
 
 
 <!-- jQuery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <!-- Materialize - Compiled and minified JavaScript-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
