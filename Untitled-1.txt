@@ -1,0 +1,130 @@
+</style></head><body>< !-- 第八节：旅行 --><section id="travel"class="section scrollspy full-height"><h3 class="page-title white-text teal">Travel</h3>< !-- 文字容器 --><div class="container flow-text"style="text-align: justify; font-size: 16px; line-height: 1.8;"><p>My travels have taken me to a diverse array of cities. As a student of transport and geography,
+I've developed a deep appreciation
+for both urban landscapes and natural wonders. I find joy in exploring city streets,
+observing how urban design intertwines with transport systems to shape daily life. Equally,
+I'm drawn to the serenity of forests and the vastness of oceans,
+often venturing outdoors to experience nature's beauty firsthand.
+</p><p>Through my geographical perspective,
+I've come to see these urban spaces
+as more than just points on a map. Each city tells its own story,
+with differences in planning,
+architecture,
+and culture that continue to fascinate me. </p><p>I've created a map to illustrate this journey: <span style="color: red;">red markers</span> indicate places
+where I've lived for extended periods, absorbing the local culture and rhythms;
+<span style="color: green;">green markers</span>highlight cities I've explored as a curious visitor;
+and <span style="color: blue;">blue markers</span>point to destinations that spark my imagination for future adventures. </p></div>< !-- 地图容器 --><div class="map-container"><div id="map"style="width: 100%; height: 100%;"></div>< !-- Leaflet.js 地图 --></div><script src="https://unpkg.com/leaflet/dist/leaflet.js"></script><script> // 确保在窗口加载后初始化地图
+
+window.onload=function () {
+  // 创建地图并设置初始视图为全球
+  const map=L.map('map').setView([0, 0], 2); // 初始视图设置为全球，缩放级别设置为2
+
+  // 添加 CartoDB Positron 瓦片图层
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }
+
+  ).addTo(map);
+
+  // 创建红色标记的图标
+  const redMarkerIcon=L.icon( {
+      iconUrl: 'assets/img/map/redmarker.png', // 使用自定义红色标记图标
+      iconSize: [40, 40], // 图标大小
+      iconAnchor: [12, 41], // 图标锚点
+      popupAnchor: [1, -34] // 弹出窗口锚点
+    }
+
+  );
+
+  // 创建绿色标记的图标
+  const greenMarkerIcon=L.icon( {
+      iconUrl: 'assets/img/map/greenmarker.png', // 使用自定义绿色标记图标
+      iconSize: [19, 30], // 图标大小
+      iconAnchor: [12, 41], // 图标锚点
+      popupAnchor: [1, -34] // 弹出窗口锚点
+    }
+
+  );
+
+  // 创建蓝色标记的图标
+  const blueMarkerIcon=L.icon( {
+      iconUrl: 'assets/img/map/bluemarker.svg', // 使用自定义蓝色标记图标
+      iconSize: [20, 32], // 图标大小
+      iconAnchor: [12, 41], // 图标锚点
+      popupAnchor: [1, -34] // 弹出窗口锚点
+    }
+
+  );
+
+  // 添加香港标记
+  const hongKongMarker=L.marker([22.3964, 114.1099], {
+      icon: redMarkerIcon
+    }
+
+  ).addTo(map); // 香港的坐标
+  hongKongMarker.bindPopup(` <div style="max-width: 150px;"> <b>Hong Kong</b><br> <img src="assets/img/map/hongkong.jpg"alt="Hong Kong"style="width:80%; max-width: 80px; height: auto;"> <br>I am now living in this city. It's hot!
+</div> `);
+
+  // 添加上海标记
+  const shanghaiMarker=L.marker([31.2304, 121.4737], {
+      icon: redMarkerIcon
+    }
+
+  ).addTo(map);
+  shanghaiMarker.bindPopup(` <div style="max-width: 150px;"> <b>Shanghai</b> <br>Shanghai is a city of remarkable efficiency and vibrant prosperity. Its charm lies in the refined lifestyle of its inhabitants, with a touch of petit bourgeois romance. . <br> <a href="https://maps.app.goo.gl/eCx5Q1HUvWgpz5Ck7"target="_blank">View on Google Maps</a> </div> `);
+
+  // 添加扬州标记
+  const yangzhouMarker=L.marker([32.3942, 119.4384], {
+      icon: redMarkerIcon
+    }
+
+  ).addTo(map);
+  yangzhouMarker.bindPopup(` <div style="max-width: 150px;"> <b>Yangzhou</b> <img src="assets/img/map/yangzhou.jpg"alt="yangzhou"style="width:100%; max-width: 100px; height: auto;"> <br>I grew up in a small county town north of Yangzhou, an area known as the "land of fish and rice."
+    Yangzhou enjoys a pleasant and humid climate, with almost no natural disasters. The United Nations has recognized it as a livable city. The region is blessed with abundant water resources, with major rivers like the Yangtze, the Grand Canal, and the Slender West Lake crisscrossing the landscape. These waterways have not only nurtured a rich civilization but also shaped the beauty and character of its people. Growing up in the tranquil water towns of Jiangnan, the soft rhythms of life in this watery paradise instilled a sense of patience and harmony. 故人西辞黄鹤楼，烟花三月下扬州<br> <a href="https://maps.app.goo.gl/XzTa2BC3LXAbQEmU6"target="_blank">View on Google Maps</a> </div> `);
+
+  // 添加北京标记
+  const beijingMarker=L.marker([39.9042, 116.4074], {
+      icon: redMarkerIcon
+    }
+
+  ).addTo(map); // 使用相同的红色标记
+  beijingMarker.bindPopup(` <div style="max-width: 150px;"> <b>Beijing</b> <br>The ages between 18 and 22 are certainly among the best times in a person's life. 
+I'm very grateful that I spent those years in Beijing, and even more so that I lived near the 
+Second Ring Road. I loved riding my bike along Xueyuan Road on summer nights in Beijing, and I also enjoyed taking walks in Jingshan Park. Every time I was there, I felt especially comfortable and had a sense of home. After staying for four years,
+    I feel I've acquired some of that open-minded and easygoing attitude of the Beijing locals.</br>
+<a href="https://maps.app.goo.gl/46aF7BF8pGoMo6BV6"target="_blank">View on Google Maps</a> </div> `);
+
+  // 添加慕尼黑标记
+  const munichMarker=L.marker([48.1351, 11.5820], {
+      icon: redMarkerIcon
+    }
+
+  ).addTo(map); // 使用相同的红色标记
+  munichMarker.bindPopup(` <div style="max-width: 150px;"> <b>Munich</b><br> <img src="assets/img/map/munich.jpg"alt="Munich"style="width:100%; max-width: 100px; height: auto;"> <br>Munich will always be my favorite European city. It is very clean, with streams in the countryside as clear as pure water. There, I met many lifelong friends. </div> `);
+
+  // 添加 Gaztelugatxe 标记
+  const gaztelugatxeMarker=L.marker([43.3860, -2.7257], {
+      icon: greenMarkerIcon
+    }
+
+  ).addTo(map); // Gaztelugatxe 的坐标
+  gaztelugatxeMarker.bindPopup(` <div style="max-width: 150px;"> <b>Gaztelugatxe</b><br> After drinks with friends, a 90-min hike led to this wild Bay of Biscay beach. We witnessed the 60-million-year-old Game of Thrones filming location: cliffs, shallows, and sea stacks.<br> <img src="assets/img/map/gaztelugatxe.jpg"alt="Gaztelugatxe"style="width:100%; max-width: 100px; height: auto;"><br> <a href="https://maps.app.goo.gl/xTFxfyLCfxLvAEsL9"target="_blank">View on Google Maps</a> </div> `);
+
+  // 添加大加那利岛标记
+  const granCanariaMarker=L.marker([27.9305, -15.5702], {
+      icon: greenMarkerIcon
+    }
+
+  ).addTo(map); // 大加那利岛的坐标
+  granCanariaMarker.bindPopup(` <div style="max-width: 150px;"> <b>Gran Canaria</b><br> 这本是一个安静而人迹稀少的岛屿，十年前欧洲渴求阳光的游客，给它带来了不尽的繁荣。电影，摄影，手表， 这些赋重税的商店又挤满在大街小巷，一个个乱糟糟的大城，总觉得它有香港一式一样的气氛。 This was once a quiet island with few visitors. Ten years ago, European tourists seeking sunshine brought it endless prosperity. Shops selling heavily taxed items like movies, photography equipment, and watches are now crammed into every street and alley. These chaotic big cities always give me the same atmosphere as Hong Kong -《逍遥七岛游》三毛.<br> <img src="assets/img/map/gran.png"alt="Gran Canaria"style="width:100%; max-width: 100px; height: auto;"><br> <a href="https://maps.app.goo.gl/jLLzeKwoho4GFRSq6"target="_blank">View on Google Maps</a> </div> `);
+
+  // 添加布里斯班标记
+  const brisbaneMarker=L.marker([-27.4698, 153.0251], {
+      icon: blueMarkerIcon
+    }
+
+  ).addTo(map); // 布里斯班的坐标
+  brisbaneMarker.bindPopup(` <div style="max-width: 150px;"> <b>Brisbane</b><br> On my bucket list for a trip or potential relocation.<br> <a href="https://maps.app.goo.gl/52SPjxoczwAin8Mm7"target="_blank">View on Google Maps</a> </div> `);
+}
+
+;
