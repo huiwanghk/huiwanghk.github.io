@@ -556,6 +556,12 @@ Second Ring Road. I loved riding my bike along Xueyuan Road on summer nights in 
   ).addTo(map); // 大加那利岛的坐标
   granCanariaMarker.bindPopup(` <div style="max-width: 150px;"> <b>Gran Canaria</b><br> 这本是一个安静而人迹稀少的岛屿，十年前欧洲渴求阳光的游客，给它带来了不尽的繁荣。电影，摄影，手表， 这些赋重税的商店又挤满在大街小巷，一个个乱糟糟的大城，总觉得它有香港一式一样的气氛。 This was once a quiet island with few visitors. Ten years ago, European tourists seeking sunshine brought it endless prosperity. Shops selling heavily taxed items like movies, photography equipment, and watches are now crammed into every street and alley. These chaotic big cities always give me the same atmosphere as Hong Kong -《逍遥七岛游》三毛.<br> <img src="assets/img/map/gran.png"alt="Gran Canaria"style="width:100%; max-width: 100px; height: auto;"><br> <a href="https://maps.app.goo.gl/jLLzeKwoho4GFRSq6"target="_blank">View on Google Maps</a> </div> `);
 
+  const sanDiegoMarker = L.marker([32.7157, -117.1611], {
+    icon: greenMarkerIcon
+  }).addTo(map); // San Diego coordinates
+
+  sanDiegoMarker.bindPopup(`<div style="max-width: 150px;"> <b>San Diego</b><br> I love the sea lions at La Jolla Cove. <br> <a href="https://maps.app.goo.gl/P2UAgM9AqQTd7Xrk9" target="_blank">View on Google Maps</a></div>`);
+
   // 添加布里斯班标记
   const brisbaneMarker=L.marker([-27.4698, 153.0251], {
       icon: blueMarkerIcon
