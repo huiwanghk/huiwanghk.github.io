@@ -457,6 +457,7 @@ body {
             padding: 20px;
         }
     </style>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_rkdI2gWmU6OFK3ScMDAnNrJZ9QnMjds&callback=initMap"></script>
 </head>
 <body>
     <!-- 第八节：旅行 -->
@@ -476,56 +477,58 @@ body {
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        const map = L.map('map').setView([0, 0], 2); // 初始视图设置为全球
+        function initMap() {
+            const map = L.map('map').setView([0, 0], 2); // 初始视图设置为全球
 
-        // 添加 CartoDB Positron 瓦片图层
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        }).addTo(map);
+            // 添加 CartoDB Positron 瓦片图层
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            }).addTo(map);
 
-        // 创建红色标记的图标
-        const redMarkerIcon = L.icon({
-            iconUrl: 'assets/img/map/redmarker.png', // 请确保这是有效的路径
-            iconSize: [40, 40],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34]
-        });
+            // 创建红色标记的图标
+            const redMarkerIcon = L.icon({
+                iconUrl: 'assets/img/map/redmarker.png', // 请确保这是有效的路径
+                iconSize: [40, 40],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34]
+            });
 
-        // 创建绿色标记的图标
-        const greenMarkerIcon = L.icon({
-            iconUrl: 'assets/img/map/greenmarker.png', // 请确保这是有效的路径
-            iconSize: [19, 30],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34]
-        });
+            // 创建绿色标记的图标
+            const greenMarkerIcon = L.icon({
+                iconUrl: 'assets/img/map/greenmarker.png', // 请确保这是有效的路径
+                iconSize: [19, 30],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34]
+            });
 
-        // 创建蓝色标记的图标
-        const blueMarkerIcon = L.icon({
-            iconUrl: 'assets/img/map/bluemarker.svg', // 请确保这是有效的路径
-            iconSize: [20, 32],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34]
-        });
+            // 创建蓝色标记的图标
+            const blueMarkerIcon = L.icon({
+                iconUrl: 'assets/img/map/bluemarker.svg', // 请确保这是有效的路径
+                iconSize: [20, 32],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34]
+            });
 
-        // 添加标记
-        const markers = [
-            { coords: [22.3964, 114.1099], icon: redMarkerIcon, title: "Hong Kong", desc: "I am now living in this city." },
-            { coords: [31.2304, 121.4737], icon: redMarkerIcon, title: "Shanghai", desc: "A city of remarkable efficiency." },
-            { coords: [32.3942, 119.4384], icon: redMarkerIcon, title: "Yangzhou", desc: "I grew up in a small county town." },
-            { coords: [39.9042, 116.4074], icon: redMarkerIcon, title: "Beijing", desc: "Spent my best years here." },
-            { coords: [48.1351, 11.5820], icon: redMarkerIcon, title: "Munich", desc: "My favorite European city." },
-            { coords: [43.3860, -2.7257], icon: greenMarkerIcon, title: "Gaztelugatxe", desc: "A wild beach." },
-            { coords: [27.9305, -15.5702], icon: greenMarkerIcon, title: "Gran Canaria", desc: "Once a quiet island." },
-            { coords: [32.7157, -117.1611], icon: greenMarkerIcon, title: "San Diego", desc: "I love the sea lions." },
-            { coords: [-8.4095, 115.1889], icon: greenMarkerIcon, title: "Bali", desc: "Volunteered at an orphanage." },
-            { coords: [-27.4698, 153.0251], icon: blueMarkerIcon, title: "Brisbane", desc: "On my bucket list." }
-        ];
+            // 添加标记
+            const markers = [
+                { coords: [22.3964, 114.1099], icon: redMarkerIcon, title: "Hong Kong", desc: "I am now living in this city." },
+                { coords: [31.2304, 121.4737], icon: redMarkerIcon, title: "Shanghai", desc: "A city of remarkable efficiency." },
+                { coords: [32.3942, 119.4384], icon: redMarkerIcon, title: "Yangzhou", desc: "I grew up in a small county town." },
+                { coords: [39.9042, 116.4074], icon: redMarkerIcon, title: "Beijing", desc: "Spent my best years here." },
+                { coords: [48.1351, 11.5820], icon: redMarkerIcon, title: "Munich", desc: "My favorite European city." },
+                { coords: [43.3860, -2.7257], icon: greenMarkerIcon, title: "Gaztelugatxe", desc: "A wild beach." },
+                { coords: [27.9305, -15.5702], icon: greenMarkerIcon, title: "Gran Canaria", desc: "Once a quiet island." },
+                { coords: [32.7157, -117.1611], icon: greenMarkerIcon, title: "San Diego", desc: "I love the sea lions." },
+                { coords: [-8.4095, 115.1889], icon: greenMarkerIcon, title: "Bali", desc: "Volunteered at an orphanage." },
+                { coords: [-27.4698, 153.0251], icon: blueMarkerIcon, title: "Brisbane", desc: "On my bucket list." }
+            ];
 
-        markers.forEach(marker => {
-            const m = L.marker(marker.coords, { icon: marker.icon }).addTo(map);
-            m.bindPopup(`<b>${marker.title}</b><br>${marker.desc}`);
-        });
+            markers.forEach(marker => {
+                const m = L.marker(marker.coords, { icon: marker.icon }).addTo(map);
+                m.bindPopup(`<b>${marker.title}</b><br>${marker.desc}`);
+            });
+        }
     </script>
 
     <!-- Divider Line -->
