@@ -130,9 +130,314 @@
                     <i class="mdi mdi-trophy small"></i><span>Awards</span>
                 </a>
             </li>
+            <!-- 添加间距 -->
+            <div style="height: 350px;"></div>
+            <!-- 木鱼系统开始 -->
+            <div style="width: 180px; margin: 0 auto; text-align: center; padding: 5px;">
+                <!-- 功德计数和进度条 -->
+                <div style="
+                    font-size: 16px; 
+                    color: #D4AF37; 
+                    margin-bottom: -5px;
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    font-weight: 500;
+                ">
+                    功德：<span id="merit-count" style="color: #FFD700;">0</span>
+                </div>
+
+                <!-- 进度条 -->
+                <div style="
+                    width: 100px;
+                    height: 11px;
+                    background: rgba(218, 165, 32, 0.2);
+                    border-radius: 2px;
+                    margin: 0 auto 6px auto;
+                    overflow: hidden;
+                ">
+                    <div id="merit-progress" style="
+                        width: 0%;
+                        height: 100%;
+                        background: linear-gradient(to right, #FFD700, #D4AF37);
+                        transition: width 0.3s ease;
+                    "></div>
+                </div>
+
+                <!-- 方形底座容器 -->
+                <div style="
+                    width: 120px;
+                    height: 120px;
+                    background: linear-gradient(145deg, #fff8e5, #fff1d4);
+                    border-radius: 12px;
+                    margin: 0 auto;
+                    position: relative;
+                    box-shadow: 0 2px 12px rgba(218, 165, 32, 0.2);
+                    padding: 10px;
+                    border: 1px solid rgba(218, 165, 32, 0.1);
+                ">
+                    <!-- 木鱼和敲击棒容器 -->
+                    <div class="wooden-fish-container" onclick="knockWoodenFish()" style="position: relative; height: 100px; cursor: pointer;">
+                        <!-- 木鱼底座 -->
+                        <div style="
+                            width: 70px;
+                            height: 12px;
+                            background: linear-gradient(to right, #D4AF37, #FFD700, #D4AF37);
+                            border-radius: 6px;
+                            position: absolute;
+                            bottom: 15px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        "></div>
+
+                        <!-- 木鱼本体 -->
+                        <div class="fish" style="
+                            width: 60px;
+                            height: 30px;
+                            background: linear-gradient(to bottom, #FFD700, #D4AF37);
+                            border-radius: 50% 50% 10px 10px;
+                            position: absolute;
+                            bottom: 25px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            box-shadow: 0 4px 8px rgba(218, 165, 32, 0.3);
+                        ">
+                            <!-- 木鱼纹理 -->
+                            <div style="
+                                width: 50px;
+                                height: 20px;
+                                border: 2px solid rgba(218, 165, 32, 0.3);
+                                border-radius: 40% 40% 8px 8px;
+                                position: absolute;
+                                top: 2px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            "></div>
+                        </div>
+                        
+                        <!-- 敲击棒 -->
+                        <div class="stick" style="
+                            width: 8px;
+                            height: 40px;
+                            background: linear-gradient(to bottom, #FFD700, #D4AF37);
+                            position: absolute;
+                            top: 15px;
+                            left: calc(50% + 20px);
+                            transform: rotate(-45deg);
+                            transform-origin: bottom;
+                            transition: transform 0.2s;
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        ">
+                            <div style="
+                                width: 12px;
+                                height: 12px;
+                                background: linear-gradient(45deg, #D4AF37, #FFD700);
+                                border-radius: 50%;
+                                position: absolute;
+                                top: -6px;
+                                left: -2px;
+                                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                            "></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 提示文字 -->
+                <div style="
+                    font-size: 11px;
+                    color: #B8860B;
+                    margin-top: 8px;
+                    opacity: 0.8;
+                ">
+                    点击木鱼积累功德
+                </div>
+            </div>
         </ul>
     </nav>
+    <script>
+    let merit = 0;
+    const LEVEL_THRESHOLD = 100; // 每100功德升一级
 
+    // 添加所有动画样式
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translate(var(--x-offset), 0) scale(0.8);
+            }
+            10% {
+                opacity: 1;
+                transform: translate(var(--x-offset), -20px) scale(1.2);
+            }
+            60% {
+                opacity: 1;
+                transform: translate(calc(var(--x-offset) + var(--x-drift)), -60px) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(calc(var(--x-offset) + var(--x-drift) * 1.5), -100px) scale(0.8);
+            }
+        }
+
+        @keyframes knockAnimation {
+            0% { transform: rotate(-45deg); }
+            50% { transform: rotate(-30deg); }
+            100% { transform: rotate(-45deg); }
+        }
+
+        @keyframes fishShake {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(0.98); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+
+        @keyframes glowPulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .merit-plus {
+            position: absolute;
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: bold;
+            pointer-events: none;
+            animation: floatUp 1.2s ease-out forwards;
+            z-index: 10;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .wooden-fish-container:active .stick {
+            animation: knockAnimation 0.2s ease-out;
+        }
+
+        .wooden-fish-container:active .fish {
+            animation: fishShake 0.2s ease-out;
+        }
+
+        .wooden-fish-container:hover .stick {
+            transform: rotate(-50deg);
+        }
+    `;
+    document.head.appendChild(styleSheet);
+
+    function showCompletionMessage() {
+        // 创建提示元素
+        const message = document.createElement('div');
+        message.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(145deg, #FFD700, #D4AF37);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 2px 12px rgba(218, 165, 32, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 100;
+            white-space: nowrap;
+        `;
+        message.textContent = '今日功德已圆满';
+        
+        // 添加到容器
+        const container = document.querySelector('.wooden-fish-container');
+        container.appendChild(message);
+        
+        // 淡入效果
+        setTimeout(() => {
+            message.style.opacity = '1';
+        }, 100);
+        
+        // 添加光芒效果
+        const glow = document.createElement('div');
+        glow.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
+            animation: glowPulse 1.5s ease-out;
+            pointer-events: none;
+        `;
+        container.appendChild(glow);
+        
+        // 3秒后移除提示
+        setTimeout(() => {
+            message.style.opacity = '0';
+            setTimeout(() => {
+                message.remove();
+                glow.remove();
+            }, 300);
+        }, 3000);
+    }
+
+    function updateProgress() {
+        const progress = (merit % LEVEL_THRESHOLD) / LEVEL_THRESHOLD * 100;
+        document.getElementById('merit-progress').style.width = `${progress}%`;
+        
+        // 如果进度满了，显示圆满提示
+        if (merit > 0 && merit % LEVEL_THRESHOLD === 0) {
+            showCompletionMessage();
+            const progressBar = document.getElementById('merit-progress');
+            progressBar.style.transition = 'none';
+            progressBar.style.width = '100%';
+            progressBar.style.opacity = '0.8';
+            
+            setTimeout(() => {
+                progressBar.style.transition = 'width 0.3s ease';
+                progressBar.style.width = '0%';
+                progressBar.style.opacity = '1';
+            }, 50);
+        }
+    }
+
+    function knockWoodenFish() {
+        merit += 1;
+        document.getElementById('merit-count').textContent = merit;
+        updateProgress();
+        
+        // 创建+1动画
+        const plusOne = document.createElement('div');
+        plusOne.textContent = '+1';
+        plusOne.className = 'merit-plus';
+        
+        // 随机位置和漂移
+        const xOffset = (Math.random() - 0.5) * 40;
+        const xDrift = (Math.random() - 0.5) * 60;
+        
+        plusOne.style.setProperty('--x-offset', `${xOffset}px`);
+        plusOne.style.setProperty('--x-drift', `${xDrift}px`);
+        plusOne.style.left = '50%';
+        plusOne.style.top = '20px';
+        
+        document.querySelector('.wooden-fish-container').appendChild(plusOne);
+        
+        // 清理动画元素
+        setTimeout(() => plusOne.remove(), 1200);
+    }
+
+    // 添加触摸设备支持
+    document.querySelector('.wooden-fish-container').addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        knockWoodenFish();
+    });
+    </script>
     <!-- Nav class 2 -->
     <!-- 手机端导航栏 -->
     <nav class="hide-on-large-only trigger z-depth-1" style="background-color: white; height: 60px; line-height: 60px;">
@@ -202,7 +507,7 @@
                             <h2 style="font-weight: 600; font-size: 25px; line-height: 1.4;">
                                 <span style="font-size: 30px; display: inline-block; animation: wave 0.5s ease-in-out;">Hi There! 👋</span><br />
                                 I'm <span class="teal" style="display: inline-block; transition: transform 0.3s ease;">Hui Wang 
-                                    <span style="font-family: 'KaiTi', '楷体', STKaiti, '华文楷体', serif; font-size: 28px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">王輝</span>
+                                    <span style="font-family: 'KaiTi', '楷体', STKaiti, '华文楷体', serif; font-size: 28px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">王輝.</span>
                                 </span>
                             </h2>
                         </div>
