@@ -134,21 +134,65 @@
     </nav>
 
     <!-- Nav class 2 -->
-    <nav class="hide-on-large-only trigger z-depth-1">
-        <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out" class="button-collapse">
-            <i class="mdi-navigation-menu"></i>
-        </a>
-        <div class="name-title">
-            <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Hui Wang</a>
-            <span class="black-text">HKU Geography</span>
+    <!-- 手机端导航栏 -->
+    <nav class="hide-on-large-only trigger z-depth-1" style="background-color: white; height: 60px; line-height: 60px;">
+        <div style="display: flex; align-items: center; height: 100%; position: relative;">
+            <a href="#" data-activates="mobile-demo" class="button-collapse" style="display: flex; align-items: center; position: absolute; left: 5px;">
+                <i class="mdi-navigation-menu" style="color: teal; font-size: 30px;"></i>
+            </a>
+            <div class="name-title" style="flex: 1; text-align: center;">
+                <a id="mobile-name" href="#" class="teal-text" style="font-size: 18px; font-weight: 500; display: block; line-height: normal;">Hui Wang</a>
+                <span class="black-text" style="font-size: 14px; opacity: 0.8;">HKU Geography</span>
+            </div>
         </div>
     </nav>
+
+    <!-- 手机端侧边栏 -->
+    <ul id="mobile-demo" class="side-nav" style="background-color: white;">
+        <li class="bold" style="margin: 10px 0;">
+            <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text" 
+            style="padding: 15px 20px; display: flex; align-items: center; font-weight: 500;">
+                <i class="mdi mdi-account small" style="margin-right: 15px; color: teal;"></i>
+                <span>About</span>
+            </a>
+        </li>
+        <li class="bold" style="margin: 10px 0;">
+            <a aria-label="Navigate to the Publications section" href="#publications" class="waves-effect waves-dark teal-text"
+            style="padding: 15px 20px; display: flex; align-items: center; font-weight: 500;">
+                <i class="mdi-av-my-library-books small" style="margin-right: 15px; color: teal;"></i>
+                <span>Publications</span>
+            </a>
+        </li>
+        <li class="bold" style="margin: 10px 0;">
+            <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"
+            style="padding: 15px 20px; display: flex; align-items: center; font-weight: 500;">
+                <i class="mdi mdi-briefcase small" style="margin-right: 15px; color: teal;"></i>
+                <span>Projects</span>
+            </a>
+        </li>
+        <li class="bold" style="margin: 10px 0;">
+            <a aria-label="Navigate to the Service section" href="#service" class="waves-effect waves-dark teal-text"
+            style="padding: 15px 20px; display: flex; align-items: center; font-weight: 500;">
+                <i class="mdi mdi-handshake small" style="margin-right: 15px; color: teal;"></i>
+                <span>Services</span>
+            </a>
+        </li>
+        <li class="bold" style="margin: 10px 0;">
+            <a aria-label="Navigate to the Awards section" href="#awards" class="waves-effect waves-dark teal-text"
+            style="padding: 15px 20px; display: flex; align-items: center; font-weight: 500;">
+                <i class="mdi mdi-trophy small" style="margin-right: 15px; color: teal;"></i>
+                <span>Awards</span>
+            </a>
+        </li>
+    </ul>
+
+
 
 
     <!-- Main Content -->
     <main>
         <!-- First Section: Heading lines and image -->
-         <section id="intro" class="section scrollspy full-height">
+        <section id="intro" class="section scrollspy full-height">
             <div class="overlay"></div>
             <div class="container">
                 <div class="col s12 m6 l6">
@@ -222,87 +266,195 @@
             <h3 class="page-title white-text teal">About</h3>
             <div class="container flow-text" style="text-align: justify; font-size: 16px; line-height: 1.6;">
                 <!-- Main Introduction -->
-                <p>
-                    Hui is a third-year PhD candidate at the 
-                    <a href="https://www.geog.hku.hk/" target="_blank" class="teal-text hoverline">Department of Geography</a>, 
-                    <a href="https://www.hku.hk/" target="_blank" class="teal-text hoverline">The University of Hong Kong</a>.
-                    Under the expert guidance of 
-                    <a href="https://www.bpyloo.hku.hk/" target="_blank" class="teal-text hoverline">Professor Becky P.Y. Loo</a> 
-                    and with the invaluable support of 
-                    <a href="https://www.jlfc.hku.hk/" target="_blank" class="teal-text hoverline">The Joint Lab on Future Cities</a>, 
-                    he is exploring sustainable transport solutions to ensure the sustainability of future cities. Hui received his Master's degree in Transport Engineering from the 
-                    <a href="https://tjjt.tongji.edu.cn/" target="_blank" class="teal-text hoverline">College of Transportation</a>, 
-                    at <a href="https://www.tongji.edu.cn/" target="_blank" class="teal-text hoverline">Tongji University</a> 
-                    in June 2022 and the B.E. degree in Railway Transport Engineering from the 
-                    <a href="http://trans.bjtu.edu.cn/cms/" target="_blank" class="teal-text hoverline">School of Traffic and Transportation</a>, 
-                    at <a href="https://www.bjtu.edu.cn/" target="_blank" class="teal-text hoverline">Beijing Jiaotong University</a> 
-                    in June 2019, respectively. He has been awarded several honors, including the China National Scholarship, 
-                    Outstanding Graduate Award of Shanghai, and Outstanding Master's Thesis award.
-                </p>
+                <!-- About -->
+                <div style="margin-bottom: 20px;">
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                        Hui is a third-year PhD candidate at the 
+                        <a href="https://www.geog.hku.hk/" target="_blank" class="teal-text hoverline">Department of Geography</a>, 
+                        <a href="https://www.hku.hk/" target="_blank" class="teal-text hoverline">The University of Hong Kong</a>.
+                        Under the expert guidance of 
+                        <a href="https://www.bpyloo.hku.hk/" target="_blank" class="teal-text hoverline">Professor Becky P.Y. Loo</a> 
+                        and with the invaluable support of 
+                        <a href="https://www.jlfc.hku.hk/" target="_blank" class="teal-text hoverline">The Joint Lab on Future Cities</a>, 
+                        he is exploring sustainable transport solutions to ensure the sustainability of future cities. Hui received his Master's degree in Transport Engineering from the 
+                        <a href="https://tjjt.tongji.edu.cn/" target="_blank" class="teal-text hoverline">College of Transportation</a>, 
+                        at <a href="https://www.tongji.edu.cn/" target="_blank" class="teal-text hoverline">Tongji University</a> 
+                        in June 2022 and the B.E. degree in Railway Transport Engineering from the 
+                        <a href="http://trans.bjtu.edu.cn/cms/" target="_blank" class="teal-text hoverline">School of Traffic and Transportation</a>, 
+                        at <a href="https://www.bjtu.edu.cn/" target="_blank" class="teal-text hoverline">Beijing Jiaotong University</a> 
+                        in June 2019, respectively. He has been awarded several honors, including the China National Scholarship, 
+                        Outstanding Graduate Award of Shanghai, and Outstanding Master's Thesis award.
+                    </p>
 
-                <p>
-                    His training encompasses both engineering and social sciences and his current research focuses on developing people-oriented and place-based methods 
-                    to facilitate safe, inclusive, efficient, and healthy transport systems, contributing transformative changes to next-generation mobility.
-                </p>
+                    <p style="font-size: 16px; line-height: 1.6;">
+                        His training encompasses both engineering and social sciences and his current research focuses on developing people-oriented and place-based methods 
+                        to facilitate safe, inclusive, efficient, and healthy transport systems, contributing transformative changes to next-generation mobility.
+                    </p>
+                </div>
 
                 <!-- Research Interests -->
-                <p style="text-align: left; font-size: 16px; margin-top: 20px;">
-                    <i class="material-icons" style="color: teal; vertical-align: middle; margin-right: 8px; font-size: 20px;">science</i>
-                    <strong style="font-size: 18px;">Research Interests:</strong><br>
-                    <div style="margin-left: 28px; margin-top: 5px;">
-                        <span style="color: teal; margin-right: 8px;">•</span>Transport planning, travel behavior and urban form<br>
-                        <span style="color: teal; margin-right: 8px;">•</span>Rail operations, management and optimization<br>
-                        <span style="color: teal; margin-right: 8px;">•</span>Active travel, health and spatial analysis
+                <div class="research-section" style="margin-top: 20px;">
+                    <div class="section-header" style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <i class="material-icons" style="color: teal; margin-right: 8px; font-size: 20px;">science</i>
+                        <strong style="font-size: 18px;">Research Interests</strong>
                     </div>
-                </p>
+
+                    <div style="margin-left: 0;">
+                        <div style="display: flex; margin-bottom: 6px;">
+                            <span style="color: teal; margin-right: 8px;">•</span>
+                            <span>Transport planning, travel behavior and urban form</span>
+                        </div>
+                        
+                        <div style="display: flex; margin-bottom: 6px;">
+                            <span style="color: teal; margin-right: 8px;">•</span>
+                            <span>Rail operations, management and optimization</span>
+                        </div>
+                        
+                        <div style="display: flex;">
+                            <span style="color: teal; margin-right: 8px;">•</span>
+                            <span>Active travel, health and spatial analysis</span>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Education -->
-                <p style="text-align: left; font-size: 16px; margin-top: 20px;">
-                    <i class="material-icons" style="color: teal; vertical-align: middle; margin-right: 8px; font-size: 20px;">school</i>
-                    <strong style="font-size: 18px;">Education:</strong><br>
-                    <div style="margin-left: 28px; margin-top: 5px;">
-                        
-                        <span style="color: teal; margin-right: 8px;">•</span>M.Eng (Transport), 
-                        <a href="https://www.tongji.edu.cn/" target="_blank" class="teal-text hoverline">Tongji University</a>, 
-                        Shanghai, China<br>
-                        <div style="margin-left: 20px; color: #666; margin-top: 2px; margin-bottom: 8px;">
-                            <i class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 5px;">person</i>Advisor: 
-                            <a href="https://tjjt.tongji.edu.cn/info/2901/10856.htm" target="_blank" class="teal-text hoverline">Prof. Jing Teng</a><br>
-                            <i class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 5px;">date_range</i>Sep. 2019–Jun. 2022
-                        </div>
-                        
-                        <span style="color: teal; margin-right: 8px;">•</span>B.Eng (Railway Transport), 
-                        <a href="https://www.bjtu.edu.cn/" target="_blank" class="teal-text hoverline">Beijing Jiaotong University</a>, 
-                        Beijing, China<br>
-                        <div style="margin-left: 20px; color: #666; margin-top: 2px; margin-bottom: 8px;">
-                            <i class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 5px;">person</i>Advisor: 
-                            <a href="https://trans.bjtu.edu.cn/faculty/Q4brJaQeDoamEo15.html" target="_blank" class="teal-text hoverline">Dr. Ying Wang</a> & 
-                            <a href="https://trans.bjtu.edu.cn/faculty/M1gYnaAkjV7rDlVN.html" target="_blank" class="teal-text hoverline">Prof. Haiying Li</a><br>
-                            <i class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 5px;">date_range</i>Sep. 2015–Jun. 2019
-                        </div>
-                        
-                        <span style="color: teal; margin-right: 8px;">•</span>Exchange Student, 
-                        <a href="https://www.tum.de/" target="_blank" class="teal-text hoverline">Technical University of Munich</a>, 
-                        Munich, Germany<br>
-                        <div style="margin-left: 20px; color: #666; margin-top: 2px;">
-                            <i class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 5px;">date_range</i>Oct. 2021–Jun. 2022
-                        </div>
+                <div class="education-section" style="margin-top: 20px;">
+                    <div class="section-header" style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <i class="material-icons" style="color: teal; margin-right: 8px; font-size: 20px;">school</i>
+                        <strong style="font-size: 18px;">Education</strong>
                     </div>
-                </p>
+
+                    <!-- 香港大学 -->
+                    <div class="education-item" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                        <div style="flex: 1; min-width: 0;">  <!-- 添加 min-width: 0 确保文本可以正确换行 -->
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <span style="color: teal; margin-right: 8px; flex-shrink: 0;">•</span>
+                                <div style="min-width: 0;">
+                                    <a href="https://www.hku.hk/" target="_blank" class="teal-text hoverline" style="font-weight: 500;">The University of Hong Kong</a><span>, Hong Kong SAR, China</span>
+                                </div>
+                            </div>
+                            <div style="margin-left: 20px; color: #666; font-size: 14px;">
+                                <div style="margin-bottom: 4px;">PhD in Transport Geography</div>
+                                <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                                    <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">person</i>
+                                    <span>Advisor: <a href="https://bpyloo.hku.hk/" target="_blank" class="teal-text hoverline">Prof. Becky P.Y. Loo</a></span>
+                                </div>
+                                <div style="display: flex; align-items: center;">
+                                    <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">date_range</i>
+                                    <span>Sep. 2022–present</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/assets/img/hku.png" alt="HKU" style="width: 45px; height: 45px; margin-left: 15px; object-fit: contain;">
+                    </div>
+
+                    <!-- 同济大学 -->
+                    <div class="education-item" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                        <div style="flex: 1; min-width: 0;">  <!-- 添加 min-width: 0 确保文本可以正确换行 -->
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <span style="color: teal; margin-right: 8px; flex-shrink: 0;">•</span>
+                                <div style="min-width: 0;">
+                                    <a href="https://www.tongji.edu.cn/" target="_blank" class="teal-text hoverline" style="font-weight: 500;">Tongji University</a><span>, Shanghai, China</span>
+                                </div>
+                            </div>
+                            <div style="margin-left: 20px; color: #666; font-size: 14px;">
+                                <div style="margin-bottom: 4px;">M.Eng in Transport</div>
+                                <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                                    <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">person</i>
+                                    <span>Advisor: <a href="https://tjjt.tongji.edu.cn/info/2901/10856.htm" target="_blank" class="teal-text hoverline">Prof. Jing Teng</a></span>
+                                </div>
+                                <div style="display: flex; align-items: center;">
+                                    <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">date_range</i>
+                                    <span>Sep. 2019–Jun. 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/assets/img/tongji.png" alt="Tongji University" style="width: 45px; height: 45px; margin-left: 15px; object-fit: contain;">
+                    </div>
+
+                    <!-- 北交大 -->
+                    <div class="education-item" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                        <div style="flex: 1; min-width: 0;">
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <span style="color: teal; margin-right: 8px; flex-shrink: 0;">•</span>
+                                <div style="min-width: 0;">
+                                    <a href="https://www.bjtu.edu.cn/" target="_blank" class="teal-text hoverline" style="font-weight: 500;">Beijing Jiaotong University</a><span>, Beijing, China</span>
+                                </div>
+                            </div>
+                            <div style="margin-left: 20px; color: #666; font-size: 14px;">
+                                <div style="margin-bottom: 4px;">B.Eng in Railway Transport</div>
+                                <div style="margin-bottom: 2px;">
+                                    <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                                        <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">person</i>
+                                        <span>Advisor: <a href="https://trans.bjtu.edu.cn/faculty/Q4brJaQeDoamEo15.html" target="_blank" class="teal-text hoverline">Dr. Ying Wang</a></span>
+                                    </div>
+                                    <div style="margin-left: 19px;">
+                                        <a href="https://trans.bjtu.edu.cn/faculty/M1gYnaAkjV7rDlVN.html" target="_blank" class="teal-text hoverline">& Prof. Haiying Li</a>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center;">
+                                    <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">date_range</i>
+                                    <span>Sep. 2015–Jun. 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/assets/img/bjtu.png" alt="BJTU" style="width: 45px; height: 45px; margin-left: 15px; object-fit: contain;">
+                    </div>
+
+                    <!-- 慕尼黑工大 -->
+                    <div class="education-item" style="display: flex; justify-content: space-between;">
+                        <div style="flex: 1; min-width: 0;">
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <span style="color: teal; margin-right: 8px; flex-shrink: 0;">•</span>
+                                <div style="min-width: 0;">
+                                    <a href="https://www.tum.de/" target="_blank" class="teal-text hoverline" style="font-weight: 500;">Technical University of Munich</a><span>, Munich, Germany</span>
+                                </div>
+                            </div>
+                            <div style="margin-left: 20px; color: #666; font-size: 14px;">
+                                <div style="margin-bottom: 4px;">Exchange Student</div>
+                                <div style="display: flex; align-items: center;">
+                                    <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">date_range</i>
+                                    <span>Oct. 2021–Jun. 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/assets/img/tum.png" alt="TUM" style="width: 45px; height: 45px; margin-left: 15px; object-fit: contain;">
+                    </div>
+                </div>
+
+                <style>
+                @media screen and (max-width: 600px) {
+                    .education-item {
+                        margin-bottom: 15px;
+                    }
+                    .education-item img {
+                        width: 35px;
+                        height: 35px;
+                    }
+                    .education-item a, .education-item span {
+                        word-break: break-word;
+                    }
+                }
+                </style>
 
                 <!-- Contact -->
-                <p style="text-align: left; font-size: 16px; margin-top: 20px;">
-                    <i class="material-icons" style="color: teal; vertical-align: middle; margin-right: 8px; font-size: 20px;">email</i>
-                    <strong style="font-size: 18px;">Contact:</strong><br>
-                    <div style="margin-left: 28px; margin-top: 5px;">
-                        <span style="color: teal; margin-right: 8px;">•</span>
-                        <a href="mailto:huiwanghk@connect.hku.hk" class="teal-text hoverline">huiwanghk@connect.hku.hk</a><br>
-                        <p style="margin-top: 8px; color: #666;">
-                            <i class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 5px;">forum</i>
-                            Welcome for any questions and collaborations.
-                        </p>
+                <div class="contact-section" style="margin-top: 20px;">
+                    <div class="section-header" style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <i class="material-icons" style="color: teal; margin-right: 8px; font-size: 20px;">email</i>
+                        <strong style="font-size: 18px;">Contact</strong>
                     </div>
-                </p>
+
+                    <div style="display: flex; margin-bottom: 8px;">
+                        <span style="color: teal; margin-right: 8px;">•</span>
+                        <div>
+                            <a href="mailto:huiwanghk@connect.hku.hk" class="teal-text hoverline">huiwanghk@connect.hku.hk</a>
+                            <div style="margin-top: 8px; color: #666; font-size: 14px; display: flex; align-items: center;">
+                                <i class="material-icons" style="font-size: 14px; margin-right: 5px; flex-shrink: 0;">forum</i>
+                                <span>Welcome for any questions and collaborations.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -311,10 +463,9 @@
             <div class="container">
                 <!-- First Card: Journal Article -->
                 <div class="card">
-                    <div class="card-content">
-                        <div class="row">
-                            <div class="col s12 m2"></div>
-                            <div class="col s12 m12">
+                    <div class="card-content" style="padding-bottom: 0;">
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="col s12">
                                 <div style="margin-bottom: 20px;">
                                     <p style="text-align: left; font-size: 18px; margin-bottom: 10px;"><b>Journal Article</b></p>
                                     <div style="text-align: left; font-size: 16px; color: #666;">
@@ -708,10 +859,9 @@
                 </div>
                 <!-- Additional Presentations Card -->
                 <div class="card">
-                    <div class="card-content">
-                        <div class="row">
-                            <div class="col s12 m2"></div>
-                            <div class="col s12 m12">
+                    <div class="card-content" style="padding-bottom: 0;"> 
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="col s12">
                                 <p style="text-align: left; font-size: 18px;"><b>Selected Presentations & Workshop</b><br /></p>
                                 <div data-year="2023" class="year-section">
                                     <div class="year-header">
@@ -726,7 +876,7 @@
                                                 <div>
                                                     <span>Hui Wang</span>
                                                     <div style="margin: 2px 0;">Anylogic Training</div>
-                                                    <div style="color: #666; margin: 2px 0;"><em>Workshop at Global Virtual Design and Construction Limited's Training Centre</em>, Hong Kong SAR 2023.</div>
+                                                    <div style="color: #666; margin: 2px 0;"><em>Workshop at Global Virtual Design and Construction Limited's Training Centre</em>, Hong Kong SAR, China.</div>
                                                     <div style="margin-top: 3px;">
                                                         <span class="tag"><i class="material-icons icon-small">label</i> Agent-based Simulation</span>
                                                     </div>
@@ -739,12 +889,27 @@
                                                 <div>
                                                     <span>Hui Wang</span>
                                                     <div style="margin: 2px 0;">Adaptability Analysis of DRT: Review, Simulation and Future Directions</div>
-                                                    <div style="color: #666; margin: 2px 0;"><em>Workshop at Beijing Municipal Institute of City Planning & Design</em>, Beijing 2023. (Report in Chinese)</div>
+                                                    <div style="color: #666; margin: 2px 0;"><em>Workshop at Beijing Municipal Institute of City Planning & Design</em>, Beijing, China. (Report in Chinese)</div>
                                                     <div style="margin-top: 3px;">
                                                         <span class="tag"><i class="material-icons icon-small">label</i> Bus Planning</span>
-                                                        <span class="tag"><i class="material-icons icon-small">analytics</i> Spatial Analysis</span>
-                                                        <span class="tag"><i class="material-icons icon-small">analytics</i> Agent-based Simulation</span>
-                                                        <span class="tag"><i class="material-icons icon-small">analytics</i> Data Envelopment Analysis</span>
+                                                        <span class="tag"><i class="material-icons icon-small">label</i> Spatial Analysis</span>
+                                                        <span class="tag"><i class="material-icons icon-small">label</i> Agent-based Simulation</span>
+                                                        <span class="tag"><i class="material-icons icon-small">label</i> Data Envelopment Analysis</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="publication-item" data-topics="Bus Planning" data-methods="Spatial Analysis" style="list-style: none; margin-left: 0; margin-bottom: 10px;">
+                                            <div class="publication-content" style="line-height: 1.3;">
+                                                <i class="material-icons icon-article">event_note</i>
+                                                <div>
+                                                    <span>Hui Wang, Becky P.Y. Loo</span>
+                                                    <div style="margin: 2px 0;">A comprehensive evaluation of rural accessibility based on public transport: A case study from Hong Kong</div>
+                                                    <div style="color: #666; margin: 2px 0;"><em>Paper presented at the International Conference for Computational Social Science</em>, Copenhagen, Denmark.</div>
+                                                    <div style="margin-top: 3px;">
+                                                        <span class="tag"><i class="material-icons icon-small">label</i> Bus Planning</span>
+                                                        <span class="tag"><i class="material-icons icon-small">label</i> Spatial Analysis</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -756,11 +921,11 @@
                                                 <div>
                                                     <span>Jing Teng, Tong Wu, Cen Zhang, Jinyang Li, and Hui Wang</span>
                                                     <div style="margin: 2px 0;">Exploring heterogeneity in preferences for Mobility as a Service: An Airport Ground Access Case</div>
-                                                    <div style="color: #666; margin: 2px 0;"><em>Presented at the Transportation Research Board (TRB) 102nd Annual Meeting</em>, USA 2023.</div>
+                                                    <div style="color: #666; margin: 2px 0;"><em>Presented at the Transportation Research Board (TRB) 102nd Annual Meeting</em>, Washington, D.C., USA.</div>
                                                     <div style="margin-top: 3px;">
                                                         <span class="tag"><i class="material-icons icon-small">label</i> Bus Planning</span>
                                                         <span class="tag"><i class="material-icons icon-small">label</i> Travel Behaviour</span>
-                                                        <span class="tag"><i class="material-icons icon-small">analytics</i> Econometrics</span>
+                                                        <span class="tag"><i class="material-icons icon-small">label</i> Econometrics</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -768,7 +933,7 @@
                                     </ul>
                                 </div>
 
-                                <div data-year="2022" class="year-section">
+                                <div data-year="2022" class="year-section" style="margin-bottom: 0;">
                                     <div class="year-header">
                                         <div class="year-divider"></div>
                                         <div class="year-label"><i class="material-icons icon-medium">calendar_today</i>2020</div>
@@ -781,10 +946,10 @@
                                                 <div>
                                                     <span>Hui Wang, Lin Yang, Zhuotong Bai</span>
                                                     <div style="margin: 2px 0;">A Multi-Objective Railway Freight Timetable Reschedule Approach with Extensive and Stochastic Delay</div>
-                                                    <div style="color: #666; margin: 2px 0;"><em>Presented at the 2020 INFORMS Annual Meeting</em>, USA 2020.</div>
+                                                    <div style="color: #666; margin: 2px 0;"><em>Presented at the 2020 INFORMS Annual Meeting</em>, USA.</div>
                                                     <div style="margin-top: 3px;">
                                                         <span class="tag"><i class="material-icons icon-small">label</i> Railway Planning</span>
-                                                        <span class="tag"><i class="material-icons icon-small">analytics</i> Optimization</span>
+                                                        <span class="tag"><i class="material-icons icon-small">label</i> Optimization</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -798,7 +963,6 @@
                         <span style="font-size: 14px;"> Latest update: May/2025</span>
                     </div>
                 </div>
-
             </div>
         </section>
                                     
@@ -888,268 +1052,54 @@
             <div class="container">
                 <div class="row">
                     <!-- Public Transport Disadvantage -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 244px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px; display: flex; align-items: center; justify-content: center; background-color: #f5f5f5;">
-                                <img alt="Public Transport Disadvantage" src="/assets/img/disadvantage.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 12px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 1px;">
-                                    Public Transport Disadvantage
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Propose a holistic framework to identify public transport disadvantaged areas.<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Perform a case study in Hong Kong.
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Data:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>GTFS: Hong Kong Datastore (open data)<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Population & facilities: Hong Kong Common Spatial Data Infrastructure (CSDI) Portal (open data)
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Output:</span>
-                                        <div style="margin-top: 2px;">
-                                            <a href="https://www-sciencedirect-com.eproxy.lib.hku.hk/science/article/pii/S0966692324001923" 
-                                            target="_blank" 
-                                            style="display: inline-block; margin-right: 15px; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            📄 Research paper
-                                            </a>
-                                            <a href="https://www.jlfc.hku.hk/?pgid=m38v3yks-e9a0c559-3540-4e8e-8db3-9b18fcf1fd75" 
-                                            target="_blank"
-                                            style="display: inline-block; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            🎥 Video
-                                            </a>
-                                        </div>
-                                    </div>
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="Public Transport Disadvantage" 
+                                        src="/assets/img/disadvantage.jpg" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Dynamics of in-station time -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 240px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px;">
-                                <img alt="Dynamics of in-station time" src="/assets/img/MTR.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 8px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 2px solid #e0e0e0; padding-bottom: 1px;">
-                                    Dynamics of in-station time
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>An agent-based simulation to measure the dynamics of in-station time.<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Recommends both long-term and short-term measures.
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        Public Transport Disadvantage
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Propose a holistic framework to identify public transport disadvantaged areas.<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Perform a case study in Hong Kong.
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Data:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Passenger flow, station structure, & operation plan: MTR Corporation Limited.
+                                        <!-- Data -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Data:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>GTFS: Hong Kong Datastore (open data)<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Population & facilities: Hong Kong Common Spatial Data Infrastructure (CSDI) Portal (open data)
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Output:</span>
-                                        <div style="margin-top: 2px;">
-                                            <a href="https://www-sciencedirect-com.eproxy.lib.hku.hk/science/article/pii/S0886779824004243#f0015" 
-                                            target="_blank" 
-                                            style="display: inline-block; margin-right: 15px; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            📄 Research paper
-                                            </a>
-                                            <a href="https://www.jlfc.hku.hk/?pgid=m28s01w2-4e975174-0319-48f3-89be-b5fe6906b00a" 
-                                            target="_blank"
-                                            style="display: inline-block; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            🎥 Video
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Demand Responsive Transit -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 250px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px;">
-                                <img alt="Demand Responsive Transit" src="/assets/img/newdrt.gif" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 8px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 2px solid #e0e0e0; padding-bottom: 1px;">
-                                    Demand Responsive Transit
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Reviews the adaptability analysis methods of DRT.<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>An agent-based simulation to measure the operation of DRT.<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>A techno-economic assessment method is developed.
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Output:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <a href="https://www-tandfonline-com.eproxy.lib.hku.hk/doi/full/10.1080/01441647.2023.2165574" 
-                                            target="_blank" 
-                                            style="display: inline-block; margin-right: 15px; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            📄 Research paper 1
-                                            </a>
-                                            <a href="https://www.researchgate.net/publication/364621116_A_Multi-Agent-Based_Simulation_Explore_the_Adaptability_of_Route_Deviation_Demand_Responsive_Transit" 
-                                            target="_blank"
-                                            style="display: inline-block; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            📄 Research paper 2
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Honors:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Outstanding Master's Thesis award from Tongji University.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Railway Productivity optimization -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 240px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px;">
-                                <img alt="Railway Productivity optimization" src="/assets/img/chinarailwaynetwork.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 8px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 2px solid #e0e0e0; padding-bottom: 1px;">
-                                    Railway Productivity optimization
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Productivity layout evaluation & optimization of the train operation department.<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Adjustment in the train operation department is the most complex due to the involvement of personnel.<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>A study integrating railway transportation engineering and management.
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Sponsor:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>China State Railway Group Co., Ltd.
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Output:</span>
-                                        <div style="margin-top: 2px;">
-                                            <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=TDYS201912020&uniplatform=NZKPT&v=ugJnLvfCNBTbwgBApKeO-qeIe7SfppavGJZvgU3H5DVOvSTePK1C3GkU9Ldj3EFT" 
-                                            target="_blank" 
-                                            style="display: inline-block; margin-right: 15px; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            📄 Research paper
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Municipal railway planning -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 240px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px;">
-                                <img alt="Municipal railway planning" src="/assets/img/Guangzhouline.webp" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 8px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 2px solid #e0e0e0; padding-bottom: 1px;">
-                                    Municipal railway planning
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Develop a passenger flow assignment model (multinomial logit model) for express/local line problems.<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Solve the assignment model based on the method of successive averages algorithm.
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Sponsor:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Guangzhou Metro Design & Research Institute Co., Ltd.
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Output:</span>
-                                        <div style="margin-top: 2px;">
-                                            <a href="https://journals-sagepub-com.eproxy.lib.hku.hk/doi/10.1177/03611981211030261" 
-                                            target="_blank" 
-                                            style="display: inline-block; margin-right: 15px; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            📄 Research paper 1
-                                            </a>
-                                            <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=HDJT202006008&uniplatform=NZKPT&v=aQAK5uXBRJjDYjzTT_OiIfzC8YNirJ_-uFYdVGMaqj5OOr5eGd2Ao9FcNhniDSZS" 
-                                            target="_blank"
-                                            style="display: inline-block; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                            📄 Research paper 2
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Qingdao MaaS -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 240px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px;">
-                                <img alt="Qingdao MaaS" src="/assets/img/Qingdao.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 8px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 2px solid #e0e0e0; padding-bottom: 1px;">
-                                    Qingdao MaaS
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Conduct behavior survey for traveling to/from Qingdao new airport<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Suggest operation mode of MaaS for Qingdao city
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Sponsor:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Qingdao Municipal Government.
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Output:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>My policy recommendations on MaaS planning for Qingdao city have been adopted by the government and can be found on their official website.<br>
-                                            <div style="margin-top: 2px;">
-                                                <a href="http://www.qingdao.gov.cn/zwgk/xxgk/jtys/ywfl/jbjs/202208/t20220803_6297848.shtml" 
+                                        <!-- Output -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Output:</span>
+                                            <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                <a href="https://www-sciencedirect-com.eproxy.lib.hku.hk/science/article/pii/S0966692324001923" 
                                                 target="_blank" 
-                                                style="display: inline-block; margin-right: 15px; padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none;">
-                                                🔗 Website
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                📄 Research paper
+                                                </a>
+                                                <a href="https://www.jlfc.hku.hk/?pgid=m38v3yks-e9a0c559-3540-4e8e-8db3-9b18fcf1fd75" 
+                                                target="_blank"
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                🎥 Video
                                                 </a>
                                             </div>
                                         </div>
@@ -1159,30 +1109,320 @@
                         </div>
                     </div>
 
-                    <!-- Integrate Metro and Intercity Rail -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 240px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px;">
-                                <img alt="Integrate Metro and Intercity Rail" src="/assets/img/yga.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 8px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 2px solid #e0e0e0; padding-bottom: 1px;">
-                                    Integrate Metro and Intercity Rail
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Review of EU railway interconnection<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Research standard setting of timetable collaborative optimization<br>
-                                            <span style="color: teal; margin-right: 8px;">•</span>Analyze of enterprise management and coordination mechanism
+                    <!-- Dynamics of in-station time -->
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="Dynamics of in-station time" 
+                                        src="/assets/img/MTR.jpg" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
+                                </div>
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        Dynamics of in-station time
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>An agent-based simulation to measure the dynamics of in-station time.<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Recommends both long-term and short-term measures.
+                                            </div>
+                                        </div>
+
+                                        <!-- Data -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Data:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Passenger flow, station structure, & operation plan: MTR Corporation Limited.
+                                            </div>
+                                        </div>
+
+                                        <!-- Output -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Output:</span>
+                                            <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                <a href="https://www-sciencedirect-com.eproxy.lib.hku.hk/science/article/pii/S0886779824004243#f0015" 
+                                                target="_blank" 
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                📄 Research paper
+                                                </a>
+                                                <a href="https://www.jlfc.hku.hk/?pgid=m28s01w2-4e975174-0319-48f3-89be-b5fe6906b00a" 
+                                                target="_blank"
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                🎥 Video
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Sponsor:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>China Railway Design Group Co., Ltd.
+                    <!-- Demand Responsive Transit -->
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="Demand Responsive Transit" 
+                                        src="/assets/img/newdrt.gif" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
+                                </div>
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        Demand Responsive Transit
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Reviews the adaptability analysis methods of DRT.<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>An agent-based simulation to measure the operation of DRT.<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>A techno-economic assessment method is developed.
+                                            </div>
+                                        </div>
+
+                                        <!-- Output -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Output:</span>
+                                            <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                <a href="https://www-tandfonline-com.eproxy.lib.hku.hk/doi/full/10.1080/01441647.2023.2165574" 
+                                                target="_blank" 
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                📄 Research paper 1
+                                                </a>
+                                                <a href="https://www.researchgate.net/publication/364621116_A_Multi-Agent-Based_Simulation_Explore_the_Adaptability_of_Route_Deviation_Demand_Responsive_Transit" 
+                                                target="_blank"
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                📄 Research paper 2
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Honors -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Honors:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Outstanding Master's Thesis award from Tongji University.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Railway Productivity optimization -->
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="Railway Productivity optimization" 
+                                        src="/assets/img/chinarailwaynetwork.jpg" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
+                                </div>
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        Railway Productivity optimization
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Productivity layout evaluation & optimization of the train operation department.<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Adjustment in the train operation department is the most complex due to the involvement of personnel.<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>A study integrating railway transportation engineering and management.
+                                            </div>
+                                        </div>
+
+                                        <!-- Sponsor -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Sponsor:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>China State Railway Group Co., Ltd.
+                                            </div>
+                                        </div>
+
+                                        <!-- Output -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Output:</span>
+                                            <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=TDYS201912020&uniplatform=NZKPT&v=ugJnLvfCNBTbwgBApKeO-qeIe7SfppavGJZvgU3H5DVOvSTePK1C3GkU9Ldj3EFT" 
+                                                target="_blank" 
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                📄 Research paper
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Municipal railway planning -->
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="Municipal railway planning" 
+                                        src="/assets/img/Guangzhouline.webp" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
+                                </div>
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        Municipal railway planning
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Develop a passenger flow assignment model (multinomial logit model) for express/local line problems.<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Solve the assignment model based on the method of successive averages algorithm.
+                                            </div>
+                                        </div>
+
+                                        <!-- Sponsor -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Sponsor:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Guangzhou Metro Design & Research Institute Co., Ltd.
+                                            </div>
+                                        </div>
+
+                                        <!-- Output -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Output:</span>
+                                            <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                <a href="https://journals-sagepub-com.eproxy.lib.hku.hk/doi/10.1177/03611981211030261" 
+                                                target="_blank" 
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                📄 Research paper 1
+                                                </a>
+                                                <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=HDJT202006008&uniplatform=NZKPT&v=aQAK5uXBRJjDYjzTT_OiIfzC8YNirJ_-uFYdVGMaqj5OOr5eGd2Ao9FcNhniDSZS" 
+                                                target="_blank"
+                                                style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                📄 Research paper 2
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Qingdao MaaS -->
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="Qingdao MaaS" 
+                                        src="/assets/img/Qingdao.jpg" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
+                                </div>
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        Qingdao MaaS
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Conduct behavior survey for traveling to/from Qingdao new airport<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Suggest operation mode of MaaS for Qingdao city
+                                            </div>
+                                        </div>
+
+                                        <!-- Sponsor -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Sponsor:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Qingdao Municipal Government.
+                                            </div>
+                                        </div>
+
+                                        <!-- Output -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Output:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>My policy recommendations on MaaS planning for Qingdao city have been adopted by the government and can be found on their official website.<br>
+                                                <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                    <a href="http://www.qingdao.gov.cn/zwgk/xxgk/jtys/ywfl/jbjs/202208/t20220803_6297848.shtml" 
+                                                    target="_blank" 
+                                                    style="padding: 4px 8px; border-radius: 4px; background-color: #f5f5f5; color: teal; text-decoration: none; display: inline-block;">
+                                                    🔗 Website
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Integrate Metro and Intercity Rail -->
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="Integrate Metro and Intercity Rail" 
+                                        src="/assets/img/yga.jpg" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
+                                </div>
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        Integrate Metro and Intercity Rail
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Review of EU railway interconnection<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Research standard setting of timetable collaborative optimization<br>
+                                                <span style="color: teal; margin-right: 8px;">•</span>Analyze of enterprise management and coordination mechanism
+                                            </div>
+                                        </div>
+
+                                        <!-- Sponsor -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Sponsor:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>China Railway Design Group Co., Ltd.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1191,40 +1431,80 @@
                     </div>
 
                     <!-- One-ticket connecting service -->
-                    <div class="col s12" style="margin-bottom: -50;">
-                        <div class="card medium" style="display: flex; flex-direction: row; max-height: 240px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            <div class="card-image" style="flex: 1; margin: 0; overflow: hidden; border-radius: 8px 0 0 8px;">
-                                <img alt="One-ticket connecting service" src="/assets/img/oneticket.png" style="width: 100%; height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="card-content" style="flex: 2; padding: 8px 15px; overflow: auto; min-height: 250px;">
-                                <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 4px 0; display: block; border-bottom: 2px solid #e0e0e0; padding-bottom: 1px;">
-                                    One-ticket connecting service
-                                </span>
-                                <div style="font-size: 16px; line-height: 1.3;">
-                                    <div style="margin-bottom: 5px;">
-                                        <span style="color: teal; font-weight: 600;">Project highlights:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Analyze collaborative operation scheduling system
+                    <div class="col s12">
+                        <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <!-- 图片容器 -->
+                                <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <img alt="One-ticket connecting service" 
+                                        src="/assets/img/oneticket.png" 
+                                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;" />
+                                </div>
+                                
+                                <!-- 内容容器 -->
+                                <div style="flex: 2; padding: 16px;">
+                                    <span class="card-title teal-text" style="font-size: 18px; font-weight: 600; margin: 0 0 10px 0; display: block; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;">
+                                        One-ticket connecting service
+                                    </span>
+                                    
+                                    <div style="font-size: 16px; line-height: 1.3;">
+                                        <!-- Project Highlights -->
+                                        <div style="margin-bottom: 10px;">
+                                            <span style="color: teal; font-weight: 600;">Project highlights:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Analyze collaborative operation scheduling system
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div>
-                                        <span style="color: teal; font-weight: 600;">Sponsor:</span>
-                                        <div style="margin: 2px 0 5px 15px;">
-                                            <span style="color: teal; margin-right: 8px;">•</span>Scientific Research Institute of the Ministry of Transport.
+                                        <!-- Sponsor -->
+                                        <div>
+                                            <span style="color: teal; font-weight: 600;">Sponsor:</span>
+                                            <div style="margin: 4px 0 0 15px;">
+                                                <span style="color: teal; margin-right: 8px;">•</span>Scientific Research Institute of the Ministry of Transport.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                 
+                    </div>
+
+
+                </div>
             </div>
         </section>
+
+        <style>
+        @media screen and (min-width: 769px) {
+            .card > div {
+                flex-direction: row !important;
+            }
+            
+            .card > div > div:first-child {
+                flex: 0 0 400px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .card img {
+                border-radius: 8px 0 0 8px !important;
+                height: 300px;
+            }
+
+            /* Output 链接在电脑端的样式 */
+            .card a {
+                display: inline-block;
+                width: auto;
+            }
+        }
+        </style>
+
 
         <!-- Sixth Section: Service -->
         <section id="service" class="section scrollspy">
             <h3 class="page-title white-text teal">Service</h3>
             <div class="container">
+                <!-- Review Services Section -->
                 <!-- Review Services Section -->
                 <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
                     <div class="card-content" style="padding: 20px;">
@@ -1236,7 +1516,7 @@
                         </div>
                         
                         <!-- Journal Grid Layout -->
-                        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; padding: 0; margin: 0;">
+                        <ul class="journal-grid" style="display: grid; padding: 0; margin: 0;">
                             <!-- npj Sustainable Mobility -->
                             <li style="list-style: none;">
                                 <a href="https://www.nature.com/npjsustainmobil/" target="_blank" 
@@ -1321,6 +1601,30 @@
                     </div>
                 </div>
 
+                <style>
+                /* 响应式网格布局 */
+                .journal-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                    gap: 20px;
+                }
+
+                /* 手机端显示3列 */
+                @media screen and (max-width: 600px) {
+                    .journal-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 8px;
+                    }
+                }
+
+                /* 平板和电脑端保持原来的布局 */
+                @media screen and (min-width: 601px) {
+                    .journal-grid {
+                        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                        gap: 20px;
+                    }
+                }
+                </style>
+
                 <!-- Professionals -->
                 <div class="card" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
                     <div class="card-content" style="padding: 20px;">
@@ -1330,48 +1634,36 @@
                             </span>
                         </div>
                         
-                        <div style="padding: 0; margin: 0;">
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Student Member at
-                                    <a href="https://www.socsc.hku.hk/rhps/" target="_blank" class="teal-text hoverline" style="margin-left: 5px; text-transform: none;">HKU Research Hub of Population Studies</a>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">since 2025</span>
-                            </div>
+                        <ul style="list-style-type: disc; padding-left: 15px; margin: 0;">
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Student Member at
+                                <a href="https://www.socsc.hku.hk/rhps/" target="_blank" class="teal-text hoverline" style="text-transform: none;">HKU Research Hub of Population Studies</a>
+                                <span style="color: #666; font-size: 14px;">(since 2025)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Student Fellow at
-                                    <a href="https://www.jlfc.hku.hk/" target="_blank" class="teal-text hoverline" style="margin-left: 5px; text-transform: none;">HKU Joint Lab on Future Cities</a>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">since 2022</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Student Fellow at
+                                <a href="https://www.jlfc.hku.hk/" target="_blank" class="teal-text hoverline" style="text-transform: none;">HKU Joint Lab on Future Cities</a>
+                                <span style="color: #666; font-size: 14px;">(since 2022)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Student Fellow at
-                                    <a href="https://www.institute-of-transport-studies.hku.hk/" target="_blank" class="teal-text hoverline" style="margin-left: 5px; text-transform: none;">HKU Institute of Transport Studies</a>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">since 2022</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Student Fellow at
+                                <a href="https://www.institute-of-transport-studies.hku.hk/" target="_blank" class="teal-text hoverline" style="text-transform: none;">HKU Institute of Transport Studies</a>
+                                <span style="color: #666; font-size: 14px;">(since 2022)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Student Member at
-                                    <a href="https://www.informs.org/" target="_blank" class="teal-text hoverline" style="margin-left: 5px; text-transform: none;">US Institute for Operations Research and the Management Sciences (INFORMS)</a>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2020-2021</span>
-                            </div>
-                        </div>
+                            <li style="font-size: 16px; line-height: 1.3;">
+                                Student Member at
+                                <a href="https://www.informs.org/" target="_blank" class="teal-text hoverline" style="text-transform: none;">US Institute for Operations Research and the Management Sciences (INFORMS)</a>
+                                <span style="color: #666; font-size: 14px;">(2020-2021)</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="card-action">
                         <span>Latest update: May/2025</span>
                     </div>
-                </div>                            
+                </div>            
             </div>
         </section>
 
@@ -1388,39 +1680,32 @@
                             </span>
                         </div>
                         
-                        <div style="padding: 0; margin: 0;">
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Conference Support Scheme for Research Postgraduate (RPg) Students from HKU Research Hub of Population Studies.
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2025</span>
-                            </div>
+                        <ul style="list-style-type: disc; padding-left: 15px; margin: 0;">
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Conference Support Scheme for Research Postgraduate (RPg) Students from 
+                                <a href="https://www.socsc.hku.hk/rhps/" target="_blank" class="teal-text hoverline" style="text-transform: none;">HKU Research Hub of Population Studies</a>
+                                <span style="color: #666; font-size: 14px;">(2025)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    PhD Student Travel Fund from Hong Kong Society for Transportation Studies.
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2025</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                PhD Student Travel Fund from 
+                                <a href="https://www.hksts.org/" target="_blank" class="teal-text hoverline" style="text-transform: none;">Hong Kong Society for Transportation Studies</a>
+                                <span style="color: #666; font-size: 14px;">(2025)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    External Research Funding from Beijing Municipal Institute of City Planning & Design (Support Field Trip Expenses, including Accommodation and Survey Costs for Hui (PI), with an Amount of 50,000 RMB). <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2024</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                External Research Funding from 
+                                <a href="https://www.bjghy.com/" target="_blank" class="teal-text hoverline" style="text-transform: none;">Beijing Municipal Institute of City Planning & Design</a>
+                                (Support Field Trip Expenses, including Accommodation and Survey Costs for Hui (PI), with an Amount of 50,000 RMB)
+                                <span style="color: #666; font-size: 14px;">(2024)</span>
+                                <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    HKU Postgraduate Scholarship.
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2022-2026</span>
-                            </div>
-                        </div>
+                            <li style="font-size: 16px; line-height: 1.3;">
+                                HKU Postgraduate Scholarship
+                                <span style="color: #666; font-size: 14px;">(2022-2026)</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="card-action">
                         <span>Latest update: May/2025</span>
@@ -1436,87 +1721,60 @@
                             </span>
                         </div>
                         
-                        <div style="padding: 0; margin: 0;">
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Outstanding Master's Thesis award from Tongji University. <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2023</span>
-                            </div>
+                        <ul style="list-style-type: disc; padding-left: 15px; margin: 0;">
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Outstanding Master's Thesis award from Tongji University
+                                <span style="color: #666; font-size: 14px;">(2023)</span>
+                                <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Outstanding Graduate Award of Shanghai. <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2022</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Outstanding Graduate Award of Shanghai
+                                <span style="color: #666; font-size: 14px;">(2022)</span>
+                                <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    China National Scholarship.
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2021</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                China National Scholarship
+                                <span style="color: #666; font-size: 14px;">(2021)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Excellent Student Title at Tongji University.
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2020</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Excellent Student Title at Tongji University
+                                <span style="color: #666; font-size: 14px;">(2020)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    The Social Activities Scholarship at Tongji University.
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2020</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                The Social Activities Scholarship at Tongji University
+                                <span style="color: #666; font-size: 14px;">(2020)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    The Second Scholarship at Beijing Jiaotong University.
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2018</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                The Second Scholarship at Beijing Jiaotong University
+                                <span style="color: #666; font-size: 14px;">(2018)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Top 50 Mi Yue (Clash Lane) in Central and Western District, Hong Kong [Honor of Kings]. <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2025</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Top 50 Mi Yue (Clash Lane) in Central and Western District, Hong Kong [Honor of Kings]
+                                <span style="color: #666; font-size: 14px;">(2025)</span>
+                                <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Top 100 Erin (Farm Lane) in Central and Western District, Hong Kong [Honor of Kings].
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2025</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Top 50 Zhou Yu (Middle Lane) in Central and Western District, Hong Kong [Honor of Kings]
+                                <span style="color: #666; font-size: 14px;">(2025)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Top 100 Sang Qi (Roaming Support) in Central and Western District, Hong Kong [Honor of Kings].
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2025</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Top 100 Erin (Farm Lane) in Central and Western District, Hong Kong [Honor of Kings]
+                                <span style="color: #666; font-size: 14px;">(2025)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Top 50 Zhou Yu (Middle Lane) in Central and Western District, Hong Kong [Honor of Kings].
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2025</span>
-                            </div>
-                        </div>
+                            <li style="font-size: 16px; line-height: 1.3;">
+                                Top 100 Sang Qi (Roaming Support) in Central and Western District, Hong Kong [Honor of Kings]
+                                <span style="color: #666; font-size: 14px;">(2025)</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="card-action" style="padding: 2px 5;">
                         <span style="font-size: 14px;">Latest update: May/2025</span>
@@ -1532,49 +1790,36 @@
                             </span>
                         </div>
                         
-                        <div style="padding: 0; margin: 0;">
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    <span>The First Prize: </span>
-                                    <a href="https://www.informs.org/Recognizing-Excellence/Award-Recipients/Hui-Wang" target="_blank" class="teal-text hoverline" style="margin-left: 5px; text-transform: none;">INFORMS: The 2020 RAS Problem Solving Competition</a>
-                                    <span>. [International]. <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i></span>
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2020</span>
-                            </div>
+                        <ul style="list-style-type: disc; padding-left: 15px; margin: 0;">
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                The First Prize: 
+                                <a href="https://www.informs.org/Recognizing-Excellence/Award-Recipients/Hui-Wang" 
+                                target="_blank" 
+                                class="teal-text hoverline" 
+                                style="text-transform: none;">INFORMS: The 2020 RAS Problem Solving Competition</a>. 
+                                [International] <span style="color: #666; font-size: 14px;">(2020)</span> <i class="material-icons" style="color: #E91E63; font-size: 18px; vertical-align: middle;">bookmark</i>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    The Second Prize: The 17th China Graduate Mathematical Contest in Modeling. [National].
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2020</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                The Second Prize: The 17th China Graduate Mathematical Contest in Modeling. [National]
+                                <span style="color: #666; font-size: 14px;">(2020)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    The Second Prize: The 16th China Graduate Mathematical Contest in Modeling. [National].
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2019</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                The Second Prize: The 16th China Graduate Mathematical Contest in Modeling. [National]
+                                <span style="color: #666; font-size: 14px;">(2019)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    Honorable Mention: Interdisciplinary Contest in Modeling. [International].
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2018</span>
-                            </div>
+                            <li style="margin-bottom: 6px; font-size: 16px; line-height: 1.3;">
+                                Honorable Mention: Interdisciplinary Contest in Modeling. [International]
+                                <span style="color: #666; font-size: 14px;">(2018)</span>
+                            </li>
 
-                            <div style="padding: 2px 15px; font-size: 16px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <span style="color: teal; margin-right: 10px;">•</span>
-                                    The Second Prize: Asia and Pacific Mathematical Contest in Modeling. [International].
-                                </div>
-                                <span style="color: #666; font-size: 14px; margin-left: 10px; white-space: nowrap;">2018</span>
-                            </div>
-                        </div>
+                            <li style="font-size: 16px; line-height: 1.3;">
+                                The Second Prize: Asia and Pacific Mathematical Contest in Modeling. [International]
+                                <span style="color: #666; font-size: 14px;">(2018)</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="card-action" style="padding: 2px 5;">
                         <span style="font-size: 14px;">Latest update: May/2025</span>
@@ -1583,51 +1828,50 @@
             </div>
         </section>
 
-        <!-- ClustrMaps Globe at the Bottom -->
-        <div style="width: 20%; margin: auto">
+<!-- ClustrMaps Globe and Visitor Counter -->
+<div style="padding: 30px 0; text-align: center;">
+    <!-- ClustrMaps Globe -->
+    <div class="globe-container" style="width: 280px; max-width: 90%; margin: 0 auto 20px auto;">
+        <div style="border-radius: 50%; overflow: hidden;">
             <script
                 type="text/javascript"
                 id="clstr_globe"
                 src="//clustrmaps.com/globe.js?d=JnNpxa44ao2NTw1SEMdTyBmxadl7CF9n-SBR8v7xV_o"
             ></script>
         </div>
+    </div>
 
-        <!-- Access Counter -->
-        <div
-            style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                flex-wrap: wrap;
-            "
-        >
-            <span>Page visitors: </span>
-            <a
-                href="https://www.easycounter.com/"
-                class="counter-image"
-                style="margin-left: 0px"
-            >
-                <img
-                    src="https://www.easycounter.com/counter.php?elvinwongwong"
-                    border="0"
-                    alt="Free Hit Counter"
-                    style="vertical-align: middle"
-                />
-            </a>
-        </div>
+    <!-- Access Counter -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 16px;">
+        <span style="color: #424242;">Page visitors:</span>
+        <a href="https://www.easycounter.com/" 
+           class="counter-image"
+           style="text-decoration: none;">
+            <img src="https://www.easycounter.com/counter.php?elvinwongwong"
+                 border="0"
+                 alt="Visitor Counter"
+                 style="vertical-align: middle; height: 22px;" />
+        </a>
+    </div>
+</div>
+
+<style>
+@media screen and (max-width: 600px) {
+    .globe-container {
+        width: 220px !important;
+    }
+}
+</style>
 
     </main>
 
     <!-- 引入 Materialize 的 JavaScript 文件 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        // 初始化 Sidenav
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            M.Sidenav.init(elems);
-        });
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".button-collapse").sideNav();
+});
+</script>
 </body>
 </html>
