@@ -140,10 +140,11 @@ html {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98); /* 提高背景透明度 */
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
 
 /* ========== 移动端响应式 ========== */
@@ -202,15 +203,34 @@ html {
     flex-direction: column;
     gap: 0;
     padding: 0 2rem;
+    margin: 0; /* 确保没有额外边距 */
 }
 
 .mobile-menu .nav-links a {
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem 0; /* 增加上下内边距 */
+    border-bottom: 1px solid rgba(0, 77, 64, 0.1); /* 更淡的分割线 */
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+    background: transparent; /* 确保默认背景透明 */
+}
+
+.mobile-menu .nav-links a:hover {
+    background: rgba(0, 77, 64, 0.05); /* 很淡的悬停背景 */
+    color: var(--accent-color);
+    padding-left: 0.5rem; /* 悬停时稍微缩进 */
 }
 
 .mobile-menu .nav-links a:last-child {
     border-bottom: none;
+}
+
+.mobile-menu .nav-links li {
+    margin: 0; /* 确保li没有边距 */
+    list-style: none;
 }
 
 /* ========== 主要内容区域 ========== */
