@@ -146,6 +146,48 @@ html {
     padding: 1rem 0;
 }
 
+/* ========== 移动端响应式 ========== */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block; /* 在移动端显示汉堡包按钮 */
+    }
+    
+    .nav-links {
+        display: none; /* 隐藏桌面端的导航链接 */
+    }
+    
+    .nav-container {
+        padding: 1rem 1.5rem; /* 移动端减少内边距 */
+    }
+    
+    .logo {
+        font-size: 1rem; /* 移动端logo稍小 */
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .mobile-menu .nav-links {
+        display: flex; /* 移动端菜单中的链接要显示 */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 1rem; /* 更小屏幕进一步减少内边距 */
+    }
+    
+    .mobile-menu {
+        padding: 0.5rem 0;
+    }
+    
+    .mobile-menu .nav-links {
+        padding: 0 1rem; /* 减少移动端菜单内边距 */
+    }
+}
+
 .mobile-menu.active {
     display: block;
     animation: slideDown 0.3s ease;
