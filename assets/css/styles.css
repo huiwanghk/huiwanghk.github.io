@@ -249,8 +249,8 @@ main {
 }
 
 .social-btn {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: var(--primary-color);
     border: 1px solid var(--border-color);
@@ -261,7 +261,7 @@ main {
     text-decoration: none;
     box-shadow: var(--shadow-light);
     color: var(--accent-color); /* 添加图标颜色 */
-    font-size: 1.2rem; /* 添加图标大小 */
+    font-size: 1.8rem; /* 添加图标大小 */
 }
 
 .social-btn:hover {
