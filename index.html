@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Hui Wang - PhD Candidate at HKU Geography Department">
+    <meta name="description" content="Hui Wang - PhD Candidate at HKU Geography">
     <meta property="og:title" content="Hui Wang @ HKU">
     <meta property="og:description" content="PhD Candidate @ HKU Geography">
     <meta property="og:image" content="https://huiwanghk.github.io/examples/preview.JPG">
@@ -66,57 +66,74 @@
     <!-- Main Content -->
     <main>
         <!-- Home Page -->
-        <div id="home" class="page active">
-            <div class="home-hero">
-                <div class="greeting-section">
-                    <h2 class="greeting-title">
-                        <span class="wave-emoji">Hi There! 👋</span><br />
-                        I'm <span class="name-highlight">Hui 
-                            <span class="chinese-name">王輝.</span>
-                        </span>
-                    </h2>
-                </div>
-
-                <div class="social-media">
-                    <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-btn">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-btn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-btn">
-                        <i class="fab fa-researchgate"></i>
-                    </a>
-                    <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-btn">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-
-                <div class="affiliations">
-                    <a href="https://www.jlfc.hku.hk/" target="_blank" class="affiliation-link">
-                        The Joint Lab on Future Cities
-                    </a>
-                    <a href="https://www.geog.hku.hk/" target="_blank" class="affiliation-link">
-                        Department of Geography
-                    </a>
-                    <a href="https://www.institute-of-transport-studies.hku.hk/" target="_blank" class="affiliation-link">
-                        Institute of Transport Studies
-                    </a>
-                    <a href="https://www.socsc.hku.hk/rhps/" target="_blank" class="affiliation-link">
-                        Research Hub of Population Studies
-                    </a>
-                    <a href="https://www.hku.hk/" target="_blank" class="affiliation-link">
-                        The University of Hong Kong
-                    </a>
-                </div>
-
-                <div class="action-buttons">
-                    <button onclick="showPage('about')" class="btn btn-primary">Read More</button>
-                    <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-secondary">Contact Me</a>
-                    <a href="https://drive.google.com/file/d/1KddMQjBK5dB-J7Is7h8QDBIfhhwZbMoE/view?usp=sharing" target="_blank" class="btn btn-secondary">Download CV</a>
-                </div>
+<!-- Home Page -->
+<div id="home" class="page active">
+    <div class="home-hero">
+        <!-- 头像和介绍整合 -->
+        <div class="profile-intro">
+            <div class="profile-image">
+                <img src="/assets/img/profile.jpg" alt="Hui Wang" class="profile-img">
+            </div>
+            <div class="intro-text">
+                <h2 class="greeting-title">
+                    <span class="wave-emoji">Hi There! 👋</span><br />
+                    I'm <span class="name-highlight">Hui Wang 
+                        <span class="chinese-name">王輝.</span>
+                    </span>
+                </h2>
+                <p class="greeting-subtitle">
+                    PhD Candidate in Transport Geography 🚊
+                </p>
             </div>
         </div>
+
+        <!-- 简化的机构信息 -->
+        <div class="affiliations-simple">
+            <div class="affiliation-badges">
+                <a href="https://geog.hku.hk/" target="_blank" class="affiliation-badge">
+                    <i class="fas fa-university"></i>
+                    <span>HKU Geography</span>
+                </a>
+                <a href="https://www.jlfc.hku.hk/" target="_blank" class="affiliation-badge">
+                    <i class="fas fa-city"></i>
+                    <span>Joint Lab on Future Cities</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 主要操作按钮 -->
+        <div class="action-buttons">
+            <button onclick="showPage('about')" class="btn btn-primary">
+                <i class="fas fa-user"></i>
+                About Me
+            </button>
+            <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Get in Touch
+            </a>
+            <a href="https://drive.google.com/file/d/1KddMQjBK5dB-J7Is7h8QDBIfhhwZbMoE/view?usp=sharing" target="_blank" class="btn btn-outline">
+                <i class="fas fa-download"></i>
+                Download CV
+            </a>
+        </div>
+
+        <!-- 学术社交链接 -->
+        <div class="social-links">
+            <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-link" title="ResearchGate">
+                <i class="fab fa-researchgate"></i>
+            </a>
+            <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+</div>
 
         <!-- About Page -->
         <!-- About Page - 替换现有的about页面内容 -->
@@ -124,17 +141,17 @@
             <div class="about-content">
                 <div class="about-text">
                     <p style="margin-bottom: 1.5rem;">
-                        Hui is a final-year PhD candidate at the 
+                        👋 Hui is a final-year PhD candidate at the 
                         <a href="https://www.geog.hku.hk/" target="_blank">Department of Geography</a>, 
                         <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>.
-                        He is currently working on sustainable transport solutions for future cities, supervised by 
+                        He is currently working on sustainable transport solutions for future cities 🌆, supervised by 
                         <a href="https://www.bpyloo.hku.hk/" target="_blank">Professor Becky P.Y. Loo</a> 
                         and funded by 
                         <a href="https://www.jlfc.hku.hk/" target="_blank">The Joint Lab on Future Cities</a>. 
                         Hui received his Master's degree in Transport Engineering from the 
                         <a href="https://tjjt.tongji.edu.cn/" target="_blank">College of Transportation</a> 
                         at <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a> 
-                        in June 2022, and his B.E. degree in Railway Transport Engineering from the 
+                        in June 2022 🎓, and his B.E. degree in Railway Transport Engineering from the 
                         <a href="http://trans.bjtu.edu.cn/cms/" target="_blank">School of Traffic and Transportation</a> 
                         at <a href="https://www.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a> 
                         in June 2019. He has received several honors, including the China National Scholarship, 
@@ -142,32 +159,34 @@
                     </p>
 
                     <p>
-                        His academic training encompasses both engineering and social sciences. Currently, he focuses on developing people-oriented and place-based methods to facilitate safe, 
-                        inclusive, efficient, and healthy transport systems.
+                        🔬 His academic training encompasses both engineering and social sciences. Currently, he focuses on developing people-oriented and place-based methods to facilitate safe, 
+                        inclusive, efficient, and healthy transport systems 🚊🚶‍♂️🌱.
                     </p>
                 </div>
 
-                <!-- Research Interests -->
+
                 <div class="about-section">
                     <div class="section-header-about">
                         <i class="fas fa-microscope section-icon"></i>
                         <h3 class="section-title-about">Research Interests</h3>
                     </div>
 
-                    <ul class="interest-list">
-                        <li class="interest-item">
-                            <span class="interest-bullet">•</span>
-                            <span class="interest-text">Transport planning, travel behavior and urban form</span>
-                        </li>
-                        <li class="interest-item">
-                            <span class="interest-bullet">•</span>
-                            <span class="interest-text">Rail operations, management and optimization</span>
-                        </li>
-                        <li class="interest-item">
-                            <span class="interest-bullet">•</span>
-                            <span class="interest-text">Active travel, health and spatial analysis</span>
-                        </li>
-                    </ul>
+                    <div class="interest-grid">
+                        <div class="interest-card">
+                            <div class="interest-icon">🏙️</div>
+                            <p class="interest-description">Transport planning, travel behavior and urban form</p>
+                        </div>
+                        
+                        <div class="interest-card">
+                            <div class="interest-icon">🚊</div>
+                            <p class="interest-description">Rail operations, management and optimization</p>
+                        </div>
+                        
+                        <div class="interest-card">
+                            <div class="interest-icon">🚶‍♂️</div>
+                            <p class="interest-description">Active travel, health and spatial analysis</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Education -->
@@ -226,6 +245,26 @@
                             <img src="/assets/img/tongji.png" alt="Tongji University" class="education-logo">
                         </li>
 
+                        <!-- TUM -->
+                        <li class="education-item">
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <span class="education-bullet">•</span>
+                                    <div class="education-institution">
+                                        <a href="https://www.tum.de/" target="_blank">Technical University of Munich</a><span class="education-location">, Munich, Germany</span>
+                                    </div>
+                                </div>
+                                <div class="education-details">
+                                    <div class="education-degree">Exchange Student</div>
+                                    <div class="education-date">
+                                        <i class="fas fa-calendar detail-icon"></i>
+                                        <span>Oct. 2021--Jun. 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="/assets/img/tum.png" alt="TUM" class="education-logo">
+                        </li>
+
                         <!-- BJTU -->
                         <li class="education-item">
                             <div class="education-content">
@@ -248,26 +287,6 @@
                                 </div>
                             </div>
                             <img src="/assets/img/bjtu.png" alt="BJTU" class="education-logo">
-                        </li>
-
-                        <!-- TUM -->
-                        <li class="education-item">
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-bullet">•</span>
-                                    <div class="education-institution">
-                                        <a href="https://www.tum.de/" target="_blank">Technical University of Munich</a><span class="education-location">, Munich, Germany</span>
-                                    </div>
-                                </div>
-                                <div class="education-details">
-                                    <div class="education-degree">Exchange Student</div>
-                                    <div class="education-date">
-                                        <i class="fas fa-calendar detail-icon"></i>
-                                        <span>Oct. 2021--Jun. 2022</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="/assets/img/tum.png" alt="TUM" class="education-logo">
                         </li>
                     </ul>
                 </div>
@@ -293,27 +312,20 @@
                     </ul>
                 </div>
 
-                <!-- 在About页面的访客统计部分 -->
-                <!-- 在About页面的访客统计部分 - 紧凑版 -->
-                <div class="visitor-stats" style="max-width: 320px; margin: 2rem auto; padding: 1rem;">
-                    
-                    <!-- ClustrMaps Globe - 保持原始大小但居中 -->
-                    <div class="globe-container" style="margin: 0.5rem auto; display: flex; justify-content: center;">
-                        <script
-                            type="text/javascript"
-                            id="clstr_globe"
-                            src="//clustrmaps.com/globe.js?d=JnNpxa44ao2NTw1SEMdTyBmxadl7CF9n-SBR8v7xV_o">
-                        </script>
+                <!-- 访客统计部分 - 简化紧凑版 -->
+                <div class="visitor-stats">
+                    <!-- ClustrMaps Globe -->
+                    <div class="globe-container">
+                        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=JnNpxa44ao2NTw1SEMdTyBmxadl7CF9n-SBR8v7xV_o"></script>
                     </div>
                     
-                    <!-- Access Counter - 紧凑显示 -->
-                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">
-                        <span style="color: var(--text-secondary);">Visitors:</span>
-                        <a href="https://www.easycounter.com/" style="text-decoration: none; margin-left: 6px;">
-                            <img src="https://www.easycounter.com/counter.php?elvinwongwong"
-                                border="0"
-                                alt="Visitor Counter"
-                                style="vertical-align: middle; height: 18px;" />
+                    <!-- Access Counter -->
+                    <div class="counter-row">
+                        <span>Visitors:</span>
+                        <a href="https://www.easycounter.com/">
+                            <img src="https://www.easycounter.com/counter.php?elvinwongwong" 
+                                border="0" 
+                                alt="Visitor Counter" />
                         </a>
                     </div>
                 </div>
@@ -847,7 +859,7 @@
                     </div>
 
                     <div class="publications-card-footer">
-                        Latest update: May/2025
+                        Latest update: Sep.2025
                     </div>
                 </div>
 
@@ -1112,7 +1124,7 @@
                             </div>
 
                     <div class="publications-card-footer">
-                        Latest update: May/2025
+                        Latest update: Sep.2025
                     </div>
                 </div>
             </div>
@@ -1603,74 +1615,78 @@
                         </ul>
                     </div>
                     <div class="services-card-footer">
-                        Latest update: Apr/2025
+                        Latest update: Sep.2025
                     </div>
                 </div>
 
-                <!-- Professionals -->
                 <div class="services-card">
                     <div class="services-card-header">
                         <h3 class="services-card-title">
                             <i class="fas fa-users services-card-icon"></i>
-                            Professionals
+                            Professional Memberships
                         </h3>
                     </div>
                     <div class="services-card-content">
-                        <ul class="services-list">
-                            <li class="services-item">
-                                <span class="services-bullet">•</span>
-                                <div class="services-item-content">
-                                    <div class="services-item-text">
-                                        Vice-Chairperson, Student Committee at
-                                        <a href="https://institute-of-transport-studies.hku.hk/" target="_blank">HKU Institute of Transport Studies.</a>
-                                        <span class="services-year">(2025-2026)</span>
+                        <div class="timeline-container">
+                            <div class="timeline-item current">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="position-title">Vice-Chairperson, Student Committee</div>
+                                    <div class="organization">
+                                        <a href="https://institute-of-transport-studies.hku.hk/" target="_blank">HKU Institute of Transport Studies</a>
                                     </div>
+                                    <div class="time-period current-period">2025-2026</div>
                                 </div>
-                            </li>
-                            <li class="services-item">
-                                <span class="services-bullet">•</span>
-                                <div class="services-item-content">
-                                    <div class="services-item-text">
-                                        Student Member at
-                                        <a href="https://www.socsc.hku.hk/rhps/" target="_blank">HKU Research Hub of Population Studies.</a>
-                                        <span class="services-year">(since 2025)</span>
+                            </div>
+                            
+                            <div class="timeline-item ongoing">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="position-title">Student Member</div>
+                                    <div class="organization">
+                                        <a href="https://www.socsc.hku.hk/rhps/" target="_blank">HKU Research Hub of Population Studies</a>
                                     </div>
+                                    <div class="time-period">since 2025</div>
                                 </div>
-                            </li>
-                            <li class="services-item">
-                                <span class="services-bullet">•</span>
-                                <div class="services-item-content">
-                                    <div class="services-item-text">
-                                        Student Fellow at
-                                        <a href="https://www.jlfc.hku.hk/" target="_blank">HKU Joint Lab on Future Cities.</a>
-                                        <span class="services-year">(since 2022)</span>
+                            </div>
+                            
+                            <div class="timeline-item ongoing">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="position-title">Student Fellow</div>
+                                    <div class="organization">
+                                        <a href="https://www.jlfc.hku.hk/" target="_blank">HKU Joint Lab on Future Cities</a>
                                     </div>
+                                    <div class="time-period">since 2022</div>
                                 </div>
-                            </li>
-                            <li class="services-item">
-                                <span class="services-bullet">•</span>
-                                <div class="services-item-content">
-                                    <div class="services-item-text">
-                                        Student Fellow at
-                                        <a href="https://www.institute-of-transport-studies.hku.hk/" target="_blank">HKU Institute of Transport Studies.</a>
-                                        <span class="services-year">(since 2022)</span>
+                            </div>
+                            
+                            <div class="timeline-item ongoing">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="position-title">Student Fellow</div>
+                                    <div class="organization">
+                                        <a href="https://www.institute-of-transport-studies.hku.hk/" target="_blank">HKU Institute of Transport Studies</a>
                                     </div>
+                                    <div class="time-period">since 2022</div>
                                 </div>
-                            </li>
-                            <li class="services-item">
-                                <span class="services-bullet">•</span>
-                                <div class="services-item-content">
-                                    <div class="services-item-text">
-                                        Student Member at
-                                        <a href="https://www.informs.org/" target="_blank">US Institute for Operations Research and the Management Sciences (INFORMS).</a>
-                                        <span class="services-year">(2020-2021)</span>
+                            </div>
+                            
+                            <div class="timeline-item past">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="position-title">Student Member</div>
+                                    <div class="organization">
+                                        <a href="https://www.informs.org/" target="_blank">US Institute for Operations Research and the Management Sciences (INFORMS)</a>
                                     </div>
+                                    <div class="time-period">2020-2021</div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="services-card-footer">
-                        Latest update: May/2025
+                        <i class="fas fa-clock"></i>
+                        Last updated: Sep.2025
                     </div>
                 </div>
 
@@ -1679,27 +1695,30 @@
                     <div class="services-card-header">
                         <h3 class="services-card-title">
                             <i class="fas fa-chalkboard-teacher services-card-icon"></i>
-                            Conference
+                            Conference Services
                         </h3>
                     </div>
                     <div class="services-card-content">
-                        <ul class="services-list">
-                            <li class="services-item">
-                                <span class="services-bullet">•</span>
-                                <div class="services-item-content">
-                                    <div class="services-item-text">
-                                        Session Chair for the Public Space and Social Networks Session at the
-                                        <a href="http://www.china-planning.org/s" target="_blank">International Association for China Planning 2025 Conference.</a>
-                                        <span class="services-year">(03-06 July 2025)</span>
+                        <div class="timeline-container">
+                            <div class="timeline-item current">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="position-title">Session Chair</div>
+                                    <div class="session-detail">Public Space and Social Networks Session</div>
+                                    <div class="organization">
+                                        <a href="http://www.china-planning.org/s" target="_blank">International Association for China Planning 2025 Conference</a>
                                     </div>
+                                    <div class="time-period current-period">July 3-6, 2025</div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="services-card-footer">
-                        Latest update: July/2025
+                        <i class="fas fa-clock"></i>
+                        Last updated: Sep.2025
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -1760,7 +1779,7 @@
                         </ul>
                     </div>
                     <div class="awards-card-footer">
-                        Latest update: May/2025
+                        Latest update: Sep.2025
                     </div>
                 </div>
 
@@ -1834,7 +1853,7 @@
                                 <span class="awards-bullet">•</span>
                                 <div class="awards-item-content">
                                     <div class="awards-item-text">
-                                        Top 50 Mi Yue (Clash Lane) in Central and Western District, Hong Kong. [Honor of Kings].
+                                        Top 15 Mi Yue (Clash Lane) in Central and Western District, Hong Kong. [Honor of Kings].
                                         <span class="awards-year">(2025)</span>
                                         <i class="fas fa-bookmark bookmark-icon"></i>
                                     </div>
@@ -1870,7 +1889,7 @@
                         </ul>
                     </div>
                     <div class="awards-card-footer">
-                        Latest update: May/2025
+                        Latest update: Sep.2025
                     </div>
                 </div>
 
@@ -1934,7 +1953,7 @@
                         </ul>
                     </div>
                     <div class="awards-card-footer">
-                        Latest update: May/2025
+                        Latest update: Sep.2025
                     </div>
                 </div>
             </div>
@@ -2100,6 +2119,20 @@
             
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            closeMobileMenu();
+        }
+
+        // 添加这个新函数
+        function closeMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const icon = mobileMenuBtn.querySelector('i');
+            
+            if (mobileMenu) {
+                mobileMenu.classList.remove('active');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
 
         // Make functions globally available
