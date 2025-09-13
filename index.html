@@ -2138,6 +2138,44 @@
         window.filterPublications = filterPublications;
         window.clearAllFilters = clearAllFilters;
 
+        // ========================================
+        // 5. 地球仪大小调整
+        // ========================================
+
+        // 等待地球仪加载完成后调整大小
+        function resizeGlobe() {
+            setTimeout(() => {
+                const globeContainer = document.querySelector('.globe-container');
+                if (globeContainer) {
+                    // 查找地球仪元素（可能是iframe、canvas或div）
+                    const globeElements = globeContainer.querySelectorAll('iframe, canvas, div[style*="width"], embed, object');
+                    
+                    globeElements.forEach(element => {
+                        if (element && element.style) {
+                            element.style.width = '250px !important';
+                            element.style.height = '250px !important';
+                            element.style.transform = 'scale(1.1)';
+                            element.style.transformOrigin = 'center';
+                        }
+                    });
+                    
+                    // 也尝试通过属性设置
+                    globeElements.forEach(element => {
+                        if (element.setAttribute) {
+                            element.setAttribute('width', '50');
+                            element.setAttribute('height', '350');
+                        }
+                    });
+                }
+            }, 2000); // 等待2秒确保地球仪完全加载
+        }
+
+// 页面加载完成后调整大小
+document.addEventListener('DOMContentLoaded', resizeGlobe);
+
+// 也在window load事件中再次调整
+window.addEventListener('load', resizeGlobe);
+
 
     </script>
 

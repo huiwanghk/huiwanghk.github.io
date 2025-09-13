@@ -1639,22 +1639,26 @@ main {
 
 /* ========== 访客统计样式 ========== */
 .globe-container {
-    margin: 20px auto;
-    min-height: 250px;
+    margin: 290px auto 5px auto; /* 保持上边距，减少下边距 */
+    min-height: 0px;
+    width: 100%;
+    max-width: 500px;
     border: none;
     background: transparent;
 }
 
+
 .visitor-stats {
     margin: 10px 0;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     background: transparent;
     border: none;
     box-shadow: none;
 }
 
 .counter-row {
+    margin-top: 15px; /* 负边距，让统计数字更靠近地球仪 */
     display: flex;
     align-items: center;
     justify-content: center;
