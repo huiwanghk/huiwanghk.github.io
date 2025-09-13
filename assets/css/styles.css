@@ -1636,16 +1636,22 @@ main {
     line-height: 1.2; /* 添加行高控制 */
 }
 
+
 /* ========== 访客统计样式 ========== */
-.visitor-stats {
-    max-width: 280px;
-    margin: 2rem auto;
-    padding: 1rem;
-    text-align: center;
+.globe-container {
+    margin: 20px auto;
+    min-height: 250px;
+    border: none;
+    background: transparent;
 }
 
-.globe-container {
-    margin-bottom: 0.8rem;
+.visitor-stats {
+    margin: 10px 0;
+    text-align: center;
+    padding: 30px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .counter-row {
