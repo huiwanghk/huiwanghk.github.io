@@ -85,7 +85,7 @@
         <!-- Home Page -->
         <div id="home" class="page active">
             <div class="home-hero">
-                <!-- 头像和介绍整合 -->
+                <!-- 头像和介绍 -->
                 <div class="profile-intro">
                     <div class="profile-image">
                         <img src="/assets/img/profile.jpg" alt="Hui Wang" class="profile-img">
@@ -103,61 +103,60 @@
                     </div>
                 </div>
 
-                <!-- 简化的机构信息 -->
-                <div class="affiliations-simple">
-                    <div class="affiliation-badges">
-                        <a href="https://geog.hku.hk/" target="_blank" class="affiliation-badge">
-                            <i class="fas fa-university"></i>
-                            <span>HKU Geography</span>
+                <!-- 中间内容区域 -->
+                <div class="middle-content">
+                    <!-- 机构信息 -->
+                    <div class="affiliations-simple">
+                        <div class="affiliation-badges">
+                            <a href="https://geog.hku.hk/" target="_blank" class="affiliation-badge">
+                                <i class="fas fa-university"></i>
+                                <span>HKU Geography</span>
+                            </a>
+                            <a href="https://www.jlfc.hku.hk/" target="_blank" class="affiliation-badge">
+                                <i class="fas fa-city"></i>
+                                <span>Joint Lab on Future Cities</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 操作按钮 -->
+                    <div class="action-buttons">
+                        <button onclick="showPage('about')" class="btn btn-primary">
+                            <i class="fas fa-user"></i>
+                            About Me
+                        </button>
+                        <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Get in Touch
                         </a>
-                        <a href="https://www.jlfc.hku.hk/" target="_blank" class="affiliation-badge">
-                            <i class="fas fa-city"></i>
-                            <span>Joint Lab on Future Cities</span>
+                        <a href="https://drive.google.com/file/d/1KddMQjBK5dB-J7Is7h8QDBIfhhwZbMoE/view?usp=sharing" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </a>
+                    </div>
+
+                    <!-- 社交链接 -->
+                    <div class="social-links">
+                        <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-link" title="ResearchGate">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                        <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- 主要操作按钮 -->
-                <div class="action-buttons">
-                    <button onclick="showPage('about')" class="btn btn-primary">
-                        <i class="fas fa-user"></i>
-                        About Me
-                    </button>
-                    <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get in Touch
-                    </a>
-                    <a href="https://drive.google.com/file/d/1KddMQjBK5dB-J7Is7h8QDBIfhhwZbMoE/view?usp=sharing" target="_blank" class="btn btn-outline">
-                        <i class="fas fa-download"></i>
-                        Download CV
-                    </a>
-                </div>
-
-                <!-- 学术社交链接 -->
-                <div class="social-links">
-                    <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-link" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-link" title="ResearchGate">
-                        <i class="fab fa-researchgate"></i>
-                    </a>
-                    <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-link" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-
-                <!-- 访客统计部分 -->
+                <!-- 访客统计 -->
                 <div class="visitor-stats">
-                    
-                    <!-- 3D地球仪 -->
                     <div class="globe-container">
                         <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=JnNpxa44ao2NTw1SEMdTyBmxadl7CF9n-SBR8v7xV_o"></script>
                     </div>
-                    
-                    <!-- Access Counter -->
                     <div class="counter-row">
                         <div class="visitor-badge">
                             <div class="visitor-info">
@@ -1244,11 +1243,11 @@
                         </div>
                     </div>
 
-                    <!-- Dynamics of in-station time -->
+                    <!-- Dynamics of In-station Time -->
                     <div class="project-card">
-                        <img src="/assets/img/MTR.jpg" alt="Dynamics of in-station time" class="project-image">
+                        <img src="/assets/img/MTR.jpg" alt="Dynamics of In-station Time" class="project-image">
                         <div class="project-content">
-                            <h3 class="project-title">Dynamics of in-station time</h3>
+                            <h3 class="project-title">Dynamics of In-station Time</h3>
                             
                             <div class="project-section">
                                 <div class="project-section-title">
@@ -1354,11 +1353,11 @@
                         </div>
                     </div>
 
-                    <!-- Railway Productivity optimization -->
+                    <!-- Railway Productivity Optimization -->
                     <div class="project-card">
-                        <img src="/assets/img/chinarailwaynetwork.jpg" alt="Railway Productivity optimization" class="project-image">
+                        <img src="/assets/img/chinarailwaynetwork.jpg" alt="Railway Productivity Optimization" class="project-image">
                         <div class="project-content">
-                            <h3 class="project-title">Railway Productivity optimization</h3>
+                            <h3 class="project-title">Railway Productivity Optimization</h3>
                             
                             <div class="project-section">
                                 <div class="project-section-title">
@@ -1408,11 +1407,11 @@
                         </div>
                     </div>
 
-                    <!-- Municipal railway planning -->
+                    <!-- Municipal Railway Planning -->
                     <div class="project-card">
-                        <img src="/assets/img/Guangzhouline.webp" alt="Municipal railway planning" class="project-image">
+                        <img src="/assets/img/Guangzhouline.webp" alt="Municipal Railway Planning" class="project-image">
                         <div class="project-content">
-                            <h3 class="project-title">Municipal railway planning</h3>
+                            <h3 class="project-title">Municipal Railway Planning</h3>
                             
                             <div class="project-section">
                                 <div class="project-section-title">
@@ -1559,11 +1558,11 @@
                         </div>
                     </div>
 
-                    <!-- One-ticket connecting service -->
+                    <!-- One-ticket Connecting Service -->
                     <div class="project-card">
-                        <img src="/assets/img/oneticket.png" alt="One-ticket connecting service" class="project-image">
+                        <img src="/assets/img/oneticket.png" alt="One-ticket Connecting Service" class="project-image">
                         <div class="project-content">
-                            <h3 class="project-title">One-ticket connecting service</h3>
+                            <h3 class="project-title">One-ticket Connecting Service</h3>
                             
                             <div class="project-section">
                                 <div class="project-section-title">
