@@ -72,20 +72,43 @@ html {
     gap: 1rem;
     text-decoration: none;
     color: var(--text-primary);
-    font-weight: 600;
-    font-size: 1.1rem;
+    /* 删除这里的字体设置，让span独立控制 */
 }
 
 .logo img {
     width: 50px;
     height: 50px;
-    border-radius: 0; /* 去掉圆角，改成方形 */
+    border-radius: 0;
     transition: var(--transition);
-    object-fit: contain; /* 保持logo比例 */
+    object-fit: contain;
 }
 
 .logo:hover img {
     transform: scale(1.05);
+}
+
+.logo span {
+    font-weight: 800;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.5rem; /* 直接设置绝对大小，不用em */
+    position: relative;
+}
+
+.logo span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.logo:hover span::after {
+    width: 100%;
 }
 
 .nav-links {
@@ -173,31 +196,49 @@ main {
 }
 
 /* ========== Home页面样式 ========== */
-/* 给整个Home页面添加背景 */
+/* 首页主容器 */
 .home-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 160px); /* 保留原有的全屏高度 */
+    min-height: calc(100vh - 160px);
     text-align: center;
-    padding: 3rem 2rem; /* 使用新的较大padding */
-    max-width: 700px; /* 新的最大宽度 */
+    padding: 3rem 2rem;
+    max-width: 700px;
     margin: 0 auto;
-    gap: 3rem; /* 新的间距 */
+    gap: 3rem;
+}
+
+/* Profile部分 */
+.profile-intro {
+    text-align: center;
+}
+
+.profile-image {
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 77, 64, 0.25);
 }
 
 .greeting-title {
-    font-size: clamp(2rem, 4vw, 2.8rem); /* 稍微增加最大值 */
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 600;
     line-height: 1.4;
-    margin-bottom: 1rem; /* 从2rem减少，因为现在用gap控制间距 */
+    margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .wave-emoji {
-    font-size: clamp(2.2rem, 5vw, 3.2rem); /* 稍微增加 */
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
     display: inline-block;
     animation: wave 2s ease-in-out infinite;
 }
@@ -222,30 +263,12 @@ main {
 .greeting-subtitle {
     font-size: 1.3rem;
     color: var(--text-secondary);
-    margin: 0; /* 删除margin，用gap控制间距 */
-}
-
-/* 头像样式 */
-.profile-intro {
-    text-align: center;
-}
-
-.profile-image {
-    margin-bottom: 1.5rem;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid var(--accent-color);
-    object-fit: cover;
-    box-shadow: 0 6px 20px rgba(0, 77, 64, 0.25);
+    margin: 0;
 }
 
 /* 机构徽章 */
 .affiliations-simple {
-    margin: 0; /* 删除margin，用gap控制 */
+    margin: 0;
 }
 
 .affiliation-badges {
@@ -289,7 +312,7 @@ main {
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0; /* 删除margin，用gap控制 */
+    margin: 0;
 }
 
 .btn {
@@ -315,7 +338,7 @@ main {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    margin: 0; /* 删除margin，用gap控制 */
+    margin: 0;
 }
 
 .social-link {
@@ -350,7 +373,7 @@ main {
     .home-hero {
         gap: 2.5rem;
         padding: 2rem 1.5rem;
-        min-height: calc(100vh - 120px); /* 移动端调整 */
+        min-height: calc(100vh - 120px);
     }
     
     .profile-img {
@@ -366,6 +389,10 @@ main {
         font-size: 1.1rem;
     }
     
+    .chinese-name {
+        font-size: 0.8em !important;
+    }
+    
     .affiliation-badge {
         padding: 0.8rem 1.2rem;
         font-size: 0.95rem;
@@ -373,6 +400,14 @@ main {
     
     .btn {
         padding: 0.9rem 1.8rem;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     
     .social-link {
@@ -384,6 +419,28 @@ main {
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 480px) {
+    .chinese-name {
+        font-size: 0.75em !important;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.08) !important;
+    }
+    
+    .affiliation-badge {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-link i {
+        font-size: 1.1rem;
+    }
+}
+
 /* ========== About页面样式 ========== */
 .about-hero {
     text-align: center;
@@ -2461,3 +2518,4 @@ footer {
         font-size: 0.85rem;
     }
 }
+
