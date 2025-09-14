@@ -163,8 +163,8 @@ html {
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--card-background) !important;
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);  /* 白色半透明 */
+    backdrop-filter: blur(10px);             /* 添加毛玻璃效果 */
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -263,7 +263,7 @@ main {
 /* Text Content */
 .intro-text {
     margin-bottom: 0;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     max-width: 600px;
 }
 
@@ -321,9 +321,66 @@ main {
     min-height: 300px;
 }
 
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+    margin-top: 2.0rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--card-background);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link i {
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.social-link:hover::before {
+    transform: scale(1);
+}
+
+.social-link:hover {
+    border-color: var(--accent-color);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 77, 64, 0.3);
+}
+
 /* Affiliations */
 .affiliations-simple {
-    margin: 2rem 0;
+    margin: 1rem 0;
+    margin-top: 1.5rem;
 }
 
 .affiliation-badges {
@@ -369,6 +426,7 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     margin: 1rem 0;
+    margin-top: 1.5rem;
 }
 
 .btn {
@@ -448,62 +506,6 @@ main {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Social Links */
-.social-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin: 1rem 0;
-    margin-top: 2rem;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: var(--card-background);
-    border: 2px solid var(--border-color);
-    border-radius: 50%;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.social-link i {
-    font-size: 1.3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.social-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    transform: scale(0);
-    transition: transform 0.3s ease;
-    border-radius: 50%;
-}
-
-.social-link:hover::before {
-    transform: scale(1);
-}
-
-.social-link:hover {
-    border-color: var(--accent-color);
-    color: white;
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 77, 64, 0.3);
-}
-
 /* Visitor Stats */
 .visitor-stats {
     margin: 0 auto;
@@ -574,11 +576,21 @@ main {
     vertical-align: middle;
 }
 
-/* Home Page Mobile Responsive *//* Home Page Mobile Responsive */
+/* Home Page Mobile Responsive */
 @media (max-width: 768px) {
     .home-hero {
         padding: 1.5rem 1.5rem 2rem 1.5rem;
         min-height: calc(100vh - 120px);
+        gap: 0.5rem;
+    }
+    
+    .profile-intro {
+        margin-bottom: 0.5rem;
+        margin-top: -0.5rem;
+    }
+    
+    .profile-image {
+        margin-bottom: -1rem;
     }
     
     .profile-img {
@@ -587,30 +599,56 @@ main {
         border-width: 4px;
     }
     
+    .intro-text {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        max-width: 100%;
+    }
+    
     .greeting-title {
         font-size: clamp(1.8rem, 5vw, 2.2rem);
         margin-bottom: 0.8rem;
         font-weight: 600;
+        line-height: 1.2;
     }
     
     .greeting-subtitle {
         font-size: 1.1rem;
         font-weight: 400;
         margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
     }
     
-    .intro-text {
-        margin-bottom: 1.8rem;
-        margin-top: 1.2rem;
+    .chinese-name {
+        font-size: 0.8em;
     }
     
     .middle-content {
         padding: 1rem 0;
-        min-height: 180px;
+        min-height: 200px;
+        gap: 0.5rem;
     }
     
+    /* Social Links Mobile */
+    .social-links {
+        margin: 1rem 0;
+        margin-top: 1.2rem;
+        gap: 0.8rem;
+    }
+    
+    .social-link {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .social-link i {
+        font-size: 1.1rem;
+    }
+    
+    /* Affiliations Mobile */
     .affiliations-simple {
-        margin: 0.7rem 0;
+        margin: 1rem 0;
+        margin-top: 1.2rem;
     }
     
     .affiliation-badges {
@@ -623,36 +661,38 @@ main {
         width: 100%;
         max-width: 320px;
         padding: 0.8rem 1.5rem;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         font-weight: 500;
         border-radius: 20px;
         gap: 0.6rem;
         text-align: center;
         justify-content: center;
-        display: flex;                    /* 确保是flex布局 */
-        align-items: center;              /* 垂直居中 */
-        flex-direction: row;              /* 水平排列图标和文字 */
-        flex-wrap: nowrap;                /* 不换行 */
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
     
     .affiliation-badge i {
         font-size: 1rem;
-        flex-shrink: 0;                   /* 图标不缩小 */
+        flex-shrink: 0;
     }
     
     .affiliation-badge span {
-        text-align: center;               /* 文字居中 */
-        line-height: 1.3;                 /* 合适的行高 */
-        white-space: nowrap;              /* 防止换行，如果太长会自动缩放 */
-        overflow: hidden;                 /* 隐藏溢出 */
-        text-overflow: ellipsis;          /* 显示省略号 */
+        text-align: center;
+        line-height: 1.3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
+    /* Action Buttons Mobile */
     .action-buttons {
         flex-direction: column;
         align-items: center;
         gap: 0.8rem;
-        margin: 1.2rem 0;
+        margin: 1rem 0;
+        margin-top: 1.2rem;
     }
     
     .btn {
@@ -661,53 +701,116 @@ main {
         max-width: 260px;
         font-size: 0.9rem;
         font-weight: 600;
+        min-width: auto;
     }
     
-    .social-link {
-        width: 42px;
-        height: 42px;
+    .btn i {
+        font-size: 1rem;
     }
     
-    .social-link i {
-        font-size: 1.1rem;
+    /* Visitor Stats Mobile */
+    .visitor-stats {
+        padding: 2rem 1.5rem;
+        margin-top: 1rem;
     }
     
-    .social-links {
-        margin-top: 1.2rem;
-        gap: 0.8rem;
+    .globe-container {
+        max-width: 130px;
+        margin: 20px auto;
+    }
+    
+    .visitor-badge {
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        max-width: 300px;
+    }
+    
+    .visitor-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .visitor-label {
+        font-size: 1rem;
+    }
+    
+    .counter-row {
+        font-size: 0.8rem;
+        gap: 0.4rem;
+        margin-top: 10px;
+    }
+    
+    .counter-row img {
+        height: 16px;
     }
 }
 
 @media (max-width: 480px) {
+    .home-hero {
+        padding: 1rem 1rem 1.5rem 1rem;
+        min-height: calc(100vh - 100px);
+    }
+    
     .profile-img {
         width: 140px;
         height: 140px;
         border-width: 3px;
     }
     
+    .intro-text {
+        margin-top: 1.5rem;
+    }
+    
     .greeting-title {
         font-size: clamp(1.6rem, 6vw, 2rem);
+        margin-bottom: 0.6rem;
     }
     
     .greeting-subtitle {
         font-size: 1rem;
+        letter-spacing: 0.3px;
     }
     
     .chinese-name {
         font-size: 0.7em;
     }
     
+    .middle-content {
+        padding: 0.8rem 0;
+        min-height: 180px;
+    }
+    
+    .social-links {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+    
+    .affiliations-simple {
+        margin-top: 1rem;
+    }
+    
     .affiliation-badge {
         max-width: 280px;
         padding: 0.7rem 1.2rem;
         font-size: 0.8rem;
+        gap: 0.5rem;
     }
     
     .affiliation-badge span {
-        font-size: 0.8rem;                /* 小屏幕文字更小 */
-        white-space: normal;              /* 允许换行 */
+        font-size: 0.8rem;
+        white-space: normal;
         text-align: center;
         line-height: 1.2;
+    }
+    
+    .affiliation-badge i {
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons {
+        margin-top: 1rem;
+        gap: 0.6rem;
     }
     
     .btn {
@@ -716,15 +819,73 @@ main {
         padding: 0.8rem 1.5rem;
     }
     
-    .social-links {
-        gap: 1rem;
-    }
-    
     .visitor-stats {
         padding: 1.5rem 1rem;
     }
+    
+    .globe-container {
+        max-width: 120px;
+        margin: 15px auto;
+    }
+    
+    .visitor-badge {
+        padding: 0.7rem 1.2rem;
+        border-radius: 20px;
+    }
+    
+    .visitor-label {
+        font-size: 0.9rem;
+    }
+    
+    .counter-row {
+        font-size: 0.75rem;
+        margin-top: 8px;
+    }
+    
+    .counter-row img {
+        height: 14px;
+    }
 }
 
+@media (max-width: 360px) {
+    .home-hero {
+        padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .greeting-title {
+        font-size: clamp(1.4rem, 7vw, 1.8rem);
+    }
+    
+    .affiliation-badge {
+        max-width: 260px;
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .btn {
+        max-width: 220px;
+        font-size: 0.8rem;
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .social-link {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .social-link i {
+        font-size: 1rem;
+    }
+    
+    .visitor-badge {
+        padding: 0.6rem 1rem;
+    }
+}
 /* ========================================
    ABOUT PAGE STYLES
 ======================================== */
@@ -1011,15 +1172,14 @@ main {
     .about-text p {
         font-size: 0.9rem !important;
         line-height: 1.6 !important;
-        margin-bottom: 1.2rem !important;
+        margin-bottom: 1.5rem !important;  /* 统一为1.5rem */
         color: var(--text-primary) !important;
     }
     
     .about-text p:first-of-type {
         font-size: 1rem !important;
         font-weight: 500;
-        color: var(--text-primary) !important;
-        margin-bottom: 1.3rem !important;
+        margin-bottom: 1.5rem !important;  /* 保持一致 */
     }
     
     .interest-grid {
@@ -2071,25 +2231,34 @@ main {
     }
     
     .journal-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);  /* 一行3个 */
+        gap: 0.8rem;
         margin: 1.5rem 0;
     }
     
     .journal-item {
-        text-align: center;
-        padding: 1rem;
-        background: var(--card-background);
-        border-radius: 10px;
+        list-style: none;
+    }
+    
+    .journal-link {
+        display: block;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        text-decoration: none;
         border: 1px solid var(--border-color);
     }
     
-    .journal-item a {
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: var(--text-primary);
-        text-decoration: none;
-        line-height: 1.3;
+    .journal-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .journal-link img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .timeline-container {
@@ -2171,12 +2340,12 @@ main {
     }
     
     .journal-grid {
-        grid-template-columns: 1fr;
-        gap: 0.8rem;
+        grid-template-columns: repeat(2, 1fr);  /* 小屏幕一行2个 */
+        gap: 0.6rem;
     }
     
-    .journal-item a {
-        font-size: 0.8rem;
+    .journal-link {
+        border-radius: 6px;
     }
     
     .position-title {
@@ -2202,8 +2371,8 @@ main {
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .journal-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);  /* 超小屏幕仍然2个 */
+        gap: 0.5rem;
     }
 }
 
