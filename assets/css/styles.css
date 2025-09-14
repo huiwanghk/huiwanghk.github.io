@@ -163,12 +163,13 @@ html {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);  /* 白色半透明 */
+    background: #ffffff;  /* 强制白色背景，不透明 */
     backdrop-filter: blur(10px);             /* 添加毛玻璃效果 */
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    
+    position: relative;   /* 确保层级正确 */
+    z-index: 1000;       /* 确保在最上层 */
 }
 
 .mobile-menu.active {
@@ -1175,12 +1176,7 @@ main {
         margin-bottom: 1.5rem !important;  /* 统一为1.5rem */
         color: var(--text-primary) !important;
     }
-    
-    .about-text p:first-of-type {
-        font-size: 1rem !important;
-        font-weight: 500;
-        margin-bottom: 1.5rem !important;  /* 保持一致 */
-    }
+
     
     .interest-grid {
         grid-template-columns: 1fr;
@@ -1268,10 +1264,6 @@ main {
         font-size: 0.85rem !important;
         line-height: 1.5 !important;
         margin-bottom: 1rem !important;
-    }
-    
-    .about-text p:first-of-type {
-        font-size: 0.9rem !important;
     }
     
     .interest-card {
@@ -2340,7 +2332,7 @@ main {
     }
     
     .journal-grid {
-        grid-template-columns: repeat(2, 1fr);  /* 小屏幕一行2个 */
+        grid-template-columns: repeat(3, 1fr);  /* 小屏幕一行2个 */
         gap: 0.6rem;
     }
     
@@ -2371,7 +2363,7 @@ main {
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .journal-grid {
-        grid-template-columns: repeat(2, 1fr);  /* 超小屏幕仍然2个 */
+        grid-template-columns: repeat(3, 1fr);  /* 超小屏幕仍然2个 */
         gap: 0.5rem;
     }
 }
@@ -2826,7 +2818,7 @@ footer {
 
     /* Mobile Menu */
     .mobile-menu {
-        background: var(--card-background);
+        background: #ffffff;  /* 强制白色背景，不透明 */
         border-top: 1px solid var(--border-color);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
@@ -2894,6 +2886,7 @@ footer {
     }
     
     .mobile-menu {
+        background: #ffffff;  /* 强制白色背景，不透明 */
         padding: 0.5rem 0;
     }
     
