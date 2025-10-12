@@ -1,24 +1,33 @@
 /* ========================================
-   CSS VARIABLES & RESET - 现代简约风
+   CSS VARIABLES & RESET - 极简高级风
 ======================================== */
 :root {
-    --primary-color: #ffffff;           /* 纯白色背景 */
-    --secondary-color: #f8fafc;         /* 极浅灰色 */
-    --tertiary-color: #f1f5f9;          /* 浅灰色卡片背景 */
-    --text-primary: #1f2937;            /* 几乎黑色主要文字 */
-    --text-secondary: #374151;          /* 深灰色文字 */
-    --text-muted: #6b7280;              /* 中灰色辅助文字 */
-    --accent-color: #374151;            /* 深石板灰强调色 */
-    --accent-light: #4b5563;            /* 较浅的石板灰 */
-    --border-color: #e5e7eb;            /* 浅灰色边框 */
-    --hover-color: #f3f4f6;             /* 悬停时的浅灰色 */
-    --card-background: #ffffff;         /* 卡片背景色 */
+    /* 背景颜色 - 冷白灰渐变系统 */
+    --primary-color: #E0E0DE;           /* 主背景冷白灰 */
+    --secondary-color: #E8E8E6;         /* 卡片背景珍珠灰 */
+    --tertiary-color: #F0F0EE;          /* 次级背景浅冷白 */
+    --deep-background: #D5D5D3;         /* 深色背景 */
+    --card-background: #EBEBE9;         /* 卡片统一背景 */
+    --hover-color: #F5F5F3;             /* 悬停浅灰 */
+    --border-color: #D0D0CE;            /* 边框颜色 */
     
-    /* 现代简约的阴影 */
-    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
-    --shadow-heavy: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
-    --shadow-accent: 0 4px 12px rgba(55, 65, 81, 0.15);
+    /* 导航栏颜色 */
+    --nav-background: #2C2C2C;          /* 深灰色导航栏 */
+    --nav-text: #E5E5E0;                /* 浅色文字 */
+    --nav-text-hover: #ffffff;          /* 悬停白色 */
+    
+    /* 文字颜色 */
+    --text-primary: #2C2C2C;            /* 主标题深灰黑 */
+    --text-secondary: #3F3F3F;          /* 正文中灰 */
+    --text-muted: #6B6B6B;              /* 辅助文字浅灰 */
+    --accent-color: #4A4A4A;            /* 强调色深石板灰 */
+    --accent-light: #5A5A5A;            /* 强调色浅一点 */
+    
+    /* 阴影 - 极简柔和 */
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.10);
+    --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-heavy: 0 10px 20px rgba(0, 0, 0, 0.10), 0 3px 6px rgba(0, 0, 0, 0.06);
+    --shadow-accent: 0 4px 12px rgba(74, 74, 74, 0.10);
     
     --border-radius: 8px;
     --transition: all 0.2s ease;
@@ -32,7 +41,8 @@
 
 body {
     font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--primary-color);
+    background: linear-gradient(90deg, #E0E0DE 0%, #F0F0EE 100%);
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -45,7 +55,7 @@ html {
 }
 
 #about, #awards, #services, #projects, #publications {
-    background: var(--card-background);
+    background: transparent;
 }
 
 /* ========================================
@@ -58,9 +68,9 @@ html {
     right: 0;
     z-index: 1000;
     transition: var(--transition);
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-light);
+    background: var(--nav-background);
+    border-bottom: 1px solid #404040;
+    box-shadow: var(--shadow-medium);
     backdrop-filter: blur(10px);
 }
 
@@ -78,7 +88,6 @@ html {
     align-items: center;
     gap: 1rem;
     text-decoration: none;
-    color: var(--text-primary);
 }
 
 .logo img {
@@ -95,10 +104,10 @@ html {
 
 .logo span {
     font-weight: 700;
-    color: var(--accent-color);
+    color: var(--nav-text);
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     position: relative;
 }
 
@@ -109,7 +118,7 @@ html {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-color);
+    background: var(--nav-text-hover);
     transition: width 0.3s ease;
 }
 
@@ -124,32 +133,32 @@ html {
 }
 
 .nav-links a {
-    color: var(--text-primary);
+    color: var(--nav-text);
     text-decoration: none;
     font-weight: 500;
     padding: 0.8rem 1rem;
     border-radius: 6px;
     transition: var(--transition);
     position: relative;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
-    background: var(--hover-color);
+    color: var(--nav-text-hover);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-links a.active {
-    color: var(--accent-color);
+    color: var(--nav-text-hover);
     font-weight: 600;
-    background: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .mobile-menu-btn {
     display: none;
     background: none;
     border: none;
-    color: var(--text-primary);
+    color: var(--nav-text);
     font-size: 1.3rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -158,7 +167,7 @@ html {
 }
 
 .mobile-menu-btn:hover {
-    background: var(--hover-color);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .mobile-menu {
@@ -167,9 +176,9 @@ html {
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--primary-color);
+    background: var(--nav-background);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #404040;
     padding: 1rem 0;
     box-shadow: var(--shadow-medium);
 }
@@ -217,22 +226,19 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    min-height: calc(100vh - 160px);
+    justify-content: center;
+    min-height: calc(100vh - 240px);
     text-align: center;
-    padding: 2rem 2rem 3rem 2rem;
+    padding: 2rem 2rem;
     max-width: 900px;
     margin: 0 auto;
-    gap: 0;
+    gap: 2rem;
 }
 
-/* Profile Section */
 .profile-intro {
     text-align: center;
     margin-bottom: 0;
     width: 100%;
-    padding-top: 0;
-    margin-top: -1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,13 +255,12 @@ main {
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    border: 4px solid var(--accent-color);
-    box-shadow: var(--shadow-medium);
     transform: rotate(0deg);
     transition: var(--transition);
+    border: 3px solid #555;
+    border-radius: 50%;
 }
 
 .profile-img:hover {
@@ -263,7 +268,6 @@ main {
     box-shadow: var(--shadow-heavy);
 }
 
-/* Text Content */
 .intro-text {
     margin-bottom: 0;
     margin-top: 2.5rem;
@@ -311,24 +315,22 @@ main {
     letter-spacing: 0.3px;
 }
 
-/* Middle Content */
 .middle-content {
     flex: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 0rem 0;
-    min-height: 300px;
+    gap: 2rem;
 }
 
-/* Social Links */
 .social-links {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin: 1rem 0;
-    margin-top: 2.0rem;
+    margin: 0;
+    margin-top: 2rem; /* 原来可能是 1.5rem 或更小，增加到 2rem */
 }
 
 .social-link {
@@ -378,10 +380,8 @@ main {
     box-shadow: var(--shadow-accent);
 }
 
-/* Affiliations */
 .affiliations-simple {
-    margin: 1rem 0;
-    margin-top: 1.5rem;
+    margin: 0;
 }
 
 .affiliation-badges {
@@ -409,7 +409,7 @@ main {
 
 .affiliation-badge:hover {
     border-color: var(--accent-color);
-    background: var(--secondary-color);
+    background: var(--hover-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-accent);
 }
@@ -419,14 +419,12 @@ main {
     font-size: 1.2rem;
 }
 
-/* Action Buttons */
 .action-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 1rem 0;
-    margin-top: 1.5rem;
+    margin: 0;
 }
 
 .btn {
@@ -492,87 +490,16 @@ main {
     box-shadow: var(--shadow-medium);
 }
 
-/* Visitor Stats */
-.visitor-stats {
-    margin: 0 auto;
-    text-align: center;
-    padding: 3rem 2rem;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    flex: 0 0 auto;
-    width: 100%;
-}
-
-.globe-container {
-    margin: 25px auto 25px auto;
-    min-height: 0px;
-    width: 100%;
-    max-width: 150px;
-    border: none;
-    background: transparent;
-}
-
-.counter-row {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    width: 100%;
-}
-
-.counter-row img {
-    height: 18px;
-    vertical-align: middle;
-}
-
-.visitor-badge {
-    background: var(--card-background);
-    border: 2px solid var(--border-color);
-    border-radius: 30px;
-    padding: 1rem 2rem;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition);
-    margin: 0 auto;
-    display: inline-block;
-}
-
-.visitor-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-medium);
-}
-
-.visitor-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.visitor-label {
-    font-weight: 600;
-    color: var(--text-primary);
-    font-size: 1.1rem;
-}
-
-.visitor-number {
-    height: 24px;
-    vertical-align: middle;
-}
-
 /* Home Page Mobile Responsive */
 @media (max-width: 768px) {
     .home-hero {
-        padding: 1.5rem 1.5rem 2rem 1.5rem;
-        min-height: calc(100vh - 120px);
-        gap: 0.5rem;
+        min-height: auto;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
     }
     
     .profile-intro {
-        margin-bottom: 0.5rem;
-        margin-top: -0.5rem;
+        margin-bottom: 0;
     }
     
     .profile-image {
@@ -587,21 +514,19 @@ main {
     
     .intro-text {
         margin-top: 2rem;
-        margin-bottom: 0.5rem;
         max-width: 100%;
     }
     
     .greeting-title {
         font-size: clamp(1.8rem, 5vw, 2.2rem);
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.6rem;
         font-weight: 600;
         line-height: 1.2;
     }
     
     .greeting-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: 400;
-        margin-bottom: 0.5rem;
         letter-spacing: 0.5px;
     }
     
@@ -610,15 +535,11 @@ main {
     }
     
     .middle-content {
-        padding: 1rem 0;
-        min-height: 200px;
-        gap: 0.5rem;
+        gap: 1.5rem;
     }
     
-    /* Social Links Mobile */
     .social-links {
-        margin: 1rem 0;
-        margin-top: 1.2rem;
+        margin-top: 1.5rem; /* 手机端稍微小一点 */
         gap: 0.8rem;
     }
     
@@ -629,12 +550,6 @@ main {
     
     .social-link i {
         font-size: 1.1rem;
-    }
-    
-    /* Affiliations Mobile */
-    .affiliations-simple {
-        margin: 1rem 0;
-        margin-top: 1.2rem;
     }
     
     .affiliation-badges {
@@ -653,32 +568,16 @@ main {
         gap: 0.6rem;
         text-align: center;
         justify-content: center;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: nowrap;
     }
     
     .affiliation-badge i {
         font-size: 1rem;
-        flex-shrink: 0;
     }
     
-    .affiliation-badge span {
-        text-align: center;
-        line-height: 1.3;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    /* Action Buttons Mobile */
     .action-buttons {
         flex-direction: column;
         align-items: center;
         gap: 0.8rem;
-        margin: 1rem 0;
-        margin-top: 1.2rem;
     }
     
     .btn {
@@ -693,49 +592,12 @@ main {
     .btn i {
         font-size: 1rem;
     }
-    
-    /* Visitor Stats Mobile */
-    .visitor-stats {
-        padding: 2rem 1.5rem;
-        margin-top: 1rem;
-    }
-    
-    .globe-container {
-        max-width: 130px;
-        margin: 20px auto;
-    }
-    
-    .visitor-badge {
-        padding: 0.8rem 1.5rem;
-        border-radius: 25px;
-        max-width: 300px;
-    }
-    
-    .visitor-info {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-    
-    .visitor-label {
-        font-size: 1rem;
-    }
-    
-    .counter-row {
-        font-size: 0.8rem;
-        gap: 0.4rem;
-        margin-top: 10px;
-    }
-    
-    .counter-row img {
-        height: 16px;
-    }
 }
 
 @media (max-width: 480px) {
     .home-hero {
-        padding: 1rem 1rem 1.5rem 1rem;
-        min-height: calc(100vh - 100px);
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
     }
     
     .profile-img {
@@ -750,7 +612,7 @@ main {
     
     .greeting-title {
         font-size: clamp(1.6rem, 6vw, 2rem);
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.5rem;
     }
     
     .greeting-subtitle {
@@ -763,17 +625,12 @@ main {
     }
     
     .middle-content {
-        padding: 0.8rem 0;
-        min-height: 180px;
+        gap: 1.2rem;
     }
     
     .social-links {
-        margin-top: 1rem;
+        margin-top: 1.2rem; /* 手机端稍微小一点 */
         gap: 1rem;
-    }
-    
-    .affiliations-simple {
-        margin-top: 1rem;
     }
     
     .affiliation-badge {
@@ -783,59 +640,16 @@ main {
         gap: 0.5rem;
     }
     
-    .affiliation-badge span {
-        font-size: 0.8rem;
-        white-space: normal;
-        text-align: center;
-        line-height: 1.2;
-    }
-    
-    .affiliation-badge i {
-        font-size: 0.9rem;
-    }
-    
-    .action-buttons {
-        margin-top: 1rem;
-        gap: 0.6rem;
-    }
-    
     .btn {
         max-width: 240px;
         font-size: 0.85rem;
         padding: 0.8rem 1.5rem;
     }
-    
-    .visitor-stats {
-        padding: 1.5rem 1rem;
-    }
-    
-    .globe-container {
-        max-width: 120px;
-        margin: 15px auto;
-    }
-    
-    .visitor-badge {
-        padding: 0.7rem 1.2rem;
-        border-radius: 20px;
-    }
-    
-    .visitor-label {
-        font-size: 0.9rem;
-    }
-    
-    .counter-row {
-        font-size: 0.75rem;
-        margin-top: 8px;
-    }
-    
-    .counter-row img {
-        height: 14px;
-    }
 }
 
 @media (max-width: 360px) {
     .home-hero {
-        padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+        padding: 1.2rem 0.8rem;
     }
     
     .profile-img {
@@ -866,10 +680,6 @@ main {
     
     .social-link i {
         font-size: 1rem;
-    }
-    
-    .visitor-badge {
-        padding: 0.6rem 1rem;
     }
 }
 
@@ -954,7 +764,6 @@ main {
     color: var(--text-primary);
 }
 
-/* Interest Grid */
 .interest-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -988,6 +797,7 @@ main {
     transform: translateY(-3px);
     box-shadow: var(--shadow-medium);
     border-color: var(--accent-color);
+    background: var(--hover-color);
 }
 
 .interest-icon {
@@ -1004,7 +814,6 @@ main {
     margin: 0;
 }
 
-/* Education List */
 .education-list {
     list-style: none;
     padding: 0;
@@ -1016,14 +825,14 @@ main {
     align-items: flex-start;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: var(--tertiary-color);
+    background: var(--card-background);
     border-radius: var(--border-radius);
     transition: var(--transition);
     box-shadow: var(--shadow-light);
 }
 
 .education-item:hover {
-    background: var(--secondary-color);
+    background: var(--hover-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-medium);
 }
@@ -1114,7 +923,6 @@ main {
     flex-shrink: 0;
 }
 
-/* Contact Information */
 .contact-list {
     list-style: none;
     padding: 0;
@@ -1303,7 +1111,7 @@ main {
 }
 
 .publications-card {
-    background: var(--primary-color);
+    background: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
@@ -1349,7 +1157,6 @@ main {
     color: #E91E63;
 }
 
-/* Filters */
 .publications-filters {
     background: var(--secondary-color);
     padding: 1.5rem 2rem;
@@ -1371,7 +1178,7 @@ main {
 
 .clear-filters-btn {
     padding: 0.5rem 1rem;
-    background: var(--primary-color);
+    background: var(--tertiary-color);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     color: var(--text-secondary);
@@ -1410,7 +1217,7 @@ main {
     padding: 0.7rem;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: var(--primary-color);
+    background: var(--card-background);
     font-size: 0.95rem;
     transition: var(--transition);
     color: var(--text-primary);
@@ -1426,12 +1233,12 @@ main {
 
 .filter-select option {
     color: var(--text-primary);
-    background: var(--primary-color);
+    background: var(--card-background);
 }
 
-/* Publications Content */
 .publications-content-area {
     padding: 2rem;
+    background: var(--card-background);
 }
 
 .year-section {
@@ -1766,7 +1573,7 @@ main {
 }
 
 .project-card {
-    background: var(--primary-color);
+    background: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -1777,6 +1584,7 @@ main {
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-heavy);
+    background: var(--hover-color);
 }
 
 .project-image {
@@ -1872,7 +1680,6 @@ main {
     box-shadow: var(--shadow-light);
 }
 
-/* Projects Mobile Responsive */
 @media (max-width: 768px) {
     .projects-content {
         padding: 0.5rem 0;
@@ -1918,7 +1725,7 @@ main {
 }
 
 .services-card {
-    background: var(--primary-color);
+    background: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
@@ -1954,6 +1761,7 @@ main {
 
 .services-card-content {
     padding: 2rem;
+    background: var(--card-background);
 }
 
 .services-list {
@@ -2020,7 +1828,6 @@ main {
     text-align: right;
 }
 
-/* Journal Grid */
 .journal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -2042,6 +1849,7 @@ main {
     transition: var(--transition);
     text-decoration: none;
     border: 1px solid var(--border-color);
+    background: var(--card-background);
 }
 
 .journal-link:hover {
@@ -2055,7 +1863,6 @@ main {
     display: block;
 }
 
-/* Timeline */
 .timeline-container {
     position: relative;
     padding-left: 1.8rem;
@@ -2153,7 +1960,6 @@ main {
     font-weight: 600;
 }
 
-/* Services Mobile Responsive */
 @media (max-width: 768px) {
     .services-content {
         padding: 1rem 0;
@@ -2252,7 +2058,7 @@ main {
         width: 10px;
         height: 10px;
         background: var(--accent-color);
-        border: 2px solid white;
+        border: 2px solid var(--card-background);
     }
     
     .position-title {
@@ -2367,7 +2173,7 @@ main {
 }
 
 .awards-card {
-    background: var(--primary-color);
+    background: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
@@ -2403,6 +2209,7 @@ main {
 
 .awards-card-content {
     padding: 2rem 2rem 1.5rem 2rem;
+    background: var(--card-background);
 }
 
 .awards-list {
@@ -2488,7 +2295,6 @@ main {
     text-align: right;
 }
 
-/* Awards Mobile Responsive */
 @media (max-width: 768px) {
     .awards-content {
         padding: 1rem 0;
@@ -2626,7 +2432,7 @@ main {
 }
 
 .card {
-    background: var(--primary-color);
+    background: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 2rem;
@@ -2638,6 +2444,7 @@ main {
     transform: translateY(-4px);
     box-shadow: var(--shadow-medium);
     border-color: var(--accent-color);
+    background: var(--hover-color);
 }
 
 .card-icon {
@@ -2689,27 +2496,121 @@ main {
    FOOTER
 ======================================== */
 footer {
-    background: var(--secondary-color);
-    border-top: 1px solid var(--border-color);
-    padding: 3rem 2rem 2rem;
-    text-align: center;
-    margin-top: 0;
+    background: #2a2a2a;
+    padding: 1rem 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #444;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer-text {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+.footer-left {
+    text-align: left;
+}
+
+.footer-name {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.footer-location,
+.footer-update {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.2rem;
+}
+
+.footer-right details {
+    position: relative;
+}
+
+.footer-right summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    transition: all 0.3s;
+}
+
+.footer-right summary:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.footer-right summary::-webkit-details-marker {
+    display: none;
+}
+
+.footer-right .stats-content {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 1rem;
+    background: rgba(42, 42, 42, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+}
+
+.globe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globe-container * {
+    transform: scale(0.6);
+    transform-origin: center;
+}
+
+.visitor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.visitor-count img {
+    max-height: 20px;
+    filter: brightness(1.2);
 }
 
 /* ========================================
    GLOBAL RESPONSIVE STYLES
 ======================================== */
 @media (max-width: 768px) {
+    /* Footer Mobile - 完全隐藏地球统计 */
+    footer {
+        padding: 1rem;
+    }
+    
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-left {
+        text-align: center;
+    }
+    
+    .footer-right {
+        display: none;
+    }
+    
     /* Navigation */
     .nav-links {
         display: none;
@@ -2723,7 +2624,6 @@ footer {
         padding: 0.8rem 1.5rem;
     }
 
-    /* Global Text Adjustments */
     body {
         font-size: 14px;
         line-height: 1.5;
@@ -2739,7 +2639,6 @@ footer {
         height: 38px;
     }
     
-    /* Typography Hierarchy */
     h1 { 
         font-size: 1.8rem; 
         line-height: 1.3; 
@@ -2795,18 +2694,16 @@ footer {
         max-width: 100%;
     }
 
-    /* Card Styles */
     .card {
         margin-bottom: 1.5rem;
         border-radius: var(--border-radius);
         box-shadow: var(--shadow-light);
     }
 
-    /* Mobile Menu */
     .mobile-menu {
-        background: var(--primary-color);
+        background: var(--nav-background);
         backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid #404040;
     }
 
     .mobile-menu .nav-links {
@@ -2819,11 +2716,11 @@ footer {
 
     .mobile-menu .nav-links a {
         padding: 1rem 0;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid #404040;
         display: block;
         font-size: 1rem;
         font-weight: 500;
-        color: var(--text-primary);
+        color: var(--nav-text);
         text-decoration: none;
         transition: var(--transition);
         background: transparent;
@@ -2831,8 +2728,8 @@ footer {
     }
 
     .mobile-menu .nav-links a:hover {
-        background: var(--hover-color);
-        color: var(--accent-color);
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--nav-text-hover);
         padding-left: 0.5rem;
         font-weight: 600;
     }
@@ -2846,14 +2743,12 @@ footer {
         list-style: none;
     }
     
-    /* Button Adjustments */
     .btn {
         font-size: 0.9rem;
         padding: 0.8rem 1.5rem;
         border-radius: var(--border-radius);
     }
     
-    /* Link Styles */
     a {
         color: var(--accent-color);
         text-decoration: none;
@@ -2871,9 +2766,9 @@ footer {
     }
     
     .mobile-menu {
-        background: var(--primary-color);
+        background: var(--nav-background);
         backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid #404040;
         padding: 1rem 0;
         box-shadow: var(--shadow-medium);
         position: relative;

@@ -51,7 +51,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo" onclick="showPage('home')">
-                <img src="/assets/img/logo.jpg" alt="Hui Wang">
+                <img src="/assets/img/hku.png" alt="Hui Wang">
                 <span>Hui Wang</span>
             </a>
             
@@ -85,10 +85,10 @@
         <!-- Home Page -->
         <div id="home" class="page active">
             <div class="home-hero">
-                <!-- 头像和介绍 -->
+                <!-- 核心介绍区 -->
                 <div class="profile-intro">
                     <div class="profile-image">
-                        <img src="/assets/img/huiwang.png" alt="Hui Wang" class="profile-img">
+                        <img src="/assets/img/favicon/huiwang.png" alt="Hui Wang" class="profile-img">
                     </div>
                     <div class="intro-text">
                         <h2 class="greeting-title">
@@ -100,108 +100,82 @@
                         <p class="greeting-subtitle">
                             PhD Candidate in Transport Geography 🚊
                         </p>
-                    </div>
-                </div>
-
-                <!-- 社交链接 -->
-
-
-                <!-- 中间内容区域 -->
-                <div class="middle-content">
-
-                    <div class="social-links">
-                        <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-link" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-link" title="ResearchGate">
-                            <i class="fab fa-researchgate"></i>
-                        </a>
-                        <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-link" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-
-                    <!-- 机构信息 -->
-                    <div class="affiliations-simple">
-                        <div class="affiliation-badges">
-                            <a href="https://geog.hku.hk/" target="_blank" class="affiliation-badge">
-                                <i class="fas fa-university"></i>
-                                <span>HKU Geography</span>
+                        
+                        <!-- 社交链接紧跟在名字下面 -->
+                        <div class="social-links">
+                            <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
+                                <i class="fas fa-graduation-cap"></i>
                             </a>
-                            <a href="https://www.jlfc.hku.hk/" target="_blank" class="affiliation-badge">
-                                <i class="fas fa-city"></i>
-                                <span>Joint Lab on Future Cities</span>
+                            <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-link" title="ResearchGate">
+                                <i class="fab fa-researchgate"></i>
+                            </a>
+                            <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-link" title="Twitter">
+                                <i class="fab fa-twitter"></i>
                             </a>
                         </div>
                     </div>
-
-                    <!-- 操作按钮 -->
-                    <div class="action-buttons">
-                        <button onclick="showPage('about')" class="btn btn-primary">
-                            <i class="fas fa-user"></i>
-                            About Me
-                        </button>
-                        <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Get in Touch
-                        </a>
-                        <a href="./assets/resume/CV.pdf" target="_blank" class="btn btn-outline">
-                            <i class="fas fa-download"></i>
-                            Download CV
-                        </a>
-                    </div>
-
                 </div>
 
-                <!-- 访客统计 -->
-                <div class="visitor-stats">
-                    <div class="globe-container">
-                        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=JnNpxa44ao2NTw1SEMdTyBmxadl7CF9n-SBR8v7xV_o"></script>
+                <!-- 机构信息 -->
+                <div class="affiliations-simple">
+                    <div class="affiliation-badges">
+                        <a href="https://geog.hku.hk/" target="_blank" class="affiliation-badge">
+                            <i class="fas fa-university"></i>
+                            <span>HKU Geography</span>
+                        </a>
+                        <a href="https://www.jlfc.hku.hk/" target="_blank" class="affiliation-badge">
+                            <i class="fas fa-city"></i>
+                            <span>Joint Lab on Future Cities</span>
+                        </a>
                     </div>
-                    <div class="counter-row">
-                        <div class="visitor-badge">
-                            <div class="visitor-info">
-                                <span class="visitor-label">Visitors</span>
-                                <img src="https://www.easycounter.com/counter.php?elvinwongwong" 
-                                    border="0" 
-                                    alt="Counter"
-                                    class="visitor-number" />
-                            </div>
-                        </div>
-                    </div>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="action-buttons">
+                    <button onclick="showPage('about')" class="btn btn-primary">
+                        <i class="fas fa-user"></i>
+                        About Me
+                    </button>
+                    <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get in Touch
+                    </a>
+                    <a href="./assets/resume/CV.pdf" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-download"></i>
+                        Download CV
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- About Page -->
-        <!-- About Page - 替换现有的about页面内容 -->
         <div id="about" class="page">
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        👋 Hui is a final-year PhD candidate at the 
-                        <a href="https://www.geog.hku.hk/" target="_blank">Department of Geography</a>, 
-                        <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>.
-                        He is currently working on sustainable transport solutions for future cities 🌆, supervised by 
+                        👋 Hui is a final-year PhD candidate in the 
+                        <a href="https://www.geog.hku.hk/" target="_blank">Department of Geography</a> 
+                        at <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>, 
+                        supervised by 
                         <a href="https://www.bpyloo.hku.hk/" target="_blank">Professor Becky P.Y. Loo</a> 
                         and funded by 
                         <a href="https://www.jlfc.hku.hk/" target="_blank">The Joint Lab on Future Cities</a>. 
-                        Hui received his Master's degree in Transport Engineering from the 
+                        He received his Master's degree in Transport Engineering from the 
                         <a href="https://tjjt.tongji.edu.cn/" target="_blank">College of Transportation</a> 
                         at <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a> 
-                        in June 2022 🎓, and his B.E. degree in Railway Transport Engineering from the 
+                        in June 2022 🎓, and his B.Eng. in Railway Transport Engineering from the 
                         <a href="http://trans.bjtu.edu.cn/cms/" target="_blank">School of Traffic and Transportation</a> 
                         at <a href="https://www.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a> 
-                        in June 2019. He has received several honors, including the China National Scholarship, 
-                        the Outstanding Graduate Award of Shanghai, and the Outstanding Master's Thesis award.
+                        in June 2019. He has received several awards, including first place in the INFORMS Railway Operations Research Competition, 
+                        the China National Scholarship, the Outstanding Graduate Award of Shanghai, and the Outstanding Master's Thesis Award.
                     </p>
-
+                    <br>
                     <p>
-                        🔬 His academic training encompasses both engineering and social sciences. Currently, he focuses on developing people-oriented and place-based methods to facilitate safe, 
-                        inclusive, efficient, and healthy transport systems 🚊🚶‍♂️🌱.
+                        🔬 His academic training encompasses both engineering and social sciences. His research focuses on sustainable transport solutions for future cities 🌆, 
+                        developing people-oriented and place-based methods to build safe, inclusive, efficient, and healthy transport systems 🚊🚶‍♂️🌱.
                     </p>
                 </div>
 
@@ -366,7 +340,9 @@
                     <div class="publications-card-header">
                         <h3 class="publications-card-title">Journal Articles</h3>
                         <div class="publication-note">
-                            <span>* denotes corresponding author.</span>
+                            <div class="publication-legend">
+                                <span>✉️ denotes corresponding author.</span>
+                            </div>
                             <div class="publication-legend">
                                 <i class="fas fa-star star-icon"></i>
                                 <span>indicates top 10% in the respective subject category.</span>
@@ -440,7 +416,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                Hui Wang, <a href="https://scholar.google.com/citations?user=-Ys1hOwAAAAJ&hl=en&oi=ao" target="_blank">Ka Ho Tsoi</a>, <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>*
+                                                Hui Wang, <a href="https://scholar.google.com/citations?user=-Ys1hOwAAAAJ&hl=en&oi=ao" target="_blank">Ka Ho Tsoi</a>, <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>✉️
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://doi.org/10.1016/j.tra.2025.104583" target="_blank">An assessment framework for 15-minute Cities: Progress worldwide and the impact of urban form</a>
@@ -469,7 +445,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN&oi=sra" target="_blank">Jinyang Li</a>, Hui Wang, <a href="#" target="_blank">Jing Teng</a>*
+                                                <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN&oi=sra" target="_blank">Jinyang Li</a>, Hui Wang, <a href="#" target="_blank">Jing Teng</a>✉️
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://www.tandfonline.com/doi/full/10.1080/19427867.2025.2470543" target="_blank">Revisit bus network robustness from the perspective of service-physical dependency</a>
@@ -509,7 +485,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                Hui Wang, <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>*
+                                                Hui Wang, <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>✉️
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://doi.org/10.1016/j.jtrangeo.2024.103983" target="_blank">The public transport disadvantaged in a highly transit-oriented city: An analytical framework, key challenges and opportunities</a>
@@ -541,7 +517,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>, Hui Wang*
+                                                <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>, Hui Wang✉️
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://doi.org/10.1016/j.tust.2024.106006" target="_blank">Dynamics of in-station time within metro systems: Measurement and determining factors</a>
@@ -569,7 +545,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, Jing Teng*, Hui Wang
+                                                <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, Jing Teng✉️, Hui Wang
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://doi.org/10.1016/j.tranpol.2023.11.008" target="_blank">Measuring route diversity in spatial and spatial-temporal public transport networks</a>
@@ -601,7 +577,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                <a href="https://scholar.google.com/citations?user=KuI5thcAAAAJ&hl=zh-CN" target="_blank">Lin Yang</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=xIdqBDsAAAAJ" target="_blank">Dewei Li</a>*, Hui Wang, <a href="https://scholar.google.com/citations?hl=zh-CN&user=RdlhUjAAAAAJ" target="_blank">Yuan Gao</a>
+                                                <a href="https://scholar.google.com/citations?user=KuI5thcAAAAJ&hl=zh-CN" target="_blank">Lin Yang</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=xIdqBDsAAAAJ" target="_blank">Dewei Li</a>✉️, Hui Wang, <a href="https://scholar.google.com/citations?hl=zh-CN&user=RdlhUjAAAAAJ" target="_blank">Yuan Gao</a>
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://doi.org/10.1016/j.eswa.2023.121515" target="_blank">Integrating Stop Planning, Timetabling and Rolling Stock Planning on High-Speed Railway Lines: A Multi-Objective Optimization Approach</a>
@@ -629,7 +605,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, Jing Teng*, Hui Wang
+                                                <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, Jing Teng✉️, Hui Wang
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://doi.org/10.1080/23249935.2024.2317783" target="_blank">Measuring robustness in uncertain topologies: a study of on-demand bus networks</a>
@@ -656,7 +632,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                Wei Peng, Jing Teng*, Hui Wang
+                                                Wei Peng, Jing Teng✉️, Hui Wang
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://link.springer.com/article/10.1007/s40864-024-00214-8" target="_blank">Understanding Heterogeneous Passenger Route Choice in Municipal Rail Transit with Express and Local Trains: An Empirical Study in Shanghai</a>
@@ -701,7 +677,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                Hui Wang, <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=As4RRhgAAAAJ" target="_blank">Pengling Wang</a>, Jing Teng*, <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>
+                                                Hui Wang, <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=As4RRhgAAAAJ" target="_blank">Pengling Wang</a>, Jing Teng✉️, <a href="https://scholar.google.com/citations?user=hyPdGdMAAAAJ&hl=zh-CN" target="_blank">Becky P.Y. Loo</a>
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://www.tandfonline.com/doi/full/10.1080/01441647.2023.2165574" target="_blank">Adaptability analysis methods of demand responsive transit: A review and future directions</a>
@@ -730,7 +706,7 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                <a href="https://www.researchgate.net/profile/Zhuotong_Bai" target="_blank">Zhuotong Bai</a>, Hui Wang, <a href="https://scholar.google.com/citations?user=KuI5thcAAAAJ&hl=zh-CN" target="_blank">Lin Yang</a>, Jiajie Li, Huapu Lu*
+                                                <a href="https://www.researchgate.net/profile/Zhuotong_Bai" target="_blank">Zhuotong Bai</a>, Hui Wang, <a href="https://scholar.google.com/citations?user=KuI5thcAAAAJ&hl=zh-CN" target="_blank">Lin Yang</a>, Jiajie Li, Huapu Lu✉️
                                             </div>
                                             <div class="publication-title">
                                                 <a href="https://doi.org/10.1155/2023/8989644" target="_blank">A Rescheduling Approach for Freight Railway considering Equity and Efficiency by an Integrated Genetic Algorithm</a>
@@ -2010,13 +1986,39 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p class="footer-text">
-                © 2025 Hui Wang. All rights reserved.
-            </p>
+            
+            <!-- 左侧文字 -->
+            <div class="footer-left">
+                <p class="footer-name">© 2025 Hui Wang</p>
+                <p class="footer-location">📍 Pok Fu Lam, HK Island</p>
+                <p class="footer-update">Last updated: October 2025</p>
+            </div>
+
+            <!-- 右侧折叠按钮 -->
+            <div class="footer-right">
+                <details id="stats-details">
+                    <summary title="Click to view visitor statistics">
+                        <i class="fas fa-chart-bar"></i>
+                    </summary>
+                    <div class="stats-content">
+                        <div class="globe-container" id="globe-container">
+                            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=JnNpxa44ao2NTw1SEMdTyBmxadl7CF9n-SBR8v7xV_o"></script>
+                        </div>
+                        <div class="visitor-info">
+                            <span class="visitor-count">
+                                <img src="https://www.easycounter.com/counter.php?elvinwongwong" 
+                                    border="0" 
+                                    alt="Counter" />
+                            </span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
         </div>
     </footer>
 
-    <!-- JavaScript -->
+<!-- JavaScript -->
     <script>
         // ========================================
         // 1. 移动端菜单功能
@@ -2166,43 +2168,43 @@
         window.clearAllFilters = clearAllFilters;
 
         // ========================================
-        // 5. 地球仪大小调整
+        // 5. 地球仪加载和大小调整
         // ========================================
 
-        // 等待地球仪加载完成后调整大小
-        function resizeGlobe() {
-            setTimeout(() => {
-                const globeContainer = document.querySelector('.globe-container');
-                if (globeContainer) {
-                    // 查找地球仪元素（可能是iframe、canvas或div）
-                    const globeElements = globeContainer.querySelectorAll('iframe, canvas, div[style*="width"], embed, object');
-                    
-                    globeElements.forEach(element => {
-                        if (element && element.style) {
-                            element.style.width = '250px !important';
-                            element.style.height = '250px !important';
-                            element.style.transform = 'scale(1.1)';
-                            element.style.transformOrigin = 'center';
-                        }
-                    });
-                    
-                    // 也尝试通过属性设置
-                    globeElements.forEach(element => {
-                        if (element.setAttribute) {
-                            element.setAttribute('width', '50');
-                            element.setAttribute('height', '350');
-                        }
-                    });
-                }
-            }, 2000); // 等待2秒确保地球仪完全加载
-        }
+        // 监听统计信息展开事件，展开时才加载地球仪
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsDetails = document.getElementById('stats-details');
+            const globeContainer = document.getElementById('globe-container');
+            let globeLoaded = false;
 
-// 页面加载完成后调整大小
-document.addEventListener('DOMContentLoaded', resizeGlobe);
+            if (statsDetails && globeContainer) {
+                statsDetails.addEventListener('toggle', function() {
+                    if (this.open && !globeLoaded) {
+                        // 第一次展开时加载地球仪
+                        const script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = '//clustrmaps.com/globe.js?d=JnNpxa44ao2NTw1SEMdTyBmxadl7CF9n-SBR8v7xV_o';
+                        globeContainer.appendChild(script);
+                        globeLoaded = true;
 
-// 也在window load事件中再次调整
-window.addEventListener('load', resizeGlobe);
-
+                        // 加载后调整大小
+                        setTimeout(function() {
+                            const globeElements = globeContainer.querySelectorAll('iframe, canvas, div, embed, object');
+                            globeElements.forEach(element => {
+                                if (element && element.style) {
+                                    element.style.width = '250px';
+                                    element.style.height = '250px';
+                                }
+                                if (element.setAttribute) {
+                                    element.setAttribute('width', '250');
+                                    element.setAttribute('height', '250');
+                                }
+                            });
+                        }, 2000);
+                    }
+                });
+            }
+        });
 
     </script>
 
