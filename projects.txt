@@ -1,0 +1,413 @@
+        <!-- Projects Page -->
+        <div id="projects" class="page">
+            <div class="projects-content">
+
+                <div class="projects-grid">
+                    <!-- Public Transport Disadvantage -->
+                    <div class="project-card">
+                        <img src="/assets/img/disadvantage.jpg" alt="Public Transport Disadvantage" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Public Transport Disadvantage</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Propose a holistic framework to identify public transport disadvantaged areas.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Perform a case study in Hong Kong.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-database project-section-icon"></i>
+                                    Data:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>GTFS: Hong Kong Datastore (open data).</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Population & facilities: Hong Kong Common Spatial Data Infrastructure (CSDI) Portal (open data).</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-external-link-alt project-section-icon"></i>
+                                    Output:
+                                </div>
+                                <div class="project-outputs">
+                                    <a href="https://www-sciencedirect-com.eproxy.lib.hku.hk/science/article/pii/S0966692324001923" target="_blank" class="project-output-link">
+                                        📄 Research paper
+                                    </a>
+                                    <a href="https://www.jlfc.hku.hk/?pgid=m38v3yks-e9a0c559-3540-4e8e-8db3-9b18fcf1fd75" target="_blank" class="project-output-link">
+                                        🎥 Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamics of In-station Time -->
+                    <div class="project-card">
+                        <img src="/assets/img/MTR.jpg" alt="Dynamics of In-station Time" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Dynamics of In-station Time</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>An agent-based simulation to measure the dynamics of in-station time.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Recommends both long-term and short-term measures.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-database project-section-icon"></i>
+                                    Data:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Passenger flow, station structure, & operation plan: MTR Corporation Limited.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-external-link-alt project-section-icon"></i>
+                                    Output:
+                                </div>
+                                <div class="project-outputs">
+                                    <a href="https://www-sciencedirect-com.eproxy.lib.hku.hk/science/article/pii/S0886779824004243#f0015" target="_blank" class="project-output-link">
+                                        📄 Research paper
+                                    </a>
+                                    <a href="https://www.jlfc.hku.hk/?pgid=m28s01w2-4e975174-0319-48f3-89be-b5fe6906b00a" target="_blank" class="project-output-link">
+                                        🎥 Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demand Responsive Transit -->
+                    <div class="project-card">
+                        <img src="/assets/img/newdrt.gif" alt="Demand Responsive Transit" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Demand Responsive Transit</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Reviews the adaptability analysis methods of DRT.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>An agent-based simulation to measure the operation of DRT.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>A techno-economic assessment method is developed.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-external-link-alt project-section-icon"></i>
+                                    Output:
+                                </div>
+                                <div class="project-outputs">
+                                    <a href="https://www-tandfonline-com.eproxy.lib.hku.hk/doi/full/10.1080/01441647.2023.2165574" target="_blank" class="project-output-link">
+                                        📄 Research paper 1
+                                    </a>
+                                    <a href="https://www.researchgate.net/publication/364621116_A_Multi-Agent-Based_Simulation_Explore_the_Adaptability_of_Route_Deviation_Demand_Responsive_Transit" target="_blank" class="project-output-link">
+                                        📄 Research paper 2
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-trophy project-section-icon"></i>
+                                    Honors:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Outstanding Master's Thesis award from Tongji University.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Railway Productivity Optimization -->
+                    <div class="project-card">
+                        <img src="/assets/img/chinarailwaynetwork.jpg" alt="Railway Productivity Optimization" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Railway Productivity Optimization</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Productivity layout evaluation & optimization of the train operation department.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Adjustment in the train operation department is the most complex due to the involvement of personnel.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>A study integrating railway transportation engineering and management.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-handshake project-section-icon"></i>
+                                    Sponsor:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>China State Railway Group Co., Ltd.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-external-link-alt project-section-icon"></i>
+                                    Output:
+                                </div>
+                                <div class="project-outputs">
+                                    <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=TDYS201912020&uniplatform=NZKPT&v=ugJnLvfCNBTbwgBApKeO-qeIe7SfppavGJZvgU3H5DVOvSTePK1C3GkU9Ldj3EFT" target="_blank" class="project-output-link">
+                                        📄 Research paper
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Municipal Railway Planning -->
+                    <div class="project-card">
+                        <img src="/assets/img/Guangzhouline.webp" alt="Municipal Railway Planning" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Municipal Railway Planning</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Develop a passenger flow assignment model (multinomial logit model) for express/local line problems.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Solve the assignment model based on the method of successive averages algorithm.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-handshake project-section-icon"></i>
+                                    Sponsor:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Guangzhou Metro Design & Research Institute Co., Ltd.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-external-link-alt project-section-icon"></i>
+                                    Output:
+                                </div>
+                                <div class="project-outputs">
+                                    <a href="https://journals-sagepub-com.eproxy.lib.hku.hk/doi/10.1177/03611981211030261" target="_blank" class="project-output-link">
+                                        📄 Research paper 1
+                                    </a>
+                                    <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=HDJT202006008&uniplatform=NZKPT&v=aQAK5uXBRJjDYjzTT_OiIfzC8YNirJ_-uFYdVGMaqj5OOr5eGd2Ao9FcNhniDSZS" target="_blank" class="project-output-link">
+                                        📄 Research paper 2
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Qingdao MaaS -->
+                    <div class="project-card">
+                        <img src="/assets/img/Qingdao.jpg" alt="Qingdao MaaS" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Qingdao MaaS</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Conduct behavior survey for traveling to/from Qingdao new airport.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Suggest operation mode of MaaS for Qingdao city.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-handshake project-section-icon"></i>
+                                    Sponsor:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Qingdao Municipal Government.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-external-link-alt project-section-icon"></i>
+                                    Output:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>My policy recommendations on MaaS planning for Qingdao city have been adopted by the government and can be found on their official website.</span>
+                                    </div>
+                                </div>
+                                <div class="project-outputs">
+                                    <a href="http://www.qingdao.gov.cn/zwgk/xxgk/jtys/ywfl/jbjs/202208/t20220803_6297848.shtml" target="_blank" class="project-output-link">
+                                        🔗 Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Integrate Metro and Intercity Rail -->
+                    <div class="project-card">
+                        <img src="/assets/img/yga.jpg" alt="Integrate Metro and Intercity Rail" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Integrate Metro and Intercity Rail</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Review of EU railway interconnection.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Research standard setting of timetable collaborative optimization.</span>
+                                    </div>
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Analyze of enterprise management and coordination mechanism.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-handshake project-section-icon"></i>
+                                    Sponsor:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>China Railway Design Group Co., Ltd.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- One-ticket Connecting Service -->
+                    <div class="project-card">
+                        <img src="/assets/img/oneticket.png" alt="One-ticket Connecting Service" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">One-ticket Connecting Service</h3>
+                            
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-lightbulb project-section-icon"></i>
+                                    Project highlights:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Analyze collaborative operation scheduling system.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <div class="project-section-title">
+                                    <i class="fas fa-handshake project-section-icon"></i>
+                                    Sponsor:
+                                </div>
+                                <div class="project-list">
+                                    <div class="project-list-item">
+                                        <span class="project-bullet">•</span>
+                                        <span>Scientific Research Institute of the Ministry of Transport.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
