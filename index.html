@@ -56,23 +56,22 @@
             </a>
             
             <ul class="nav-links">
-                <li><a href="#" onclick="showPage('about')" class="nav-link"><i class="fas fa-user"></i> About</a></li>
                 <li><a href="#" onclick="showPage('publications')" class="nav-link"><i class="fas fa-file-alt"></i> Publications</a></li>
                 <li><a href="#" onclick="showPage('services')" class="nav-link"><i class="fas fa-hands-helping"></i> Services</a></li>
                 <li><a href="#" onclick="showPage('awards')" class="nav-link"><i class="fas fa-award"></i> Miscellaneous</a></li>
             </ul>
-            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
             </button>
-
-            <div class="mobile-menu">
-                <ul class="nav-links">
-                    <li><a href="#" onclick="showPage('about')" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#" onclick="showPage('publications')" class="nav-link"><i class="fas fa-file-alt"></i> Publications</a></li>
-                    <li><a href="#" onclick="showPage('services')" class="nav-link"><i class="fas fa-hands-helping"></i> Services</a></li>
-                    <li><a href="#" onclick="showPage('awards')" class="nav-link"><i class="fas fa-award"></i> Miscellaneous</a></li>
-                </ul>
-            </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('publications'); closeMobileMenu();" class="nav-link"><i class="fas fa-file-alt"></i> Publications</a></li>
+                <li><a href="#" onclick="showPage('services'); closeMobileMenu();" class="nav-link"><i class="fas fa-hands-helping"></i> Services</a></li>
+                <li><a href="#" onclick="showPage('awards'); closeMobileMenu();" class="nav-link"><i class="fas fa-award"></i> Miscellaneous</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -81,44 +80,43 @@
 
         <!-- Home Page -->
         <div id="home" class="page active">
-            <div class="home-hero">
-                <!-- 核心介绍区 -->
-                <div class="profile-intro">
+            <div class="home-layout">
+                <!-- 左侧栏 -->
+                <aside class="home-sidebar">
                     <div class="profile-image">
                         <img src="/assets/img/favicon/huiwang.png" alt="Hui Wang" class="profile-img">
                     </div>
+
                     <div class="intro-text">
                         <h2 class="greeting-title">
-                            <span class="wave-emoji">Hi There! 👋</span><br />
-                            I'm <span class="name-highlight">Hui Wang 
-                                <span class="chinese-name">王輝.</span>
+                            <span class="wave-emoji">👋</span><br />
+                            <span class="name-highlight">Hui Wang 
+                                <span class="chinese-name">王輝</span>
                             </span>
                         </h2>
                         <p class="greeting-subtitle">
-                            PhD Candidate in Transport Geography 🌍
+                            PhD Candidate in Transport Geography
                         </p>
-                        
-                        <!-- 社交链接紧跟在名字下面 -->
-                        <div class="social-links">
-                            <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
-                                <i class="fas fa-graduation-cap"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-link" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-link" title="ResearchGate">
-                                <i class="fab fa-researchgate"></i>
-                            </a>
-                            <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-link" title="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
                     </div>
-                </div>
 
-                <!-- 机构信息 -->
-                <div class="affiliations-simple">
-                    <div class="affiliation-badges">
+                    <div class="social-links">
+                        <a href="https://scholar.google.com/citations?user=FZ7WXRwAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/huiwanghk/?locale=en_US" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Hui-Wang-501" target="_blank" class="social-link" title="ResearchGate">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                        <a href="https://twitter.com/TransGeoHui" target="_blank" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+
+                    <div class="sidebar-divider"></div>
+
+                    <div class="affiliations-simple">
                         <a href="https://geog.hku.hk/" target="_blank" class="affiliation-badge">
                             <i class="fas fa-university"></i>
                             <span>HKU Geography</span>
@@ -128,200 +126,144 @@
                             <span>Joint Lab on Future Cities</span>
                         </a>
                     </div>
-                </div>
 
-                <!-- 操作按钮 -->
-                <div class="action-buttons">
-                    <button onclick="showPage('about')" class="btn btn-primary">
-                        <i class="fas fa-user"></i>
-                        About Me
-                    </button>
-                    <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get in Touch
-                    </a>
-                    <a href="./assets/resume/CV.pdf" target="_blank" class="btn btn-outline">
-                        <i class="fas fa-download"></i>
-                        Download CV
-                    </a>
-                </div>
-            </div>
-        </div>
+                    <div class="sidebar-divider"></div>
 
-        <!-- About Page -->
-        <div id="about" class="page">
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        👋 Hui is a final-year PhD candidate in the 
-                        <a href="https://www.geog.hku.hk/" target="_blank">Department of Geography</a> 
-                        at <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>. 
-                        He received his Master's degree in Transport Engineering from the 
-                        <a href="https://tjjt.tongji.edu.cn/" target="_blank">College of Transportation</a> 
-                        at <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a> 
-                        in June 2022 🎓, and his B.Eng. in Railway Transport Engineering from the 
-                        <a href="http://trans.bjtu.edu.cn/cms/" target="_blank">School of Traffic and Transportation</a> 
-                        at <a href="https://www.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a> 
-                        in June 2019. He has received several awards, including Research Postgraduate Student Innovation Award, first place in the INFORMS Railway Operations Research Competition, 
-                        the China National Scholarship, and the Outstanding Master's Thesis Award, etc.
-                    </p>
-                    <br>
-                    <p>
-                        🔬 His academic training encompasses both engineering and social sciences. His research focuses on sustainable transport solutions for future cities 🌆, 
-                        developing people-oriented and place-based methods to build safe, inclusive, efficient, and healthy transport systems.
-                    </p>
-                </div>
-
-
-                <div class="about-section">
-                    <div class="section-header-about">
-                        <i class="fas fa-microscope section-icon"></i>
-                        <h3 class="section-title-about">Research Interests</h3>
+                    <div class="action-buttons">
+                        <a href="mailto:huiwanghk@connect.hku.hk" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Get in Touch
+                        </a>
+                        <a href="./assets/resume/CV.pdf" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </a>
                     </div>
+                </aside>
 
-                    <div class="interest-grid">
-                        <div class="interest-card">
-                            <div class="interest-icon">🏙️🚌</div>
-                            <p class="interest-description">Accessibility and Urban Form</p>
+                <!-- 右侧主内容区 -->
+                <div class="home-main">
+                    <!-- 个人简介 -->
+                    <section class="bio-section">
+                        <h3 class="section-title">About</h3>
+                        <div class="bio-text">
+                            <p>
+                                Hui is a final-year PhD candidate in the 
+                                <a href="https://www.geog.hku.hk/" target="_blank">Department of Geography</a> 
+                                at <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>. 
+                                He received his Master's degree in Transport Engineering from the 
+                                <a href="https://tjjt.tongji.edu.cn/" target="_blank">College of Transportation</a> 
+                                at <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a> 
+                                in June 2022 🎓, and his B.Eng. in Railway Transport Engineering from the 
+                                <a href="http://trans.bjtu.edu.cn/cms/" target="_blank">School of Traffic and Transportation</a> 
+                                at <a href="https://www.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a> 
+                                in June 2019. He has received several awards, including Research Postgraduate Student Innovation Award, first place in the INFORMS Railway Operations Research Competition, 
+                                the China National Scholarship, and the Outstanding Master's Thesis Award, etc.
+                            </p>
+                            <br>
+                            <p>
+                                🔬 His academic training encompasses both engineering and social sciences. His research focuses on sustainable transport solutions for future cities 🌆, 
+                                developing people-oriented and place-based methods to build safe, inclusive, efficient, and healthy transport systems.
+                            </p>
                         </div>
-                        <div class="interest-card">
-                            <div class="interest-icon">🚴🌱</div>
-                            <p class="interest-description">Sustainable Mobility and Health</p>
-                        </div>
-                        <div class="interest-card">
-                            <div class="interest-icon">🚊🛤️</div>
-                            <p class="interest-description">Transport Operations and Optimization</p>
-                        </div>
-                    </div>
-                </div>
+                    </section>
 
-                <!-- Education -->
-                <div class="about-section">
-                    <div class="section-header-about">
-                        <i class="fas fa-graduation-cap section-icon"></i>
-                        <h3 class="section-title-about">Education</h3>
-                    </div>
+                    <!-- Research Interests -->
+                    <section class="interests-section">
+                        <h3 class="section-title">Research Interests</h3>
+                        <div class="interest-grid">
+                            <div class="interest-card">
+                                <div class="interest-icon">🏙️🚌</div>
+                                <p class="interest-description">Accessibility and Urban Form</p>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">🚴🌱</div>
+                                <p class="interest-description">Sustainable Mobility and Health</p>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">🚊🛤️</div>
+                                <p class="interest-description">Transport Operations and Optimization</p>
+                            </div>
+                        </div>
+                    </section>
 
-                    <ul class="education-list">
-                        <!-- HKU -->
-                        <li class="education-item">
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-bullet">•</span>
-                                    <div class="education-institution">
-                                        <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a><span class="education-location">, Hong Kong SAR, China</span>
+                    <!-- Education -->
+                    <section class="education-section">
+                        <h3 class="section-title">Education</h3>
+                        <div class="education-compact">
+                            <div class="edu-item">
+                                <div class="edu-main">
+                                    <div class="edu-degree">PhD in Transport Geography</div>
+                                    <div class="edu-school">
+                                        <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>
                                     </div>
-                                </div>
-                                <div class="education-details">
-                                    <div class="education-degree">PhD in Transport Geography</div>
-                                    <div class="education-advisor">
-                                        <i class="fas fa-user detail-icon"></i>
+                                    <div class="edu-meta">
+                                        <span>Sep. 2022 - present</span>
                                         <span>Advisor: <a href="https://bpyloo.hku.hk/" target="_blank">Prof. Becky P.Y. Loo</a></span>
                                     </div>
-                                    <div class="education-date">
-                                        <i class="fas fa-calendar detail-icon"></i>
-                                        <span>Sep. 2022--present</span>
-                                    </div>
                                 </div>
+                                <img src="/assets/img/hku.png" alt="HKU" class="edu-logo">
                             </div>
-                            <img src="/assets/img/hku.png" alt="HKU" class="education-logo">
-                        </li>
 
-                        <!-- Tongji -->
-                        <li class="education-item">
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-bullet">•</span>
-                                    <div class="education-institution">
-                                        <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a><span class="education-location">, Shanghai, China</span>
+                            <div class="edu-item">
+                                <div class="edu-main">
+                                    <div class="edu-degree">M.Eng in Transport Engineering</div>
+                                    <div class="edu-school">
+                                        <a href="https://www.tongji.edu.cn/" target="_blank">Tongji University</a>
                                     </div>
-                                </div>
-                                <div class="education-details">
-                                    <div class="education-degree">M.Eng in Transport</div>
-                                    <div class="education-advisor">
-                                        <i class="fas fa-user detail-icon"></i>
+                                    <div class="edu-meta">
+                                        <span>Sep. 2019 - Jun. 2022</span>
+                                        <span class="separator">•</span>
                                         <span>Advisor: <a href="https://tjjt.tongji.edu.cn/info/2901/10856.htm" target="_blank">Prof. Jing Teng</a></span>
                                     </div>
-                                    <div class="education-date">
-                                        <i class="fas fa-calendar detail-icon"></i>
-                                        <span>Sep. 2019--Jun. 2022</span>
-                                    </div>
                                 </div>
+                                <img src="/assets/img/tongji.png" alt="Tongji" class="edu-logo">
                             </div>
-                            <img src="/assets/img/tongji.png" alt="Tongji University" class="education-logo">
-                        </li>
 
-                        <!-- TUM -->
-                        <li class="education-item">
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-bullet">•</span>
-                                    <div class="education-institution">
-                                        <a href="https://www.tum.de/" target="_blank">Technical University of Munich</a><span class="education-location">, Munich, Germany</span>
+                            <div class="edu-item">
+                                <div class="edu-main">
+                                    <div class="edu-degree">B.Eng in Railway Transport Engineering</div>
+                                    <div class="edu-school">
+                                        <a href="https://www.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a>
+                                    </div>
+                                    <div class="edu-meta">
+                                        <span>Sep. 2015 - Jun. 2019</span>
+                                        <span class="separator">•</span>
+                                        <span>Advisors: <a href="https://trans.bjtu.edu.cn/faculty/Q4brJaQeDoamEo15.html" target="_blank">Dr. Ying Wang</a> & <a href="https://trans.bjtu.edu.cn/faculty/M1gYnaAkjV7rDlVN.html" target="_blank">Prof. Haiying Li</a></span>
                                     </div>
                                 </div>
-                                <div class="education-details">
-                                    <div class="education-degree">Exchange Student</div>
-                                    <div class="education-date">
-                                        <i class="fas fa-calendar detail-icon"></i>
-                                        <span>Oct. 2021--Jun. 2022</span>
-                                    </div>
-                                </div>
+                                <img src="/assets/img/bjtu.png" alt="BJTU" class="edu-logo">
                             </div>
-                            <img src="/assets/img/tum.png" alt="TUM" class="education-logo">
-                        </li>
 
-                        <!-- BJTU -->
-                        <li class="education-item">
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-bullet">•</span>
-                                    <div class="education-institution">
-                                        <a href="https://www.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a><span class="education-location">, Beijing, China</span>
+                            <div class="edu-item">
+                                <div class="edu-main">
+                                    <div class="edu-degree">Visiting Master Student</div>
+                                    <div class="edu-school">
+                                        <a href="https://www.tum.de/" target="_blank">Technical University of Munich</a>
+                                    </div>
+                                    <div class="edu-meta">
+                                        <span>Oct. 2021 - Jun. 2022</span>
                                     </div>
                                 </div>
-                                <div class="education-details">
-                                    <div class="education-degree">B.Eng in Railway Transport</div>
-                                    <div class="education-advisor">
-                                        <i class="fas fa-user detail-icon"></i>
-                                        <span>Advisor: <a href="https://trans.bjtu.edu.cn/faculty/Q4brJaQeDoamEo15.html" target="_blank">Dr. Ying Wang</a> & <a href="https://trans.bjtu.edu.cn/faculty/M1gYnaAkjV7rDlVN.html" target="_blank">Prof. Haiying Li</a></span>
-                                    </div>
-                                    <div class="education-date">
-                                        <i class="fas fa-calendar detail-icon"></i>
-                                        <span>Sep. 2015--Jun. 2019</span>
-                                    </div>
-                                </div>
+                                <img src="/assets/img/tum.png" alt="TUM" class="edu-logo">
                             </div>
-                            <img src="/assets/img/bjtu.png" alt="BJTU" class="education-logo">
-                        </li>
-                    </ul>
+                        </div>
+                    </section>
+
+                    <!-- Contact -->
+                    <section class="contact-section">
+                        <h3 class="section-title">Contact</h3>
+                        <div class="contact-info">
+                            <a href="mailto:huiwanghk@connect.hku.hk" class="contact-email">
+                                <i class="fas fa-envelope"></i>
+                                huiwanghk@connect.hku.hk
+                            </a>
+                            <p class="contact-note">Welcome for any questions and collaborations.</p>
+                        </div>
+                    </section>
                 </div>
-
-                <!-- Contact -->
-                <div class="about-section">
-                    <div class="section-header-about">
-                        <i class="fas fa-envelope section-icon"></i>
-                        <h3 class="section-title-about">Contact</h3>
-                    </div>
-
-                    <ul class="contact-list">
-                        <li class="contact-item-about">
-                            <span class="interest-bullet">•</span>
-                            <div>
-                                <a href="mailto:huiwanghk@connect.hku.hk">huiwanghk@connect.hku.hk</a>
-                                <div class="contact-note">
-                                    <i class="fas fa-comments detail-icon"></i>
-                                    <span>Welcome for any questions and collaborations.</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
         </div>
-
-
 
         <!-- Publications Page -->
         <div id="publications" class="page">
@@ -1078,7 +1020,7 @@
                                                 </div>
                                             </div>
                                         </li>
-
+<!-- 
                                         <li class="publication-item" data-topics="Bus Planning" data-methods="Spatial Analysis,Agent-based Simulation,Data Envelopment Analysis">
                                             <div class="publication-content">
                                                 <i class="fas fa-presentation publication-icon"></i>
@@ -1103,7 +1045,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
+                                        </li> -->
 
                                         <li class="publication-item" data-topics="Bus Planning" data-methods="Spatial Analysis">
                                             <div class="publication-content">
@@ -1405,15 +1347,15 @@
         <div id="awards" class="page">
             <div class="awards-content">
                 <!-- Research Grants Card -->
-                <div class="awards-card">
-                    <div class="awards-card-header">
+                <!-- <div class="awards-card"> -->
+                    <!-- <div class="awards-card-header">
                         <h3 class="awards-card-title">
                             <i class="fas fa-award awards-card-icon"></i>
                             Research Grants
                         </h3>
-                    </div>
-                    <div class="awards-card-content">
-                        <ul class="awards-list">
+                    </div> -->
+                    <!-- <div class="awards-card-content">
+                        <ul class="awards-list"> -->
                             <!-- 2026 -->
                             <!-- <li class="awards-item">
                                 <span class="awards-bullet">•</span>
@@ -1431,12 +1373,14 @@
                             </li> -->
 
                             <!-- 2024 -->
-                            <li class="awards-item">
+                            <!-- <li class="awards-item">
                                 <span class="awards-bullet">•</span>
                                 <div class="awards-item-content">
                                     <div class="grant-title">Beijing Healthy Street</div>
                                     <div class="grant-details">
-                                        <a href="https://www.bjghy.com/" target="_blank">Beijing Municipal Institute of City Planning & Design</a>
+                                        <a href="https://www.bjghy.com/" target="_blank">
+                                            Beijing Municipal Institute of City Planning & Design
+                                        </a>
                                         <span class="grant-amount">RMB 50,000</span>
                                     </div>
                                     <div class="grant-period">2023/12/01 - 2024/12/31</div>
@@ -1444,8 +1388,8 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
 
                 <!-- Awards & Honors Card -->
                 <div class="awards-card">
@@ -1457,6 +1401,18 @@
                     </div>
                     <div class="awards-card-content">
                         <ul class="awards-list">
+                            <!-- 2026 -->
+                            <li class="awards-item">
+                                <span class="awards-bullet">•</span>
+                                <div class="awards-item-content">
+                                    <div class="award-name">
+                                        <a href="https://gradsch.hku.hk/news_and_events/award_presentation_ceremony/award-recipients" target="_blank">Research Postgraduate Student Innovation Award</a>
+                                        <span class="awards-year">(2026)</span>
+                                    </div>
+                                    <i class="fas fa-bookmark bookmark-icon"></i>
+                                </div>
+                            </li>
+
                             <!-- 2025 -->
                             <li class="awards-item">
                                 <span class="awards-bullet">•</span>
@@ -1651,7 +1607,7 @@
             <div class="footer-left">
                 <p class="footer-name">© 2026 Hui Wang</p>
                 <p class="footer-location">📍 Pok Fu Lam, HK Island</p>
-                <p class="footer-update">Last updated: January 2026</p>
+                <p class="footer-update">Last updated: March 2026</p>
             </div>
 
             <!-- 右侧折叠按钮 -->
