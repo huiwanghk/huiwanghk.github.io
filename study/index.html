@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Study Questionnaires</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, system-ui, sans-serif;
+            background: linear-gradient(135deg, #f1f5f9, #cbd5e1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5vh 6vw;
+        }
+        .container {
+            width: 100%;
+            max-width: 820px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #475569;
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 4vh;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            text-decoration: none;
+            border-radius: 28px;
+            padding: 32px 38px;
+            margin-bottom: 26px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        /* 悬停时轻微上浮 */
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 38px rgba(0,0,0,0.18);
+        }
+        /* 点击时下沉 */
+        .btn:active {
+            transform: scale(0.97);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        /* 点击光晕效果 */
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.35);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease, opacity 0.6s ease;
+            opacity: 0;
+        }
+        .btn:active::after {
+            width: 600px;
+            height: 600px;
+            opacity: 1;
+            transition: 0s;
+        }
+        .num {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .btn:hover .num {
+            transform: scale(1.1);
+        }
+        .btn-blue { background: #3b82f6; }
+        .btn-green { background: #10b981; }
+        .btn-orange { background: #f59e0b; }
+        .btn-purple { background: #8b5cf6; }
+        .btn-title { font-size: 30px; font-weight: 600; color: white; line-height: 1.2; position: relative; z-index: 1; }
+        .btn-note { font-size: 18px; color: rgba(255,255,255,0.92); margin-top: 10px; line-height: 1.45; position: relative; z-index: 1; }
+        .arrow {
+            margin-left: auto;
+            color: rgba(255,255,255,0.7);
+            font-size: 38px;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .btn:hover .arrow {
+            transform: translateX(8px);
+            color: rgba(255,255,255,1);
+        }
+        .footer { text-align: center; color: #94a3b8; font-size: 18px; margin-top: 2vh; }
+
+        /* iPad 横屏时稍微缩小一点垂直间距 */
+        @media (orientation: landscape) {
+            body { padding: 4vh 8vw; }
+            .btn { padding: 26px 38px; margin-bottom: 20px; }
+            .subtitle { margin-bottom: 3vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="subtitle">Please select the questionnaire for your current stage</p>
+
+        <a class="btn btn-blue" href="https://hku.au1.qualtrics.com/jfe/form/SV_0fv49nFggRCFUlU" target="_blank">
+            <div class="num">1</div>
+            <div>
+                <div class="btn-title">Consent Form</div>
+                <div class="btn-note">Please skip this if you have already completed the consent form via our email before attending PEARL.</div>
+            </div>
+            <span class="arrow">→</span>
+        </a>
+
+        <a class="btn btn-green" href="https://hku.au1.qualtrics.com/jfe/form/SV_0ex2LsOMjmEB3BY" target="_blank">
+            <div class="num">2</div>
+            <div>
+                <div class="btn-title">Questionnaire Before Experiment</div>
+            </div>
+            <span class="arrow">→</span>
+        </a>
+
+        <a class="btn btn-orange" href="https://hku.au1.qualtrics.com/jfe/form/SV_0IlrrLg5BVGvZ9I" target="_blank">
+            <div class="num">3</div>
+            <div>
+                <div class="btn-title">Questionnaire In Experiment</div>
+                <div class="btn-note">Please note: this questionnaire needs to be completed four times during the experiment.</div>
+            </div>
+            <span class="arrow">→</span>
+        </a>
+
+        <a class="btn btn-purple" href="https://hku.au1.qualtrics.com/jfe/form/SV_d5znFlVIqnMWgHs" target="_blank">
+            <div class="num">4</div>
+            <div>
+                <div class="btn-title">Questionnaire After Experiment</div>
+            </div>
+            <span class="arrow">→</span>
+        </a>
+
+        <p class="footer">Thank you for participating in our study</p>
+    </div>
+</body>
+</html>
