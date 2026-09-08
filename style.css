@@ -1,0 +1,102 @@
+/* Peer-review journals follow the site's body typography and normal text flow. */
+.services-card-content .journal-list {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: var(--text-secondary);
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-align: left;
+}
+
+.services-card-content .journal-list .journal-link {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-decoration: none;
+}
+
+.services-card-content .journal-list .journal-link:hover,
+.services-card-content .journal-list .journal-link:focus-visible {
+    color: var(--accent-color);
+    text-decoration: underline;
+    transform: none;
+}
+
+/* Keep the review list compact within the existing Services card. */
+.peer-review-card .services-card-content {
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+}
+
+.journal-list .journal-name-zh {
+    font-family: 'KaiTi', 'STKaiti', 'BiauKai', 'DFKai-SB', serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .peer-review-card .services-card-header,
+    .peer-review-card .services-card-content {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
+
+/* Apply KaiTi to Chinese text itself, including text inside links and italics. */
+.text-kaiti,
+.chinese-name,
+.journal-list .journal-name-zh {
+    font-family: 'KaiTi', '\6977\4F53', 'STKaiti', '\534E\6587\6977\4F53', 'DFKai-SB', 'BiauKai', cursive;
+    font-style: normal;
+}
+
+/* Select KaiTi for Chinese glyphs throughout publication citations. */
+@font-face {
+    font-family: 'Publication Chinese';
+    src: local('KaiTi'), local('STKaiti'), local('DFKai-SB'), local('BiauKai');
+    font-style: normal;
+    font-weight: 100 900;
+    unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
+
+#publications .publication-authors,
+#publications .publication-title,
+#publications .publication-venue,
+#publications .publication-authors a,
+#publications .publication-title a,
+#publications .publication-venue em {
+    font-family: 'Publication Chinese', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#publications .text-kaiti {
+    font-size: 1.1em;
+    font-family: 'KaiTi', 'STKaiti', 'BiauKai', 'DFKai-SB', serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Titles without a URL share the linked publication title typography. */
+.publication-title .publication-title-text {
+    color: var(--accent-color);
+    font-size: 1rem;
+}

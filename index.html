@@ -35,15 +35,12 @@
     <meta name="twitter:description" content="PhD Candidate at HKU Geography.">
     <meta name="twitter:image" content="https://huiwanghk.github.io/examples/preview.png">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="style.css?v=20260908-6">
 </head>
 
 <body>
@@ -91,7 +88,7 @@
                         <h2 class="greeting-title">
                             <span class="wave-emoji">👋</span><br />
                             <span class="name-highlight">Hui Wang<br> 
-                                <span class="chinese-name">王輝</span>
+                                <span class="chinese-name"><span class="text-kaiti">王輝</span></span>
                             </span>
                         </h2>
                         <p class="greeting-subtitle">
@@ -290,7 +287,7 @@
                 <!-- Journal Articles Card -->
                 <div class="publications-card">
                     <div class="publications-card-header">
-                        <h3 class="publications-card-title">Journal Articles</h3>
+                        <h3 class="publications-card-title">Journal Articles &amp; Proceedings</h3>
                         <div class="publication-note">
                             <div class="publication-legend">
                                 <span>✉️ denotes corresponding author.</span>
@@ -318,6 +315,7 @@
                                 </label>
                                 <select id="yearFilter" class="filter-select" onchange="filterPublications()">
                                     <option value="all">All Years</option>
+                                    <option value="2026">2026</option>
                                     <option value="2025">2025</option>
                                     <option value="2024">2024</option>
                                     <option value="2023">2023</option>
@@ -352,6 +350,99 @@
                     </div>
 
                     <div class="publications-content-area">
+                        <!-- 2026 Publications -->
+                        <div class="year-section" data-year="2026">
+                            <div class="year-header">
+                                <div class="year-divider"></div>
+                                <div class="year-label">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    2026
+                                </div>
+                                <div class="year-divider"></div>
+                            </div>
+                            <ul class="publications-list">
+                                <li class="publication-item" data-topics="Travel Behaviour" data-methods="Econometrics">
+                                    <div class="publication-content">
+                                        <i class="fas fa-file-alt publication-icon"></i>
+                                        <div class="publication-details">
+                                            <div class="publication-authors">
+                                                Jing Teng, Tong Wu, Cen Zhang✉️, <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, Hui Wang
+                                            </div>
+                                            <div class="publication-title">
+                                                <a href="https://doi.org/10.1016/j.tbs.2025.101149" target="_blank">Exploring heterogeneity in preferences for Mobility as a Service: An airport ground access case in Qingdao, China</a>
+                                            </div>
+                                            <div class="publication-venue">
+                                                <em>Travel Behaviour and Society, 42</em>, 101149.
+                                                <i class="fas fa-star star-icon"></i>
+                                            </div>
+                                            <div class="publication-tags">
+                                                <span class="publication-tag">
+                                                    <i class="fas fa-tag"></i>
+                                                    Travel Behaviour
+                                                </span>
+                                                <span class="publication-tag">
+                                                    <i class="fas fa-tag"></i>
+                                                    Econometrics
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="publication-item" data-topics="Travel Behaviour" data-methods="Econometrics">
+                                    <div class="publication-content">
+                                        <i class="fas fa-file-alt publication-icon"></i>
+                                        <div class="publication-details">
+                                            <div class="publication-authors">
+                                                Jing Teng, Jiankun Le, Enhui Chen&#9993;&#65039;, Hui Wang
+                                            </div>
+                                            <div class="publication-title">
+                                                <a href="https://doi.org/10.16037/j.1007-869x.20250390" target="_blank">Travel choice behavior of customized feeder buses for Shanghai urban rail transit targeting suburban tourism mobility</a>
+                                            </div>
+                                            <div class="publication-venue">
+                                                <em>Urban Mass Transit, 29</em>(5), 8&ndash;14. (In Chinese).
+                                            </div>
+                                            <div class="publication-tags">
+                                                <span class="publication-tag">
+                                                    <i class="fas fa-tag"></i>
+                                                    Travel Behaviour
+                                                </span>
+                                                <span class="publication-tag">
+                                                    <i class="fas fa-tag"></i>
+                                                    Econometrics
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="publication-item" data-topics="Bus Planning,Spatial Analysis" data-methods="Spatial Analysis">
+                                    <div class="publication-content">
+                                        <i class="fas fa-file-alt publication-icon"></i>
+                                        <div class="publication-details">
+                                            <div class="publication-authors">
+                                                <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&amp;hl=zh-CN" target="_blank">Jin-Yang Li</a>, Jing Teng, Hui Wang&#9993;&#65039;
+                                            </div>
+                                            <div class="publication-title">
+                                                <span class="publication-title-text">Benefits and Challenges of Flexible Service Integration in Bus Network Redundancy</span>
+                                            </div>
+                                            <div class="publication-venue">
+                                                <em>Proceedings of the World Conference of Transport Research</em>, Toulouse, France (WCTR 2026 Toulouse).
+                                            </div>
+                                            <div class="publication-tags">
+                                                <span class="publication-tag">
+                                                    <i class="fas fa-tag"></i>
+                                                    Bus Planning
+                                                </span>
+                                                <span class="publication-tag">
+                                                    <i class="fas fa-tag"></i>
+                                                    Spatial Analysis
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- 2025 Publications -->
                         <div class="year-section" data-year="2025">
                             <div class="year-header">
@@ -394,33 +485,6 @@
                                                 <span class="publication-tag">
                                                     <i class="fas fa-tag"></i>
                                                     Spatial Analysis
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="publication-item" data-topics="Travel Behaviour" data-methods="Econometrics">
-                                    <div class="publication-content">
-                                        <i class="fas fa-file-alt publication-icon"></i>
-                                        <div class="publication-details">
-                                            <div class="publication-authors">
-                                                Jing Teng, Tong Wu, Cen Zhang✉️, <a href="https://scholar.google.com/citations?user=kwAfZOIAAAAJ&hl=zh-CN" target="_blank">Jinyang Li</a>, Hui Wang
-                                            </div>
-                                            <div class="publication-title">
-                                                <a href="https://doi.org/10.1016/j.tbs.2025.101149" target="_blank">Exploring heterogeneity in preferences for Mobility as a Service: An airport ground access case in Qingdao, China</a>
-                                            </div>
-                                            <div class="publication-venue">
-                                                <em>Travel Behaviour and Society, 42</em>, 101149.
-                                                <i class="fas fa-star star-icon"></i>
-                                            </div>
-                                            <div class="publication-tags">
-                                                <span class="publication-tag">
-                                                    <i class="fas fa-tag"></i>
-                                                    Travel Behaviour
-                                                </span>
-                                                <span class="publication-tag">
-                                                    <i class="fas fa-tag"></i>
-                                                    Econometrics
                                                 </span>
                                             </div>
                                         </div>
@@ -847,13 +911,13 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                郑翔, 王辉, 徐行方, 滕靖
+                                                <span class="text-kaiti">郑翔</span>, <span class="text-kaiti">王辉</span>, <span class="text-kaiti">徐行方</span>, <span class="text-kaiti">滕靖</span>
                                             </div>
                                             <div class="publication-title">
-                                                <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=HDJT202006008&uniplatform=NZKPT&v=aQAK5uXBRJjDYjzTT_OiIfzC8YNirJ_-uFYdVGMaqj5OOr5eGd2Ao9FcNhniDSZS" target="_blank">快慢车模式下市域轨道交通开行方案综合评价研究</a>
+                                                <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=HDJT202006008&uniplatform=NZKPT&v=aQAK5uXBRJjDYjzTT_OiIfzC8YNirJ_-uFYdVGMaqj5OOr5eGd2Ao9FcNhniDSZS" target="_blank"><span class="text-kaiti">快慢车模式下市域轨道交通开行方案综合评价研究</span></a>
                                             </div>
                                             <div class="publication-venue">
-                                                <em>华东交通大学学报, 37(06)</em>, 58-67.
+                                                <em><span class="text-kaiti">华东交通大学学报</span>, 37(06)</em>, 58-67.
                                             </div>
                                             <div class="publication-tags">
                                                 <span class="publication-tag">
@@ -870,13 +934,13 @@
                                         <i class="fas fa-file-alt publication-icon"></i>
                                         <div class="publication-details">
                                             <div class="publication-authors">
-                                                王辉, 杜新军, 李海鹰, 王莹, 何最新
+                                                <span class="text-kaiti">王辉</span>, <span class="text-kaiti">杜新军</span>, <span class="text-kaiti">李海鹰</span>, <span class="text-kaiti">王莹</span>, <span class="text-kaiti">何最新</span>
                                             </div>
                                             <div class="publication-title">
-                                                <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=TDYS201912020&uniplatform=NZKPT&v=ugJnLvfCNBTbwgBApKeO-qeIe7SfppavGJZvgU3H5DVOvSTePK1C3GkU9Ldj3EFT" target="_blank">铁路车务系统布局适配评价研究</a>
+                                                <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=TDYS201912020&uniplatform=NZKPT&v=ugJnLvfCNBTbwgBApKeO-qeIe7SfppavGJZvgU3H5DVOvSTePK1C3GkU9Ldj3EFT" target="_blank"><span class="text-kaiti">铁路车务系统布局适配评价研究</span></a>
                                             </div>
                                             <div class="publication-venue">
-                                                <em>铁道运输与经济, 41(12)</em>, 97-104.
+                                                <em><span class="text-kaiti">铁道运输与经济</span>, 41(12)</em>, 97-104.
                                             </div>
                                             <div class="publication-tags">
                                                 <span class="publication-tag">
@@ -945,9 +1009,9 @@
                                                 <i class="fas fa-presentation publication-icon"></i>
                                                 <div class="publication-details">
                                                     <div class="publication-authors">Hui Wang</div>
-                                                    <div class="publication-title">地铁乘客在站时间的动态特性</div>
+                                                    <div class="publication-title"><span class="text-kaiti">地铁乘客在站时间的动态特性</span></div>
                                                     <div class="publication-venue">
-                                                        <em>Workshop at Shanghai Shentong Metro Group Co., Ltd. (上海申通地铁集团有限公司)</em>, Shanghai, China. (In Putonghua).
+                                                        <em>Workshop at Shanghai Shentong Metro Group Co., Ltd. (<span class="text-kaiti">上海申通地铁集团有限公司</span>)</em>, Shanghai, China. (In Putonghua).
                                                     </div>
                                                     <div class="publication-tags">
                                                         <span class="publication-tag">
@@ -1189,7 +1253,7 @@
                 </div>
 
                 <!-- Peer Review -->
-                <div class="services-card">
+                <div class="services-card peer-review-card">
                     <div class="services-card-header">
                         <h3 class="services-card-title">
                             <i class="fas fa-edit services-card-icon"></i>
@@ -1197,73 +1261,7 @@
                         </h3>
                     </div>
                     <div class="services-card-content">
-                        <ul class="journal-grid">
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/transportation-research-part-a-policy-and-practice" target="_blank" class="journal-link">
-                                    <img src="/assets/img/TRA.jpg" alt="Transportation Research Part A" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/sustainable-cities-and-society" target="_blank" class="journal-link">
-                                    <img src="/assets/img/SCS.jpg" alt="Sustainable Cities and Society" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/journal-of-transport-geography" target="_blank" class="journal-link">
-                                    <img src="/assets/img/JTG.jpg" alt="Journal of Transport Geography" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/transport-policy" target="_blank" class="journal-link">
-                                    <img src="/assets/img/TP.jpg" alt="Transport Policy" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/travel-behaviour-and-society" target="_blank" class="journal-link">
-                                    <img src="/assets/img/TBS.jpg" alt="Travel Behaviour and Society" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety" target="_blank" class="journal-link">
-                                    <img src="/assets/img/RESS.jpg" alt="Reliability Engineering & System Safety" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/journal-of-transport-and-health" target="_blank" class="journal-link">
-                                    <img src="/assets/img/JTH.jpg" alt="Journal of Transport & Health" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.sciencedirect.com/journal/research-in-transportation-economics" target="_blank" class="journal-link">
-                                    <img src="/assets/img/RTE.jpg" alt="Research in Transportation Economics" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.nature.com/npjsustainmobil/" target="_blank" class="journal-link">
-                                    <img src="/assets/img/npjSMT.jpg" alt="npj Sustainable Mobility and Transport" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.tandfonline.com/journals/ttra21" target="_blank" class="journal-link">
-                                    <img src="/assets/img/TMA.jpg" alt="Transportmetrica A: Transport Science" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://link.springer.com/journal/12061" target="_blank" class="journal-link">
-                                    <img src="/assets/img/ASAP.jpeg" alt="Applied Spatial Analysis and Policy" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.tandfonline.com/journals/gtpt20" target="_blank" class="journal-link">
-                                    <img src="/assets/img/TPT.jpeg" alt="Transportation Planning and Technology" />
-                                </a>
-                            </li>
-                            <li class="journal-item">
-                                <a href="https://www.rails.cn/index.php?id=207" target="_blank" class="journal-link">
-                                    <img src="/assets/img/RTE.jpeg" alt="Railway Transport and Economy (铁道运输与经济)" />
-                                </a>
-                            </li>
-                        </ul>
+                        <p class="journal-list"><a href="https://www.sciencedirect.com/journal/transportation-research-part-a-policy-and-practice" target="_blank" class="journal-link">Transportation Research Part A</a>, <a href="https://www.sciencedirect.com/journal/sustainable-cities-and-society" target="_blank" class="journal-link">Sustainable Cities and Society</a>, <a href="https://www.sciencedirect.com/journal/journal-of-transport-geography" target="_blank" class="journal-link">Journal of Transport Geography</a>, <a href="https://www.sciencedirect.com/journal/transport-policy" target="_blank" class="journal-link">Transport Policy</a>, <a href="https://www.sciencedirect.com/journal/travel-behaviour-and-society" target="_blank" class="journal-link">Travel Behaviour and Society</a>, <a href="https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety" target="_blank" class="journal-link">Reliability Engineering & System Safety</a>, <a href="https://www.sciencedirect.com/journal/journal-of-transport-and-health" target="_blank" class="journal-link">Journal of Transport & Health</a>, <a href="https://www.sciencedirect.com/journal/research-in-transportation-economics" target="_blank" class="journal-link">Research in Transportation Economics</a>, <a href="https://www.nature.com/npjsustainmobil/" target="_blank" class="journal-link">npj Sustainable Mobility and Transport</a>, <a href="https://www.tandfonline.com/journals/ttra21" target="_blank" class="journal-link">Transportmetrica A: Transport Science</a>, <a href="https://link.springer.com/journal/12061" target="_blank" class="journal-link">Applied Spatial Analysis and Policy</a>, <a href="https://www.tandfonline.com/journals/gtpt20" target="_blank" class="journal-link">Transportation Planning and Technology</a>, <a href="https://www.rails.cn/index.php?id=207" target="_blank" class="journal-link">Railway Transport and Economy (<span class="journal-name-zh" lang="zh-Hans"><span class="text-kaiti">铁道运输与经济</span></span>)</a>, <a href="https://www.sciencedirect.com/journal/habitat-international" target="_blank" class="journal-link">Habitat International</a>.</p>
                     </div>
                 </div>
 
@@ -1421,6 +1419,15 @@
                     <div class="awards-card-content">
                         <ul class="awards-list">
                             <!-- 2026 -->
+                            <li class="awards-item">
+                                <span class="awards-bullet">&bull;</span>
+                                <div class="awards-item-content">
+                                    <div class="award-name">Outstanding ITS Service Award <span class="awards-year">(2026)</span></div>
+                                    <div class="award-organization">HKU Institute of Transport Studies</div>
+                                    <div class="award-description">Recognizes exceptional dedication, service, and positive contributions to the Institute's operation and development during the academic year. Established in 2026; recipients are nominated and endorsed at the annual meeting and receive a certificate and HK$1,000.</div>
+                                </div>
+                            </li>
+
                             <li class="awards-item">
                                 <span class="awards-bullet">•</span>
                                 <div class="awards-item-content">
@@ -1626,7 +1633,7 @@
             <div class="footer-left">
                 <p class="footer-name">© 2026 Hui Wang</p>
                 <p class="footer-location">📍 Pok Fu Lam, HK Island</p>
-                <p class="footer-update">Last updated: March 2026</p>
+                <p class="footer-update">Last updated: September 2026</p>
             </div>
 
             <!-- 右侧折叠按钮 -->

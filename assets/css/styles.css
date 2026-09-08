@@ -47,13 +47,17 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
 }
 
 /* ========================================
@@ -294,7 +298,7 @@ main {
 }
 
 .chinese-name {
-    font-family: 'STKaiti', 'KaiTi', 'BiauKai', '华文楷体', 'PingFang SC', sans-serif;
+    font-family: 'KaiTi', 'STKaiti', 'BiauKai', 'DFKai-SB', serif;
     font-size: 0.85em;
     color: var(--text-secondary);
     font-weight: 400;
@@ -961,32 +965,19 @@ main {
     padding: 2rem;
 }
 
-.journal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
+.journal-list {
+    line-height: 1.6;
 }
 
 .journal-link {
-    display: block;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
-.journal-link:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
-}
-
-.journal-link img {
-    width: 100%;
-    height: auto;
-    display: block;
+.journal-link:hover,
+.journal-link:focus-visible {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 .timeline-container {
@@ -1582,12 +1573,6 @@ footer {
 
     .publication-card {
         padding: 1.2rem;
-    }
-
-    /* Services */
-    .journal-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.8rem;
     }
 
     /* Miscellaneous */
